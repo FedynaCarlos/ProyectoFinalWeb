@@ -1,5 +1,8 @@
 Este es el proyecto del grupo 5.
 
+En nuestra pagina se encontrará información sobre el proceso de producción y distribución de vinos para brindarle al consumidor un concepto claro del producto que desea comprar.  Existirá un catalogo de vinos que podran ser adquiridos por los clientes desde cualquier parte del mundo.
+Nuestro publico obetivo seran las personas mayores de 18 años de cualquier lugar del mundo que se deleiten con el placer de disfrutar de los mejores sabores y aromas convertidos en vino.
+
 
 Los integrantes del equipo somos:
 JUAN CARLOS FEDYNA:Vivo en Buenos Aires, tengo 36 años, trabajo en una libreria, estudie recursos humanos y algo de economía, este año decidi estudiar el curso de FullStack, me gusta aprender y tener nuevos desafios en la vida.
