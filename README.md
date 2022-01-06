@@ -1,7 +1,22 @@
 Este es el proyecto del grupo 5.
 
 En nuestra pagina se encontrará información sobre el proceso de producción y distribución de vinos para brindarle al consumidor un concepto claro del producto que desea comprar.  Existirá un catalogo de vinos que podran ser adquiridos por los clientes desde cualquier parte del mundo.
-Nuestro publico obetivo seran las personas mayores de 18 años de cualquier lugar del mundo que se deleiten con el placer de disfrutar de los mejores sabores y aromas convertidos en vino.
+
+Nuestro publico obetivo seran los Clásicos y conservadores: Formado por consumidores con un perfil de mayor edad y que se ven como románticos y ahorradores. Muestran su preferencia por la cultura y aprecian de forma positiva el carácter fenolado del vino. Su vino favorito es el tradicional, por lo que valoran los vinos “de toda la vida”. Son consumidores nostálgicos, por lo que valoran las etiquetas de estilo clásico. Para ellos el vino forma parte del entorno en el mundo de los negocios o como un conector social, por lo que las promociones a través de asociaciones profesionales les resultan atractivas. Además, las promociones en grandes superficies y la comunicación a través de la TV constituyen herramientas para llegar a este segmento.
+
+Productos:
+Cabernet Sauvignon
+Intenso color rubí propio de la variedad. Aromas especiados nos recuerdan pimento rojo, orégano, eucaliptus y notas de mermeladas de ciruelas nos aportan sensaciones de complejidad. Acompañadas por chocolate, coco y tabaco provenientes de la madera.
+Malbec
+Color violáceo intenso y oscuro, de un brillo que sorprende. Aromas a frutos rojos y algo de cerezas, sumado a sutiles notas de flores violetas y lilas enmarcan la presencia del varietal. Delicados aromas tostados aportados por su paso por madera.
+Merlot
+Su color es intenso, con tonos bordó y rubí. Sus aromas son extremadamente complejos con notas a ciruela, cerezas y apreciables notas especiadas. En boca se presenta armonioso, suave y balanceado.
+Red Blend
+Posee un atractivo color rojo intenso con tonos oscuros. Sus notas frutales de ciruela, cerezas y frutos negros; se complementan perfectamente con las especias como tomillo, orégano y pimienta. Es un vino sumamente complejo y delicado, ya que en boca se percibe persistente y elegante, con una muy buena estructura, aportada por su elaboración y crianza en barricas de roble francés.
+Chardonnay
+De color amarillos limón y matiz verdoso brillantes, sus aromas recuerdan principalmente a frutos tropicales propios de una correcta madurez. Acomplejan el aroma notas de chocolate y vainilla aportadas por un paso por roble francés nuevo
+Sauvignon Blanc
+Nuestro Sauvignon Blanc presenta un color amarillo verdoso brillante. Gran intensidad aromatica que recuerda a Pomelo y otras frutas cítricas. En boca su equilibrado balance en dulzura y acidez, realzan su personalidad frutal. Es un vino fresco y joven, excelente para acompañar mariscos y frutos de mar.
 
 
 Los integrantes del equipo somos:
@@ -16,18 +31,3 @@ https://tienda.luigibosca.com/
 http://www.bodegasottano.com/es
 https://www.closdelossiete.com/
 https://www.bodegaseptima.com/
-
-Agrego 6 tipos de mercado para ver a quien va orientado el producto
-Podemos partir de la identificación de seis perfiles de consumidores y que se describen de la siguiente manera:
-
-Acomodado y abrumado: Formado por consumidores románticos que prefieren seguir bebiendo el vino que les gusta antes que probar las novedades del mercado. Muestra su preferencia por los vinos modernos y de maceración carbónica, lo que incluye vinos frutales y sabrosos que llenen la boca. Rechazan los vinos con deficiencias organolépticas. Además, es el grupo menos permeable a los elementos de marketing. Los vinos deben ser lo más perfectos y simples posibles, sin complicaciones tecnológicas ni elementos de distracción.
-
-Alma de la fiesta: Formado por un público joven ávido de pasar un buen rato en compañía de sus amigos. Muestra su preferencia por los vinos de maceración carbónica, frutales, frescos y suaves al paladar. Para este segmento interesan elaboraciones de vinos ligeros, intensos en aromas y con mucha fruta. Les atraen las etiquetas coloridas y los vinos con promociones atrevidas, siempre unido a eventos festivos y musicales. Valoran los factores ambientales y ecológicos y no rechazan nuevos envases como el bag in box, el PET o las latas.
-
-Clásico y conservador: Formado por consumidores con un perfil de mayor edad y que se ven como románticos y ahorradores. Muestran su preferencia por la cultura y aprecian de forma positiva el carácter fenolado del vino. Su vino favorito es el tradicional, por lo que valoran los vinos “de toda la vida”. Son consumidores nostálgicos, por lo que valoran las etiquetas de estilo clásico. Para ellos el vino forma parte del entorno en el mundo de los negocios o como un conector social, por lo que las promociones a través de asociaciones profesionales les resultan atractivas. Además, las promociones en grandes superficies y la comunicación a través de la TV constituyen herramientas para llegar a este segmento.
-
-Culto y solidario: Compuesto por consumidores sensibles, empáticos y que muestran un gusto elevado por la cultura. Sus preferencias les llevan a consumir vinos de tipo reserva en el que confluyen aromas frutales, especiados y balsámicos de madera. Muestran rechazo por los aromas fenolados. Este segmento valora los vinos serios y maduros, pero con imagen internacional. También se valoran los aspectos saludables del vino. La comunicación clásica es efectiva para llegar a este segmento. Los vinos mono varietales y los nuevos vinos clásicos son una apuesta segura para llegar a este segmento.
-
-Entendido o enófilo: Formado por consumidores sociales y que están interesados por el vino y la gastronomía. Muestra preferencia por los vinos frutales (con y sin envejecimiento en madera) y sin defectos, lo que incluye vinos de maceración carbónica, jóvenes y modernos. Es un segmento muy permeable a los nuevos productos, la innovación, los nuevos estilos, las nuevas regiones y las nuevas tendencias o modas. Además, gustan de sorpresas unidas a promociones en directo, como pueden ser maridajes de vino y música, pintura, teatro o cine. Además, la promoción a través de sumilleres y profesionales de la restauración y distribución es una estrategia válida para atraer a este segmento.
-
-Satisfecho y bien cultivado: Formado por consumidores valientes, extrovertidos y apasionados. Valoran los vinos con “mucho sabor” que “llenen la boca”. Valoran de forma positiva las sensaciones glicéricas, la madera y la fruta, rechazando los vinos suaves y jóvenes. Su vino ideal es el vino moderno. Se trata de un perfil que valora los aspectos táctiles, que deben ser muy cuidados en la elaboración del vino. Las presentaciones con información de naturaleza visual, con las varietales empleadas o la añada es la idónea. Los medios de comunicación más apropiados para este perfil son la prensa y la radio.
