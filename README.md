@@ -31,3 +31,6 @@ https://tienda.luigibosca.com/
 http://www.bodegasottano.com/es
 https://www.closdelossiete.com/
 https://www.bodegaseptima.com/
+
+
+Link Trello: https://trello.com/b/fEkoz6sI/bodegagrupo5
