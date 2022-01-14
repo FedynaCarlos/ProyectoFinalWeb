@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+
+
+/*-----------------Login------------------------*/
+
+.create-user{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #8e9191));
+	background: -moz-linear-gradient(top, #ffffff 0%, #8e9191 100%);
+	background: -webkit-linear-gradient(top,  #ffffff 0%, #8e9191 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%, #8e9191 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%, #8e9191 100%);
+	background: linear-gradient(top,  #ffffff 0%, #8e9191 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#8e9191', gradientType=0);
+
+   
+
+    /*background: linear-gradient(90deg, #6c6b6b 0%, #000 48%, #6c6b6b 100%);
+    
+    
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );*/
+}
+.control{
+    margin-left: auto;
+    margin-right: auto;
+}
