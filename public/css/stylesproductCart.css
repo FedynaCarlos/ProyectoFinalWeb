@@ -1,0 +1,19 @@
+*{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    body{
+        font-family: 'Raleway', sans-serif;
+            background-color: #0ca82610;
+        width: 100%;
+       }
+  
+header p i{
+    background-color: white;
+    color: blue;
+    border-radius: 2px;
+    text-align: left;
+    
+}
