@@ -1,0 +1,86 @@
+
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+/*
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+*/
+#header {
+	background:#514f4e url(../images/rausch.png) repeat;
+	margin-top:0px;
+	border-bottom:1px solid #a5916d;
+}
+.logo {
+	float: left;
+	padding: top 10px;
+}
+/****************************** Idiomas ******************************/
+
+.idiomas {
+	background:hsl(40, 7%, 74%);
+	border-bottom:1px solid #514f4e;
+}
+
+
+p.idiomas {
+	font-size:11px;
+	text-align:right;
+	text-shadow:none;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-right:10px;
+}
+
+/************************************************************************/
+
+header ul li{
+    list-style-type: none;
+    
+}
+.mainmenu ul{
+	display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+	flex-grow: 80%;
+    justify-content: space-between;
+	width: 50%;
+}
+
+.mainmenu ul a{
+    
+    font-size: 25px;
+	font: bolder;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+	color:whitesmoke;
+    text-decoration: none;
+}
+
+.busqueda{
+	display: flex;
+	justify-content:flex-start;
+	font:bold;
+	color: whitesmoke;
+}
+.busqueda div i{
+	color:whitesmoke
+}
+
+/*body{
+    font-family: 'Raleway', sans-serif;
+    background-color: #604621;
+}*/
