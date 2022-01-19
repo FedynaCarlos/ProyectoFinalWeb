@@ -7,9 +7,9 @@
 	background: -webkit-linear-gradient(top,  #ffffff 0%, #8e9191 100%);
 	background: -o-linear-gradient(top,  #ffffff 0%, #8e9191 100%);
 	background: -ms-linear-gradient(top,  #ffffff 0%, #8e9191 100%);
-	background: linear-gradient(top,  #ffffff 0%, #8e9191 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#8e9191', gradientType=0);
-    
+	background: linear-gradiennsform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#8e9191', gradientType=0)
+    top,  #ffffff 0%, #8e9191 100%);
+	filter: progid:DXImageTra;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
