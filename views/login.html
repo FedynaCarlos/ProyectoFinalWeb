@@ -8,31 +8,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
     <title>Login</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesRegister.css">
 </head>
 <body>
     <header>    
+        <div class="Logo">
+            <img src="/images/logo.png" alt="">
+        </div>
+    </header>
+    <form action="" method="post" class="create-user">
         
+        <h3 class="titulo-register">
+            Ingresa tu e-mail y contraseña
+        </h3>
+        <div  class="control-formulario">
+            <input type="email" name="email" placeholder="E-mail"class="control">
+        </div>
+        <div  class="control-formulario">
+            <input type="password" name="password" placeholder="Password" class="control">
+        </div>
+        <div class="control-formulario">
+            <button type="reset" class="boton-formulario">Ingresar</button>
+        </div>
+        <div>
+            <p><a href="#">Olvidaste tu contraseña?</a></p>
+        </div>
+    </form>
         
-        <form action="" method="post" class="create-user">
-            <div  class="control-formulario">
-                <input type="text" name="nombreyapellido" placeholder="Nombres y apellidos"class="control">
-            </div>
-            <div  class="control-formulario">
-                <input type="email" name="email" placeholder="E-mail" class="control">
-            </div>
-            <div  class="control-formulario">
-                <input type="text" name="telefono" placeholder="Telefono" class="control">
-            </div>
-            <div  class="control-formulario">
-                <input type="password" name="password" placeholder="Password" class="control">
-            </div>
-            <div  class="control-formulario">
-                <input type="password" name="cpassword" placeholder="Confirmar password" class="control">
-            </div>
-            <div class="control-formulario">
-                <button type="reset" class="boton-formulario">Registrar</button>
-            </div>
-        </form>
 </body>
 </html>
