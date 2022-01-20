@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+#header {
+	background:#514f4e url(../images/rausch.png) repeat;
+	margin-top:0px;
+	border-bottom:1px solid #a5916d;
+}
+.Logo{
+    margin-left:10px;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+.Logo img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.prueba{
+    text-align: center;
+}
+
+.mainmenu ul{
+	display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+	flex-grow: 80%;
+    justify-content: space-between;
+	width: 50%;
+    font-size: 10px;
+    text-align: center;
+}
+
+.mainmenu ul a{
+    
+    font-size: 19px;
+	font: bolder;
+    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+	color:whitesmoke;
+    text-decoration: none;
+    
+    
+}
