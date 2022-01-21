@@ -1,32 +1,22 @@
 *{
   box-sizing: border-box;
 }
-body{
+ body{
   background-color: #604621;
 }
-.body {
-  background-size: contain;
-}
-div i{
-     margin-top: 4px;
-  margin-left: 80%;        
-  padding: 10px;
-  color: rgb(195, 255, 0);
-   }
-   div label{
-     
-     color:turquoise;
-     
-   }
-   
-   header {
-    background:#514f4e url(../images/rausch.png) repeat;
-    margin-top:0px;
-    border-bottom:1px solid #a5916d;
 
-   }
-.logo {
-	float: left;
-	padding: top 10px;
+
+div i{
+  background-color: #604621;
+
+  margin-top: 4px;
+margin-left: 80%;   
+padding: 10px;
+color: green;
+font-size: xx-large;
+border-radius: 0ch;
 }
+class.logo {
+  background-color:#604621;
+} 
 
