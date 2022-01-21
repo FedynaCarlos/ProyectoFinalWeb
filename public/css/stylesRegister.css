@@ -98,11 +98,12 @@ header .busqueda .submit{
     align-content: center;
     width: 400px;
     background-color: #604621;
-    height: 70vh;
+    height: auto;
     overflow: auto;
     flex-direction: column;
     box-shadow: 7px 13px 37px #000;
     border-radius: 4px;
+    padding: 10px;
 }
 .control-formulario{
     text-align: center;
@@ -122,6 +123,7 @@ header .busqueda .submit{
     font-family: 'Raleway', sans-serif;
     background-color: transparent;
     font-size: 18px;
+    
 }
 form div p{
     color: white;
@@ -159,3 +161,18 @@ form div p{
       font-size: 12px;
       color: white;
   }
+
+
+  /*--login--*/
+
+  .ocontrasena{
+      padding: 5px;
+      font-size: 16px;
+  }
+  .linea{
+    border-top: 1px solid white;
+    height: 2px;
+    width: 220px;
+    padding: 0;
+    margin: 10px auto 10px auto;
+}
