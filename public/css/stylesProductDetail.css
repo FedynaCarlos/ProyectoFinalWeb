@@ -4,10 +4,27 @@
     box-sizing: border-box;
 }
 
+.mainmenu li a{
+    font-size: 20px;
+	padding: 25px 25px 25px 15px;
+	font: bolder;
+    font-family: Raleway ;
+	color:whitesmoke;
+    text-decoration: none;
+
+}
+
+
+.mainmenu ul {
+	display: flex;
+	margin-top: 10%;
+    
+}
+
 #header {
-	background:#514f4e url(../images/rausch.png) repeat;
+	background:#514f4e;
 	margin-top:0px;
-	border-bottom:1px solid #a5916d;
+	border-bottom:10px solid #a5916d;
 }
 .Logo{
     margin-left:10px;
@@ -23,24 +40,23 @@
     text-align: center;
 }
 
-.mainmenu ul{
-	display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-	flex-grow: 80%;
-    justify-content: space-between;
-	width: 50%;
-    font-size: 10px;
-    text-align: center;
-}
-
-.mainmenu ul a{
-    
-    font-size: 19px;
+.mainmenu li a{
+    font-size: 20px;
+	padding: 25px 25px 25px 15px;
 	font: bolder;
-    font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Raleway ;
 	color:whitesmoke;
     text-decoration: none;
-    
+
+}
+
+.mainmenu li a:hover{
+	color: green;
+	transition: color .5s;
+}
+
+.mainmenu ul {
+	display: flex;
+	margin-top: 0.3%;
     
 }
