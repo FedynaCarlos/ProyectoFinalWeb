@@ -5,7 +5,11 @@
 }
 
 header .cabecera {
+<<<<<<< HEAD
 	background-color:rgb(136,102,53);
+=======
+	background-color:#604621;
+>>>>>>> 16c8689d722970d706f15cbec4435a3ff36cac3b
 }
 
 /****************************** Idiomas ******************************/
@@ -39,7 +43,7 @@ header ul li{
     align-content: center;
     width: 100%;
     background-color: #2f1d58;
-    height: 24vh;
+    height: 27vh;
     overflow: auto;
     flex-direction: row;
 }
@@ -95,12 +99,31 @@ header .busqueda .submit{
     width: 10%;
 }
 
-.bodega{
-	display:flex;
-	height: 300px;
-	width: 100%;
-	margin: 5px 5px 5px 5px;
+.marcobodega{
+    display:flex;
+    justify-content: center;
 }
+
+.bodega{
+    height: 500px;
+	width: 98%;
+    margin: 5px 5px;
+}
+
+.pie{
+    font-weight: 100;
+    margin-top: 15x;
+    font-size: 40px;
+    text-align: center;
+   }
+   .texto {
+       margin-top: 10px;
+       display: inline-block;
+       text-align:justify ;
+       font-size: 21px;
+       height: auto;
+       width: 40%;
+   }
 
 .copyright {
     margin-top: 10px;
