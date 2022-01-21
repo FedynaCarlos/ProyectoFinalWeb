@@ -6,18 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
     <title>Resgitro</title>
     <link rel="stylesheet" href="css/stylesRegister.css">
 </head>
 <body>
-    <header>
-        <div class="Logo">
-            <a href="/"><img src="/images/logo.png" alt=""></a>
-        </div> 
+    <header>        
+        <div class="idiomas">
+                <p class="idiomas">
+                    <a href="index.html">
+                        <img src="/images/Espanol.png">
+                    </a>
+                    <a href="index.html">
+                        <img src="/images/ingles.png">
+                    </a>
+                </p>
+        </div>
+        <section class="cabecera">
+            <div> 
+                <img class="logo" src="/images/logo g5.png"  alt="Logo de Bodega G5">
+            </div>
         
+            <nav class="mainmenu">
+                <ul>
+                    <li><a href="menu1">Nuestra Historia</a></li>
+                    <li><a href="/productDetail">Productos</a></li>
+                    <li><a href="/register">Registrate</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="menu5">Contactenos</a></li>
+                    <li><a href="menu6">Compras <i class="fas fa-shopping-cart"></i></a> </li>
+                </ul>  
+            </nav>    
+        </section>    
     </header>
+  
     <form action="" method="post" class="create-user">
+        <div class="control-formulario">
+            <p>
+                <i class="far fa-question-circle"></i><b> Ya tienes cuenta? </b><a href="/login">!Inicie sesión¡</a>
+            </p>
+        </div>
         <h3 class="titulo-register">
             Regístrate
         </h3>
@@ -37,8 +67,9 @@
             <input type="password" name="cpassword" placeholder="Confirmar Password" class="control">
         </div>
         <div class="control-formulario">
-            <button type="reset" class="boton-formulario">Continuar</button>
+            <button type="reset" class="boton-formulario">Guardar</button>
         </div>
+        
     </form>
 </body>
 </html>
