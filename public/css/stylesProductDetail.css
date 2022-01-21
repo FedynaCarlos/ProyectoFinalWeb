@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+.mainmenu li a{
+    font-size: 20px;
+	padding: 25px 25px 25px 15px;
+	font: bolder;
+    font-family: Raleway ;
+	color:whitesmoke;
+    text-decoration: none;
+
+}
+
+
+.mainmenu ul {
+	display: flex;
+	margin-top: 10%;
+    
+}
+
+#header {
+	background:#514f4e;
+	margin-top:0px;
+	border-bottom:10px solid #a5916d;
+}
+.Logo{
+    margin-left:10px;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+.Logo img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+.prueba{
+    text-align: center;
+}
+
+.mainmenu li a{
+    font-size: 20px;
+	padding: 25px 25px 25px 15px;
+	font: bolder;
+    font-family: Raleway ;
+	color:whitesmoke;
+    text-decoration: none;
+
+}
+
+.mainmenu li a:hover{
+	color: green;
+	transition: color .5s;
+}
+
+.mainmenu ul {
+	display: flex;
+	margin-top: 0.3%;
+    
+}
