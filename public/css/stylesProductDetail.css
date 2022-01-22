@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
+.idiomas {
+	background:hsl(40, 7%, 74%);
+}
+
+
+p.idiomas {
+	font-size:11px;
+	text-align:right;
+	text-shadow:none;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-right:10px;
+}
+
+header .cabecera {
+	background-color:#604621;
+}
+
 .mainmenu li a{
     font-size: 20px;
 	padding: 25px 25px 25px 15px;
@@ -13,7 +31,11 @@
     text-decoration: none;
 
 }
-
+.principal{
+    display:flex;
+    justify-content: center;
+    min-width: 20%;
+}
 
 .mainmenu ul {
 	display: flex;
@@ -21,11 +43,13 @@
     
 }
 
+
 #header {
-	background:#514f4e;
+	background:#604621;
 	margin-top:0px;
 	border-bottom:10px solid #a5916d;
 }
+
 .Logo{
     margin-left:10px;
     margin-top: 10px;
@@ -37,7 +61,14 @@
 }
 
 .prueba{
+    margin-left:10px;
+    margin-top: 10px;
+    align-self: flex-start;
+    width: 90%;
     text-align: center;
+}
+.principal{
+    width: 50%;
 }
 
 .mainmenu li a{

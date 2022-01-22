@@ -5,11 +5,7 @@
 }
 
 header .cabecera {
-<<<<<<< HEAD
-	background-color:rgb(136,102,53);
-=======
 	background-color:#604621;
->>>>>>> 16c8689d722970d706f15cbec4435a3ff36cac3b
 }
 
 /****************************** Idiomas ******************************/
@@ -71,7 +67,7 @@ header ul li{
 
 .mainmenu ul {
 	display: flex;
-	margin-top: 10%;
+	margin-top: 0.5%;
     
 }
 
