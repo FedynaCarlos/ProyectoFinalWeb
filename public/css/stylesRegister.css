@@ -5,6 +5,10 @@
     padding: 0px;    
     box-sizing: border-box;
 }
+main{
+    background-image: url('/images/fotopaginainicio.jpg');
+    
+}
 header .cabecera {
 	background-color:#604621;
 }
@@ -80,6 +84,7 @@ header .busqueda .submit{
 }
 /*----Fin Header-----*/
 
+
 .titulo-register{
     color: white;
     font-family: 'Raleway', sans-serif;
@@ -110,7 +115,8 @@ header .busqueda .submit{
     width: 300px;
     height: 50px;
     margin: 10px;
-    background-color: transparent;
+    
+    /*background-color: transparent;*/
 }
 .control{
     width: 90%;
@@ -121,7 +127,7 @@ header .busqueda .submit{
     border-color: white;
     padding: 10px;
     font-family: 'Raleway', sans-serif;
-    background-color: transparent;
+    background-color: white;
     font-size: 18px;
     
 }
