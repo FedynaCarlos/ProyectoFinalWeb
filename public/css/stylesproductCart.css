@@ -114,7 +114,7 @@ header .busqueda .submit{
   font-family: 'Raleway', sans-serif;
 }
 .titles:hover{
-  color: blueviolet;
+  color:green;
 }
 
 .productosad{
@@ -124,7 +124,24 @@ header .busqueda .submit{
   font-family:'Raleway', sans-serif;
   border-bottom: 2px dashed black;
 }
-
+.descripcionp{
+  font-family: cursive;
+  color: blueviolet;
+  font-size: 20px;
+}
+.descripcionp:hover{
+  color: green;
+  transition: color .2s;
+}
+.preciop{
+  font-family: cursive;
+  color: blueviolet;
+  font-size: 20px;
+}
+.preciop:hover{
+  color: green;
+  transition: color .2s;
+}
 article div img{
   max-width: 100%;
   max-height: 90%;
@@ -135,21 +152,36 @@ article div img{
   max-height: 290px;
 }
 .imagenp:hover{
-  color: aqua;
+  color: green;
   transition: color .2s;
 
 }
 .cantidadp{
   display: flex;
-
+  font-family: cursive;
+  color: blueviolet;
+  font-size: 20px;
 }
-
+.cantidadp:hover{
+  color: green;
+  transition: color .2s;
+}
+.totalp{
+  display: flex;
+  font-family: cursive;
+  color: blueviolet;
+  font-size: 20px;
+}
+.totalp:hover{
+  color: green;
+  transition: color .2s;
+}
 .masmenos{
   display: flex;
   flex-direction: column;
 }
 .botonm{
   justify-content: center;
-  
 
 }
+
