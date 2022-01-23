@@ -97,6 +97,12 @@ header .busqueda .submit{
   text-align: center;
   margin: 20px;
 }
+.container:hover{
+      color:rgb(45, 0, 128);
+    transition: color .2s;
+    }
+  
+
 .titles {
   color: white;
   display: flex;
@@ -107,7 +113,9 @@ header .busqueda .submit{
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
 }
-
+.titles:hover{
+  color: blueviolet;
+}
 
 .productosad{
   display: flex;
@@ -116,6 +124,7 @@ header .busqueda .submit{
   font-family:'Raleway', sans-serif;
   border-bottom: 2px dashed black;
 }
+
 article div img{
   max-width: 100%;
   max-height: 90%;
@@ -125,10 +134,16 @@ article div img{
   max-width: 98px;
   max-height: 290px;
 }
+.imagenp:hover{
+  color: aqua;
+  transition: color .2s;
+
+}
 .cantidadp{
   display: flex;
 
 }
+
 .masmenos{
   display: flex;
   flex-direction: column;
