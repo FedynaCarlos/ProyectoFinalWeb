@@ -5,75 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet" />
     <link rel="stylesheet" href="css/stylesproductCart.css">
     <title>sección del carrito de compras</title>
 </head>
 <body>
-    <header>
+    <header>        
         <div class="idiomas">
-            <p class="idiomas">
-                <a href="index.html">
-                    <img src="/images/Espanol.png">
-                </a>
-                <a href="index.html">
-                    <img src="/images/ingles.png">
-                </a>
-            </p>
-    </div>
-           
-        
-          
-                <nav><i class="fas fa-shopping-cart"></i></nav>
-                <div class="control-formulario">
-                <button type="reset" class="boton-formulario">agregar al carrito</button></i>
-            </div>
-             
-               
-        <!--<section class="cabecera">
-        <label>Categoria:</label>
-    <select name="categoria">
-    <option value="">Vinos añejos</option>
-    <option value="">Vinos 1</option> 
-    <option value="">Vinos 2</option>  
-    <option value="">Vinos 3</option>  
-    <option value="">Vinos 4</option>  
-    <option value="">Vinos 5</option>  
-    <option value="">Vinos 6</option>  
-    <option value="">Vinos clasicos</option>  
-    
-    </div>
--->
-    </header>
-    <div><i><img class="logo" src="/images/logo g5.png"  alt="Logo de Bodega G5"> 
-    <div class="control-formulario">
-       
+                <p class="idiomas">
+                    <a href="index.html">
+                        <img src="/images/Espanol.png">
+                    </a>
+                    <a href="index.html">
+                        <img src="/images/ingles.png">
+                    </a>
+                </p>
         </div>
-            <!----------otro--------------->            
+        <section class="cabecera">
+            <div> 
+                <a href="/"><img class="logo" src="/images/logo g5.png"  alt="Logo de Bodega G5"></a>
+            </div>
+        
+            <nav class="mainmenu">
+                <ul>
+                    <li><a href="menu1">Nuestra Historia</a></li>
+                    <li><a href="/productDetail">Productos</a></li>
+                    <li><a href="/register">Registrate</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="menu5">Contactenos</a></li>
+                    <li><a href="/productCart">Compras <i class="fas fa-shopping-cart"></i></a> </li>
+                </ul>  
+            </nav>    
+        </section>    
+    </header>
+    <main>
+        <h2 class="titulo-main">Tus productos</h2>
+        <!-- TITULOS DEL CONTENIDO DEL CARRO -->
+        <section class="container">
+            <div class="titles">
+                <p>Productos</p>
+                <p>Descripción</p>
+                <p>Precio</p>
+                <p>Cantidad</p>
+                <p>Total</p>
+                <p>Eliminar</p>
+            </div>
+            <article class="productosad">
+                <div class="imagenp">
+                    <img src="/images/clogoespumante.jpg" alt="">            
+                </div>
+                <div class="descripcionp">
+                    <p>Vino espumuso de cosecha 2010</p>
+                </div>
+                <div class="preciop">
+                    <p>$2.500</p>
+                </div>
+                <div class="cantidadp">
+                    <input type="text" class="cant">
+                    <div class="masmenos">
+                        <button type="button" class="botonm"> <i class="far fa-plus-square"></i></button>
+                        <button type="button"><i class="far fa-minus-square"></i> </button>
 
-       <ul>
-       <li><i>vinos de seleccion <input type="number" name="numero" step="any"> <input type="reset" value="Borrar"></i></li> 
-       <br>
-       <li><i>vinos de seleccion <input type="number" name="numero" step="any"> <input type="reset" value="Borrar"></i></li> 
-       <br>
-       <li><i>vinos de seleccion <input type="number" name="numero" step="any"> <input type="reset" value="Borrar"></i></li> 
-       <br>
-       <li><i>vinos de seleccion <input type="number" name="numero" step="any"> <input type="reset" value="Borrar"></i></li> 
-       <br>
-       <li><i>vinos de seleccion  <input type="number" name="numero" step="any"> <input type="reset" value="Borrar"></i></li> 
-       <br>
-       <li><i>vinos de seleccion  <input type="number" name="numero" step="any"> <input type="reset" value="Borrar"></li></i>
-       </ul> 
-       
-      
-<!--input type="number" name="numero" max="100"-->
-       <!--------------otro::::::------>     
-           <!--<label>
-            <input type="radio" name="medio-de-pago" value="Efectivo">
-        <input type="radio" name="medio-de-pago" value="Débito">
-    <input type="radio" name="medio-de-pago" value="Tarjeta" checked>
-                </label>-->
-                <footer>          
-                <div class="copyright">
+                    </div>
+                </div>
+                <div class="totalp">
+                    <p>$2.500</p>
+                </div>
+                <div class="eliminarp">
+                    <i class="far fa-trash-alt"></i>
+                </div>
+
+
+            </article>
+            
+            <article class="productosad">
+                <div class="imagenp">
+                    <img src="/images/judasconlogo.jpg" alt="">            
+                </div>
+                <div class="descripcionp">
+                    <p>Vino Malbec</p>
+                </div>
+                <div class="preciop">
+                    <p>$18.100</p>
+                </div>
+                <div class="cantidadp">
+                    <input type="text" class="cant">
+                    <div class="masmenos">
+                        <button type="button" class="botonm"> <i class="far fa-plus-square"></i></button>
+                        <button type="button"><i class="far fa-minus-square"></i> </button>
+
+                    </div>
+                </div>
+                <div class="totalp">
+                    <p>$18.100</p>
+                </div>
+                <div class="eliminarp">
+                    <i class="far fa-trash-alt"></i>
+                </div>
+
+
+            </article>
+            
+
+
+        </section>
+
+
+    </main>
+
+
+    
+    <footer>          
+        <div class="copyright">
             <p>Copyright O 2022 Bodegas y Viñedos Grupo 5 S.R.L.</p>
         </div>  
     </footer> 
@@ -86,6 +130,9 @@
 
 
 <!--<!DOCTYPE html>
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
