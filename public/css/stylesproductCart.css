@@ -2,6 +2,8 @@
   margin: 0px;
   padding: 0px;    
   box-sizing: border-box;
+  background-image: url('../images/fondo-viñedo.jpg');
+  background-attachment: fixed;
 }
 header .cabecera {
 background-color:#604621;
@@ -35,7 +37,7 @@ header ul li{
 .logo {
   margin: 5px;
 border-radius: 50%;
-  width: 130px;
+  width: 70px;
 }
 .mainmenu li a{
   font-size: 20px;
@@ -46,7 +48,7 @@ color:whitesmoke;
   text-decoration: none;
 }
 .mainmenu li a:hover{
-color: green;
+color: black;
 transition: color .5s;
 }
 .mainmenu ul {
@@ -60,7 +62,7 @@ font:bold;
 color: whitesmoke;
 }
 .busqueda div i{
-color:rgb(37, 10, 133)
+color:white
 }
 header .form .input{
   background-color: #FFF;
@@ -78,7 +80,7 @@ header .busqueda .submit{
 }
 /*----Fin Header-----*/
 .titulo-main{
-  color: black;
+  color: white;
   text-align: left;
   font-size: 1.6rem;
   margin-right: 40vw;
@@ -89,16 +91,17 @@ header .busqueda .submit{
   align-self: normal;
   font-family: 'Raleway', sans-serif;
 }
+
 .container{
-  background-color: white;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  width: 90vw;
+  width: 80vw;
   text-align: center;
   margin: 20px;
 }
 .container:hover{
-      color:rgb(45, 0, 128);
+      color: white;
     transition: color .2s;
     }
   
@@ -123,23 +126,25 @@ header .busqueda .submit{
   align-items: center;
   font-family:'Raleway', sans-serif;
   border-bottom: 2px dashed black;
+  background: transparent;
 }
 .descripcionp{
   font-family: cursive;
-  color: blueviolet;
+  font-weight: 800;
+  color: white;
   font-size: 20px;
 }
 .descripcionp:hover{
-  color: green;
+  color: red;
   transition: color .2s;
 }
 .preciop{
   font-family: cursive;
-  color: blueviolet;
+  color: white;
   font-size: 20px;
 }
 .preciop:hover{
-  color: green;
+  color: black;
   transition: color .2s;
 }
 article div img{
@@ -150,30 +155,48 @@ article div img{
   height: 250px;
   max-width: 98px;
   max-height: 290px;
+  background: transparent;
+  border-radius: 50%;
+
 }
 .imagenp:hover{
-  color: green;
+  color: black;
   transition: color .2s;
 
 }
 .cantidadp{
   display: flex;
   font-family: cursive;
-  color: blueviolet;
+  color: white;
   font-size: 20px;
+  border-radius: 150px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.cant{
+border-radius: 20%;
+font-weight: 700;
+color: white;
+border-color:black;
+border-width: 4px;
+}
+.cant:hover{
+  color:black;
+  transition: color .2s;
+  opacity: o.2;
 }
 .cantidadp:hover{
-  color: green;
+  color: black;
   transition: color .2s;
 }
 .totalp{
   display: flex;
   font-family: cursive;
-  color: blueviolet;
+  color: white;
   font-size: 20px;
 }
 .totalp:hover{
-  color: green;
+  color: black;
   transition: color .2s;
 }
 .masmenos{
@@ -182,6 +205,7 @@ article div img{
 }
 .botonm{
   justify-content: center;
-
 }
+ 
+ 
 
