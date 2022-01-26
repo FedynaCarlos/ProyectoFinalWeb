@@ -1,22 +1,211 @@
 *{
+  margin: 0px;
+  padding: 0px;    
   box-sizing: border-box;
+  background-image: url('../images/fondo-viñedo.jpg');
+  background-attachment: fixed;
 }
- body{
-  background-color: #604621;
+header .cabecera {
+background-color:#604621;
 }
-
-
-div i{
-  background-color: #604621;
-
-  margin-top: 4px;
-margin-left: 80%;   
-padding: 10px;
-color: green;
-font-size: xx-large;
-border-radius: 0ch;
+.idiomas {
+background:hsl(40, 7%, 74%);
 }
-class.logo {
-  background-color:#604621;
+p.idiomas {
+font-size:11px;
+text-align:right;
+text-shadow:none;
+padding-top:5px;
+padding-bottom:2px;
+padding-right:10px;
+}
+header ul li{
+  list-style-type: none;   
 } 
+.cabecera {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: center;
+  width: 100%;
+  height: 20vh;
+  overflow: auto;
+  flex-direction: row;
+  align-items: center;
+}
+.logo {
+  margin: 5px;
+border-radius: 50%;
+  width: 70px;
+}
+.mainmenu li a{
+  font-size: 20px;
+padding: 25px 25px 25px 15px;
+font: bolder;
+  font-family: 'Raleway', sans-serif;
+color:whitesmoke;
+  text-decoration: none;
+}
+.mainmenu li a:hover{
+color: black;
+transition: color .5s;
+}
+.mainmenu ul {
+display: flex;
+margin-top: 0.5%;   
+}
+.busqueda{
+/*display: flex;
+justify-content:flex-start;*/
+font:bold;
+color: whitesmoke;
+}
+.busqueda div i{
+color:white
+}
+header .form .input{
+  background-color: #FFF;
+  border: 1px solid #000;
+  outline: none;
+  color: #666;
+  padding: 2px;
+}
+
+header .busqueda .submit{
+  background-color: rgb(70, 10, 10);
+  border: 1px solid #000;
+  color: #666;
+  width: 10%;
+}
+/*----Fin Header-----*/
+.titulo-main{
+  color: white;
+  text-align: left;
+  font-size: 1.6rem;
+  margin-right: 40vw;
+  margin-left: 10px;
+  padding-top: 2%;
+  padding-left: 2%;
+  border-bottom: black 3px solid;
+  align-self: normal;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container{
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  text-align: center;
+  margin: 20px;
+}
+.container:hover{
+      color: white;
+    transition: color .2s;
+    }
+  
+
+.titles {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #604621;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+.titles:hover{
+  color:green;
+}
+
+.productosad{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family:'Raleway', sans-serif;
+  border-bottom: 2px dashed black;
+  background: transparent;
+}
+.descripcionp{
+  font-family: cursive;
+  font-weight: 800;
+  color: white;
+  font-size: 20px;
+}
+.descripcionp:hover{
+  color: red;
+  transition: color .2s;
+}
+.preciop{
+  font-family: cursive;
+  color: white;
+  font-size: 20px;
+}
+.preciop:hover{
+  color: black;
+  transition: color .2s;
+}
+article div img{
+  max-width: 100%;
+  max-height: 90%;
+}
+.imagenp{
+  height: 250px;
+  max-width: 98px;
+  max-height: 290px;
+  background: transparent;
+  border-radius: 50%;
+
+}
+.imagenp:hover{
+  color: black;
+  transition: color .2s;
+
+}
+.cantidadp{
+  display: flex;
+  font-family: cursive;
+  color: white;
+  font-size: 20px;
+  border-radius: 150px;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+.cant{
+border-radius: 20%;
+font-weight: 700;
+color: white;
+border-color:black;
+border-width: 4px;
+}
+.cant:hover{
+  color:black;
+  transition: color .2s;
+  opacity: o.2;
+}
+.cantidadp:hover{
+  color: black;
+  transition: color .2s;
+}
+.totalp{
+  display: flex;
+  font-family: cursive;
+  color: white;
+  font-size: 20px;
+}
+.totalp:hover{
+  color: black;
+  transition: color .2s;
+}
+.masmenos{
+  display: flex;
+  flex-direction: column;
+}
+.botonm{
+  justify-content: center;
+}
+ 
+ 
 
