@@ -64,12 +64,10 @@ header .cabecera {
     margin-left:10px;
     margin-top: 10px;
     align-self: flex-start;
-    width: 90%;
-    text-align: center;
+    width: 90;
+    
 }
-.principal{
-    width: 50%;
-}
+
 
 .mainmenu li a{
     font-size: 20px;
@@ -90,4 +88,22 @@ header .cabecera {
 	display: flex;
 	margin-top: 0.3%;
     
+}
+.contenedorMayor{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	
+}
+.contenedor1{
+	height: 500px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.contenedor2{
+	height: 500px;
+	display: flex;
+	justify-content: space-evenly;
 }
