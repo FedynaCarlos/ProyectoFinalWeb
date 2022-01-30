@@ -5,12 +5,8 @@
     padding: 0px;    
     box-sizing: border-box;
 }
-main{
-    background-image: url('/images/fotopaginainicio.jpg');
-    
-}
-header .cabecera {
-	background-color:#604621;
+header {
+    width: 400px;
 }
 .idiomas {
 	background:hsl(40, 7%, 74%);
@@ -23,10 +19,8 @@ p.idiomas {
 	padding-bottom:2px;
 	padding-right:10px;
 }
-header ul li{
-    list-style-type: none;   
-}
 .cabecera {
+    background-color:#604621;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -43,48 +37,46 @@ header ul li{
 	border-radius: 50%;
     width: 130px;
 }
-.mainmenu li a{
-    font-size: 20px;
-	padding: 25px 25px 25px 15px;
-	font: bolder;
-    font-family: Raleway ;
-	color:whitesmoke;
-    text-decoration: none;
-}
-.mainmenu li a:hover{
-	color: green;
-	transition: color .5s;
+.mainmenu{
+    display: none;
 }
 .mainmenu ul {
 	display: flex;
 	margin-top: 0.5%;   
 }
-.busqueda{
-	/*display: flex;
-	justify-content:flex-start;*/
-	font:bold;
-	color: whitesmoke;
+header ul li{
+    list-style-type: none;   
 }
-.busqueda div i{
-	color:rgb(37, 10, 133)
+.mainmenu li a{
+    font-size: 14px;
+	padding: 15px 15px 15px 10px;
+	font: bolder;
+    font-family: 'Raleway', sans-serif;
+	color:whitesmoke;
+    text-decoration: none;
+    text-align: center;
 }
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
+.mainmenu li a:hover{
+	color: green;
+	transition: color .5s;
+}
+.burguermenu{
+    width: 60px;
+    height: 60px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    margin-right: 0%;
+}
+.burguermenu i{
+    font-size: 25px;
 }
 
-header .busqueda .submit{
-    background-color: rgb(70, 10, 10);
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
-}
+
 /*----Fin Header-----*/
-
-
+main{
+    background-image: url('/images/fotopaginainicio.jpg');    
+}
 .titulo-register{
     color: white;
     font-family: 'Raleway', sans-serif;
@@ -128,8 +120,7 @@ header .busqueda .submit{
     padding: 10px;
     font-family: 'Raleway', sans-serif;
     background-color: white;
-    font-size: 18px;
-    
+    font-size: 18px; 
 }
 form div p{
     color: white;
@@ -181,4 +172,25 @@ form div p{
     width: 220px;
     padding: 0;
     margin: 10px auto 10px auto;
+}
+
+
+@media (min-width: 361px){
+    header{
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px){
+    .mainmenu{
+        display: block;
+    }
+    .burguermenu{
+        display: none;
+    }
+}
+@media (min-width: 1024px){
+    .mainmenu li a{
+        font-size: 20px;
+    }
 }
