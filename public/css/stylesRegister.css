@@ -5,8 +5,12 @@
     padding: 0px;    
     box-sizing: border-box;
 }
+body{
+    font-family: 'Raleway', sans-serif;
+}
 header {
     width: 400px;
+    background-color: transparent;
 }
 .idiomas {
 	background:hsl(40, 7%, 74%);
@@ -20,7 +24,7 @@ p.idiomas {
 	padding-right:10px;
 }
 .cabecera {
-    background-color:#604621;
+    background-color:transparent;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
@@ -33,9 +37,10 @@ p.idiomas {
     align-items: center;
 }
 .logo {
-    margin: 5px;
-	border-radius: 50%;
-    width: 130px;
+    border-radius: 50%;
+    width: 120px;
+    
+    
 }
 .mainmenu{
     display: none;
@@ -62,11 +67,14 @@ header ul li{
 }
 .burguermenu{
     width: 60px;
-    height: 60px;
-    color: white;
+    height: 70px;
+    color: #604621;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #604621;
     margin-right: 0%;
+}
+.burguermenu:hover{
+    background-color: rgb(248, 242, 234);
 }
 .burguermenu i{
     font-size: 25px;
@@ -74,7 +82,7 @@ header ul li{
 
 
 /*----Fin Header-----*/
-main{
+body{
     background-image: url('/images/fotopaginainicio.jpg');    
 }
 .titulo-register{
@@ -175,13 +183,78 @@ form div p{
 }
 
 
+/*------Footer-----*/
+
+footer{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #bbac96;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 400px;
+}
+.fLogo{
+    border-radius: 50%;
+    width: 80px;
+    padding: 5px;
+}
+.logoyredes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.redes{
+    display: flex;
+    color: #5b5d63;
+    justify-content: space-around;
+    padding: 5% 0;
+ 
+}
+.redes i{
+    width:40px;
+    height: 40px;
+    text-align: center;
+    padding: 10% 0;
+}
+.fSubtitulo{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    max-width: 230px;
+}
+
+.fLogoyTexto{
+    display: flex;
+}
+.fLogoyTextoBajo{
+    display: flex;
+    padding-top: 10px;
+    color: #5b5d63;
+}
+.logoPagos{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+
 @media (min-width: 361px){
     header{
+        width: 100%;
+    }
+    footer{
         width: 100%;
     }
 }
 
 @media (min-width: 768px){
+    .cabecera {
+        background-color:#604621;
+    }
     .mainmenu{
         display: block;
     }
