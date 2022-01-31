@@ -39,7 +39,7 @@ header ul li{
     align-content: center;
     width: 100%;
     background-color: #2f1d58;
-    height: 34vh;
+    height: 27vh;
     overflow: auto;
     flex-direction: row;
 }
@@ -67,7 +67,7 @@ header ul li{
 
 .mainmenu ul {
 	display: flex;
-	margin-top: 0.5%;
+	margin-top: 10%;
     
 }
 
@@ -127,4 +127,5 @@ header .busqueda .submit{
     text-align:center ;
     font-size: 15px;
     height: 30px;
+    width: 100%;
 }
