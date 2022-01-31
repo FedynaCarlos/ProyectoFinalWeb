@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;    
   box-sizing: border-box;
-  background-image: url('../images/fondo-viñedo.jpg');
+  
   background-attachment: fixed;
 }
 header .cabecera {
@@ -29,11 +29,11 @@ header ul li{
   align-items: flex-start;
   align-content: center;
   width: 100%;
-  height: 20vh;
+  height: 17vh;
   overflow: auto;
   flex-direction: row;
-  align-items: center;
-}
+  }
+
 .logo {
   margin: 5px;
 border-radius: 50%;
@@ -43,12 +43,12 @@ border-radius: 50%;
   font-size: 20px;
 padding: 25px 25px 25px 15px;
 font: bolder;
-  font-family: 'Raleway', sans-serif;
+font-family: 'Raleway', sans-serif;
 color:whitesmoke;
   text-decoration: none;
 }
 .mainmenu li a:hover{
-color: black;
+color: green;
 transition: color .5s;
 }
 .mainmenu ul {
@@ -79,39 +79,38 @@ header .busqueda .submit{
   width: 10%;
 }
 /*----Fin Header-----*/
-.titulo-main{
-  color: white;
-  text-align: left;
+.titulo-main{  
+  background-color:none;
+  text-align: center;
   font-size: 1.6rem;
-  margin-right: 40vw;
-  margin-left: 10px;
-  padding-top: 2%;
-  padding-left: 2%;
+  margin-right: none;
+  margin-left:none;
+  padding-top: none;
+  padding-left: none;
   border-bottom: black 3px solid;
   align-self: normal;
   font-family: 'Raleway', sans-serif;
 }
 
 .container{
-  background-color: transparent;
+    background-image: url(/images/fondo-viñedo.jpg);
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  width: 100vw;
   text-align: center;
-  margin: 20px;
+  margin: 0px;
 }
 .container:hover{
       color: white;
     transition: color .2s;
     }
   
-
 .titles {
-  color: white;
+  color: black;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #604621;
+  background-color: transparent;
   font-weight: 700;
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
@@ -130,7 +129,7 @@ header .busqueda .submit{
 }
 .descripcionp{
   font-family: cursive;
-  font-weight: 800;
+  font-weight: 500;
   color: white;
   font-size: 20px;
 }
@@ -144,26 +143,23 @@ header .busqueda .submit{
   font-size: 20px;
 }
 .preciop:hover{
-  color: black;
+  color: red;
   transition: color .2s;
 }
 article div img{
   max-width: 100%;
-  max-height: 90%;
+  max-height: 60%;
 }
-.imagenp{
+
+ .imagenp{  
   height: 250px;
   max-width: 98px;
   max-height: 290px;
-  background: transparent;
-  border-radius: 50%;
+  margin: 5px;
+  width: 100%;
+  border-radius: 90%;
 
-}
-.imagenp:hover{
-  color: black;
-  transition: color .2s;
-
-}
+ }
 .cantidadp{
   display: flex;
   font-family: cursive;
@@ -171,13 +167,13 @@ article div img{
   font-size: 20px;
   border-radius: 150px;
   box-sizing: border-box;
-  border-radius: 50%;
+  
 }
 .cant{
 border-radius: 20%;
 font-weight: 700;
 color: white;
-border-color:black;
+border-color:rgb(70, 10, 10);
 border-width: 4px;
 }
 .cant:hover{
@@ -196,7 +192,7 @@ border-width: 4px;
   font-size: 20px;
 }
 .totalp:hover{
-  color: black;
+  color: red;
   transition: color .2s;
 }
 .masmenos{
@@ -205,7 +201,5 @@ border-width: 4px;
 }
 .botonm{
   justify-content: center;
-}
- 
- 
 
+}
