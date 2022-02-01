@@ -11,73 +11,86 @@
 
      
             <!--menuhome-->
-            <header id="header"> 
-                
+            <header>        
                 <div class="idiomas">
-        <p class="idiomas">
-            <a href="index.html">
-                <img src="/images/Espanol.png">
-            </a>
-            <a href="index.html">
-                <img src="/images/ingles.png">
-            </a>
-        </p>
-</div>  
-                <div class="idiomas">
-                    <div class="container">
-                        
-                    </div>
+                        <p class="idiomas">
+                            <a href="index.html">
+                                <img src="/images/Espanol.png">
+                            </a>
+                            <a href="index.html">
+                                <img src="/images/ingles.png">
+                            </a>
+                        </p>
                 </div>
+                <section class="cabecera">
+                    <div class="marcoLogo"> 
+                        <a href="/"><img class="logo" src="/images/logo g5.png"  alt="Logo de Bodega G5"></a>
+                    </div>
                 
-                <div class="mainmenu">
+                    <nav class="mainmenu">
                         <ul>
-                            <li><div class="header">
-                                <div class="Logo">
-                                    <img src="/images/logo.png" alt="">
-                                </div>
-                            </div></li>
-                            <li><a href="/index">Home</a></li>
-                            <li><a href="/productDetail.html">Productos</a></li>
-                            <li><a href="/nosotros">Nosotros</a></li>
-                            <li><a href="/contactenos">Contactenos</a></li>
+                            <li><a href="menu1">Nuestra Historia</a></li>
+                            <li><a href="/productDetail">Productos</a></li>
+                            <li><a href="/register">Registrate</a></li>
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="menu5">Contactenos</a></li>
+                            <li><a href="/productCart">Compras &nbsp<i class="fas fa-shopping-cart"></i></a> </li>
                         </ul>  
-                        <div class="busqueda" action="#" method="GET">
-                            <div>Buscar: </div>
-                            <div><i class="fa fa-search"></i></div>
-                        </div>    
-                    </div>    
+                    </nav>
+                    <button class="burguermenu" type="button">
+                        <i class="fas fa-bars"></i>
+                    </button>
+        
+                </section>    
             </header>
-
+     
 
               
-   <!--div añadir al carrito-->
-     <div class="prueba" > 
+      
 
-         <!--div mostar imagen-->
-        <div class="contenedorMayor">
-            <div class="contenedor1">
-                <div class="elemento1">
+         <!--div mostrar imagen-->
+        
+            <div class="contenedor1"> <!--contenedor1-->
+                <div class="elemento1"><!--elemento1-->
                     <img src="images/LaConsulta.jpg" width="110"halt="Vino tinto" class="product_img">
                     <i class="fas fa-truck"></i>
                  <p class="price">$6.770</p>
                 <h4 class="description">Vino tinto</h4>
-                </div>
-        
-            <div class="elemento2">
+                </div> <!--fin de elemnto1-->
+        <!--descripcion del producto-->
+            <div class="elemento2">  <!--elemento 2-->
                     
                     
                     <h3>Producto</h3>
-         <br>
-         <br>
-         <h4>Descripcion del producto</h4>
-         <br>
-         <br>
+                    <br>
+                    <br>
+                    <p>VINO TINTO BODEGA 5 <br>
+                    <P>MALBEC BOTELLA 750ML</P> <br>
+                    <p>$7.000</p>
+                    
+                    <br>
+                    <br>
+        <!--barra para elegir la cantidad a comprar-->
+        <div class="informacionDelProducto">
+        <form action="cantidad" method="get">
+                        <label>Cantidad</label>
+                        <select name="cantidad">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                        <br>
+                        
+                        <br>
+                        <div class="AgregarCarrito"><button type="reset" class="boton-formulario">Agregar al carrito</button></div>
+                    </form>
         
-        <input type="text" name="cantidad" placeholder="cantidad" class="control">
-        
-        <div class="prueba"><button type="reset" class="boton-formulario">Agregar al carrito</button></div>
-
-                </div>
+                     
+        </div>           
+                </div><!--fin welemento 2-->
                 
     
  
@@ -86,33 +99,88 @@
     
 </div>
 
+                <!--contenedor de productos en miniatura-->
                 <div class="contenedor2">
                     <div class="elemento3">
-                        <img src="images/c logo espumante.jpg" width="80"halt="Vino blanco" class="product_img">
+                        <img src="images/clogoespumante.jpg" width="90"halt="Vino blanco" class="product_img">
                         <i class="fas fa-truck"></i>
                      <p class="price">$5.000</p>
                     <h4 class="description">Vino Blanco</h4>
+                   <button type="reset" class="boton-formulario">Agregar al carrito</button>
                     </div>
                     <div class="elemento4">
                         <img src="images/Junior_Blend.jpg" width="80"halt="Vino tinto" class="product_img">
                         <i class="fas fa-truck"></i>
                      <p class="price">$6.000</p>
                     <h4 class="description">Vino tinto</h4>
+                    <button type="reset" class="boton-formulario">Agregar al carrito</button>
                     </div>
                     <div class="elemento5">
                         <img src="images/imagen botell con logo.jpg" width="70"halt="Vino Rosado" class="product_img">
                         <i class="fas fa-truck"></i>
                      <p class="price">$6.500</p>
                     <h4 class="description">Vino Rosado</h4>
+                    <button type="reset" class="boton-formulario">Agregar al carrito</button>
                     </div>
                     <div class="elemento6">
                         <img src="images/SantaRita.jpg" width="70"halt="Vino Rosado" class="product_img">
                         <i class="fas fa-truck"></i>
                      <p class="price">$6.500</p>
                     <h4 class="description">Vino Rosado</h4>
+                    <button type="reset" class="boton-formulario">Agregar al carrito</button>
                     </div>
                 </div>  
-</div>
+            
 
 </body>
+<footer> <!--Crear footer con la posibilidad de tener flexbox y luego utilizarlo en todas las paginas-->
+    <section class="logoyredes"> <!--Poner logo pequeño al lado izquierdo-->
+        <img class="fLogo" src="/images/logo g5.png"  alt="Logo de Bodega G5">    
+        <div class="redes">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </section>
+    <section>
+        <div class="fSubtitulo">
+            <div class="fLogoyTexto">
+                <i class="fas fa-map-marked-alt">&nbsp</i>
+                <p>UBICACIÓN</p>
+            </div>
+            <div class="fLogoyTextoBajo">
+                <i class="fas fa-map-marker-alt">&nbsp</i>
+                <p>Avenida 5ta con 25</p>
+            </div>
+            <div class="fLogoyTextoBajo">
+                <i class="far fa-envelope">&nbsp</i>
+                <p>bodega_grupo5@gmail.com</p>
+            </div>
+            <div class="fLogoyTextoBajo">
+                <i class="fas fa-phone-alt">&nbsp</i>
+                <p>+57 325 303 74 25</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="fSubtitulo">
+            <div class="fLogoyTexto">
+                <i class="far fa-clock">&nbsp</i>
+                <p>HORARIO DE ATENCIÓN</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="fSubtitulo">
+            <div class="fLogoyTexto">
+                <i class= "fas fa-money-bill-wave-alt">&nbsp</i>
+                <p>PAGOS SEGUROS POR</p>
+            </div>
+            <div>
+                <img class="logoPagos" src="/images/logospago.png"  alt="Logo pagos">
+            </div>
+        </div>
+    </section>
+</footer>
 </html>
