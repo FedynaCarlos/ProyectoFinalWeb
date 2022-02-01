@@ -46,7 +46,7 @@ header ul li{
 
 .logo {
     margin: 5px;
-	border-radius: 82px;
+	border-radius: 100px;
     
 }
 
@@ -168,10 +168,9 @@ footer{
     margin-top: 60px;
     padding: 10px;
     background-color: #bbac96;
-    display: flex;
-	
+    display: flex;	
     justify-content: space-around;
-	align-items: flex-end;
+	align-items: flex-start;
     flex-wrap: wrap;
     width: 100%;
 }
