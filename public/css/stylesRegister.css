@@ -67,6 +67,7 @@ header ul li{
 	transition: color .5s;
 }
 .burguermenu{
+    display: block;
     width: 60px;
     height: 70px;
     color: #604621;

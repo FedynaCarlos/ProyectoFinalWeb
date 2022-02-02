@@ -4,96 +4,6 @@
     box-sizing: border-box;
 }
 
-header .cabecera {
-	background-color:#604621;
-}
-
-/****************************** Idiomas ******************************/
-
-.idiomas {
-	background:hsl(40, 7%, 74%);
-}
-
-
-p.idiomas {
-	font-size:11px;
-	text-align:right;
-	text-shadow:none;
-	padding-top:5px;
-	padding-bottom:2px;
-	padding-right:10px;
-}
-
-/************************************************************************/
-
-header ul li{
-    list-style-type: none;
-    
-}
-
-.cabecera {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: center;
-    width: 100%;
-    background-color: #2f1d58;
-    height: 27vh;
-    overflow: auto;
-    flex-direction: row;
-}
-
-.logo {
-    margin: 5px;
-	border-radius: 82px;
-    
-}
-
-.mainmenu li a{
-    font-size: 20px;
-	padding: 25px 25px 25px 15px;
-	font: bolder;
-    font-family: Raleway ;
-	color:whitesmoke;
-    text-decoration: none;
-
-}
-
-.mainmenu li a:hover{
-	color: green;
-	transition: color .5s;
-}
-
-.mainmenu ul {
-	display: flex;
-	margin-top: 10%;
-    
-}
-
-.busqueda{
-	/*display: flex;
-	justify-content:flex-start;*/
-	font:bold;
-	color: whitesmoke;
-}
-.busqueda div i{
-	color:rgb(37, 10, 133)
-}
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
-
-header .busqueda .submit{
-    background-color: rgb(70, 10, 10);
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
-}
 
 .marcobodega{
     display:flex;
@@ -101,8 +11,8 @@ header .busqueda .submit{
 }
 
 .bodega{
-    height: 500px;
-	width: 98%;
+    height: 400px;
+	width: 100%;
     margin: 5px 5px;
 }
 
