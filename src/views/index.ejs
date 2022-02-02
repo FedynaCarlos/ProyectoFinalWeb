@@ -1,45 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+    <%- include('./partials/head') %>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-        <title>Login</title>
-        <link rel="stylesheet" href="css/stylesRegister.css">
+        <title>Home Bodega grupo 5</title>
+        <link rel="stylesheet" href="css/styleIndex.css">
     </head>
+    
 <body>
-    <header>        
-        <div class="idiomas">
-                <p class="idiomas">
-                    <a href="index.ejs">
-                        <img src="/images/Espanol.png">
-                    </a>
-                    <a href="index.ejs">
-                        <img src="/images/ingles.png">
-                    </a>
-                </p>
-        </div>
-        <section class="cabecera">
-            <div> 
-                <img class="logo" src="/images/logo g5.png"  alt="Logo de Bodega G5">
-            </div>
-        
-            <nav class="mainmenu">
-                <ul>
-                    <li><a href="menu1">Nuestra Historia</a></li>
-                    <li><a href="/productDetail">Productos</a></li>
-                    <li><a href="/register">Registrate</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="menu5">Contactenos</a></li>
-                    <li><a href="/productCart">Compras <i class="fas fa-shopping-cart"></i></a> </li>
-
-                </ul>  
-            </nav>    
-        </section>    
-    </header>
+    <%- include('./partials/header') %>
+    
     <div class="marcobodega">
         <img class="bodega" src="/images/FotoPaginaInicio.jpg"  alt="imagen">
     </div>
