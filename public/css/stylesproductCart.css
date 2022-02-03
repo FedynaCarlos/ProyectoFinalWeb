@@ -94,12 +94,11 @@ header .busqueda .submit{
 }
 
 .container{
-    
-  display: flex;
+      display: flex;
   flex-direction: column;
   width: 100vw;
   text-align: center;
-  margin: 0px;
+  margin: 1px;
 }
 .container:hover{
       color: green;
