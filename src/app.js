@@ -12,6 +12,9 @@ const mainRoutes = require('./routes/mainRoutes');
 app.use('/',mainRoutes);
 app.use('/register',mainRoutes);
 app.use('/login',mainRoutes);
+app.get('/productCart', (req,res)=>{
+    res.sendFile(__dirname + '/views/productCart.html');
+});
 
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');

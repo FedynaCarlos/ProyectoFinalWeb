@@ -79,6 +79,7 @@ header .busqueda .submit{
   width: 10%;
 }
 /*----Fin Header-----*/
+/*TITULOS DEL CONTENIDO DEL CARRO*/
 .titulo-main{  
   background-color:none;
   text-align: center;
@@ -93,7 +94,7 @@ header .busqueda .submit{
 }
 
 .container{
-    background-image: url(/images/fondo-viñedo.jpg);
+    
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -101,7 +102,7 @@ header .busqueda .submit{
   margin: 0px;
 }
 .container:hover{
-      color: white;
+      color: green;
     transition: color .2s;
     }
   
@@ -130,20 +131,20 @@ header .busqueda .submit{
 .descripcionp{
   font-family: cursive;
   font-weight: 500;
-  color: white;
+  color: black;
   font-size: 20px;
 }
 .descripcionp:hover{
-  color: red;
+  color: green;
   transition: color .2s;
 }
 .preciop{
   font-family: cursive;
-  color: white;
+  color: black;
   font-size: 20px;
 }
 .preciop:hover{
-  color: red;
+  color: green;
   transition: color .2s;
 }
 article div img{
@@ -163,7 +164,7 @@ article div img{
 .cantidadp{
   display: flex;
   font-family: cursive;
-  color: white;
+  color: black;
   font-size: 20px;
   border-radius: 150px;
   box-sizing: border-box;
@@ -172,27 +173,27 @@ article div img{
 .cant{
 border-radius: 20%;
 font-weight: 700;
-color: white;
+color: black;
 border-color:rgb(70, 10, 10);
 border-width: 4px;
 }
 .cant:hover{
-  color:black;
+  color: green;
   transition: color .2s;
   opacity: o.2;
 }
 .cantidadp:hover{
-  color: black;
+  color:green;
   transition: color .2s;
 }
 .totalp{
   display: flex;
   font-family: cursive;
-  color: white;
+  color: black;
   font-size: 20px;
 }
 .totalp:hover{
-  color: red;
+  color: green;
   transition: color .2s;
 }
 .masmenos{
