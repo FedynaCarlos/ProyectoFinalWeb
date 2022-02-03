@@ -7,10 +7,10 @@ app.use(express.static('../public'));
 app.set('view engine','ejs');
 
 const mainRoutes = require('./routes/mainRoutes');
-const userRoutes = require('./routes/userRoutes');
+//const userRoutes = require('./routes/userRoutes');
 
 app.use('/',mainRoutes);
-app.use('/register',userRoutes);
+app.use('/register',mainRoutes);
 app.use('/login',mainRoutes);
 
 app.listen(3000, ()=>{
