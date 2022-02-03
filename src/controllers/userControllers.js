@@ -1,10 +1,10 @@
-const controller = {
+const usuariosController = {
     register: (req,res) => {
-        return res.render('register.ejs');
+        res.render('register.ejs');
+    },
+    login:(req,res)=> {
+        res.render('login.ejs');
     }
-    /*login:(req,res)=> {
-        return res.render('login.ejs');
-    }*/
 }
 
-module.exports = controller;
+module.exports = usuariosController;

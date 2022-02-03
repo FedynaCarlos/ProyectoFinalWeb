@@ -7,14 +7,17 @@ app.use(express.static('../public'));
 app.set('view engine','ejs');
 
 const mainRoutes = require('./routes/mainRoutes');
-//const userRoutes = require('./routes/userRoutes');
+const userRoutes = require('./routes/userRoutes');
+const loginRoutes = require('./routes/loginRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 app.use('/',mainRoutes);
-app.use('/register',mainRoutes);
-app.use('/login',mainRoutes);
-app.get('/productCart', (req,res)=>{
+app.use('/register',userRoutes);
+app.use('/login',loginRoutes);
+app.use('/productCart',productRoutes)
+/*app.get('/productCart', (req,res)=>{
     res.sendFile(__dirname + '/views/productCart.html');
-});
+});*/
 
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');
