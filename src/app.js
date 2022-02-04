@@ -11,10 +11,14 @@ const userRoutes = require('./routes/userRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 const productRoutes = require('./routes/productRoutes');
 
+
+
+
 app.use('/',mainRoutes);
 app.use('/register',userRoutes);
 app.use('/login',loginRoutes);
-app.use('/productCart',productRoutes)
+app.use('/productCart',productRoutes);
+app.use('/productDetail',productRoutes);
 /*app.get('/productCart', (req,res)=>{
     res.sendFile(__dirname + '/views/productCart.html');
 });*/
