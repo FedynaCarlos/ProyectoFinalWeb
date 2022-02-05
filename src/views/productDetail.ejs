@@ -15,39 +15,7 @@
 <body>
     <%- include('./partials/header') %>
      
-            <!--menuhome-->
-            <header>        
-                <div class="idiomas">
-                        <p class="idiomas">
-                            <a href="index.html">
-                                <img src="/images/Espanol.png">
-                            </a>
-                            <a href="index.html">
-                                <img src="/images/ingles.png">
-                            </a>
-                        </p>
-                </div>
-                <section class="cabecera">
-                    <div class="marcoLogo"> 
-                        <a href="/"><img class="logo" src="/images/logo g5.png"  alt="Logo de Bodega G5"></a>
-                    </div>
-                
-                    <nav class="mainmenu">
-                        <ul>
-                            <li><a href="menu1">Nuestra Historia</a></li>
-                            <li><a href="/productDetail">Productos</a></li>
-                            <li><a href="/register">Registrate</a></li>
-                            <li><a href="/login">Login</a></li>
-                            <li><a href="menu5">Contactenos</a></li>
-                            <li><a href="/productCart">Compras &nbsp<i class="fas fa-shopping-cart"></i></a> </li>
-                        </ul>  
-                    </nav>
-                    <button class="burguermenu" type="button">
-                        <i class="fas fa-bars"></i>
-                    </button>
-        
-                </section>    
-            </header>
+            
      
 
               
@@ -138,54 +106,5 @@
             
 
 </body>
-<footer> <!--Crear footer con la posibilidad de tener flexbox y luego utilizarlo en todas las paginas-->
-    <section class="logoyredes"> <!--Poner logo pequeño al lado izquierdo-->
-        <img class="fLogo" src="/images/logo g5.png"  alt="Logo de Bodega G5">    
-        <div class="redes">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-whatsapp"></i>
-        </div>
-    </section>
-    <section>
-        <div class="fSubtitulo">
-            <div class="fLogoyTexto">
-                <i class="fas fa-map-marked-alt">&nbsp</i>
-                <p>UBICACIÓN</p>
-            </div>
-            <div class="fLogoyTextoBajo">
-                <i class="fas fa-map-marker-alt">&nbsp</i>
-                <p>Avenida 5ta con 25</p>
-            </div>
-            <div class="fLogoyTextoBajo">
-                <i class="far fa-envelope">&nbsp</i>
-                <p>bodega_grupo5@gmail.com</p>
-            </div>
-            <div class="fLogoyTextoBajo">
-                <i class="fas fa-phone-alt">&nbsp</i>
-                <p>+57 325 303 74 25</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="fSubtitulo">
-            <div class="fLogoyTexto">
-                <i class="far fa-clock">&nbsp</i>
-                <p>HORARIO DE ATENCIÓN</p>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="fSubtitulo">
-            <div class="fLogoyTexto">
-                <i class= "fas fa-money-bill-wave-alt">&nbsp</i>
-                <p>PAGOS SEGUROS POR</p>
-            </div>
-            <div>
-                <img class="logoPagos" src="/images/logospago.png"  alt="Logo pagos">
-            </div>
-        </div>
-    </section>
-</footer>
+<%- include('./partials/footer') %>
 </html>

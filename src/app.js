@@ -10,6 +10,7 @@ const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/userRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 const productRoutes = require('./routes/productRoutes');
+const prueba = require('./routes/prueba');
 
 
 
@@ -18,7 +19,7 @@ app.use('/',mainRoutes);
 app.use('/register',userRoutes);
 app.use('/login',loginRoutes);
 app.use('/productCart',productRoutes);
-app.use('/productDetail',productRoutes);
+app.use('/productDetail',prueba);
 /*app.get('/productCart', (req,res)=>{
     res.sendFile(__dirname + '/views/productCart.html');
 });*/
