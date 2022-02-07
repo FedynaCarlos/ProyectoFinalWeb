@@ -1,43 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+<%- include('./partials/head') %>
 <head>
-    <%- include('./partials/head') %>
-    <title>Resgitro</title>
-    <link rel="stylesheet" href="css/stylesRegister.css">
+    <title>Registro</title>
+    <!--<link rel="stylesheet" href="css/stylesRegister.css">-->
 </head>
 <body>
-    <header>        
-        <div class="idiomas">
-                <p class="idiomas">
-                    <a href="index.ejs">
-                        <img src="/images/Espanol.png">
-                    </a>
-                    <a href="index.ejs">
-                        <img src="/images/ingles.png">
-                    </a>
-                </p>
-        </div>
-        <section class="cabecera">
-            <div class="marcoLogo"> 
-                <a href="/"><img class="logo" src="/images/logo g5.png"  alt="Logo de Bodega G5"></a>
-            </div>
-        
-            <nav class="mainmenu">
-                <ul>
-                    <li><a href="menu1">Nuestra Historia</a></li>
-                    <li><a href="/productDetail">Productos</a></li>
-                    <li><a href="/register">Registrate</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="menu5">Contactenos</a></li>
-                    <li><a href="/productCart">Compras &nbsp<i class="fas fa-shopping-cart"></i></a> </li>
-                </ul>  
-            </nav>
-            <button class="burguermenu" type="button">
-                <i class="fas fa-bars"></i>
-            </button>
-
-        </section>    
-    </header>
+    <%- include('./partials/header') %>
+    
     <main>  <!--Se realiza main con la finanlidad de poder realizar un flexbox y poder manejar sus propiedades-->
         <form action="" method="post" class="create-user">
             <div class="control-formulario">

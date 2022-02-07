@@ -1,17 +1,6 @@
-*{
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Raleway', sans-serif;
-    
-}
-header{
-    background: rgb(136,102,53);
-    background: linear-gradient(90deg, rgba(136,102,53,1) 0%, rgba(96,70,33,1) 35%, rgba(87,70,48,1) 100%);
-}
-
-
-
-
+@import url('stylesHyF.css');
+@import url('styleIndex.css');
+@import url('stylesRegister.css');
+@import url('stylesproductCart.css');
+@import url('stylesproductDetail.css');
 

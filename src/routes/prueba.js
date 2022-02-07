@@ -4,7 +4,7 @@ const pruebaProductDetail = require('../controllers/pruebaControllers');
 
 
 
-router.get('/',pruebaProductDetail.productoDetail);
+//router.get('/',pruebaProductDetail.productoDetail);
 
 
 module.exports = router;

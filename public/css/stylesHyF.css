@@ -80,8 +80,68 @@ header ul li{
     font-size: 25px;
 }
 
+footer{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #bbac96;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 400px;
+}
+.fLogo{
+    border-radius: 50%;
+    width: 80px;
+    padding: 5px;
+}
+.logoyredes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.redes{
+    display: flex;
+    color: #5b5d63;
+    justify-content: space-around;
+    padding: 5% 0;
+ 
+}
+.redes i{
+    width:40px;
+    height: 40px;
+    text-align: center;
+    padding: 10% 0;
+}
+.fSubtitulo{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    max-width: 230px;
+}
+
+.fLogoyTexto{
+    display: flex;
+}
+.fLogoyTextoBajo{
+    display: flex;
+    padding-top: 10px;
+    color: #5b5d63;
+}
+.logoPagos{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+
 @media (min-width: 361px){
     header{
+        width: 100%;
+    }
+    footer{
         width: 100%;
     }
 }
@@ -102,3 +162,4 @@ header ul li{
         font-size: 20px;
     }
 }
+

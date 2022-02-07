@@ -1,13 +1,15 @@
-const productoController ={
+const pController ={
+    productos: (req,res) => {
+        res.render('productDetail');
+    },
     productCart: (req,res) => {
-         res.render('productCart');
+        res.render('productCart');
+    },  
+    crear: (req,res) =>{
+        res.render('createProduct')
     }
-    ,  
-    productoDetail:(req,res)=>{
-        res.render('productDetail')
-    
-}
-}
-module.exports = productoController;
+};
+
+module.exports = pController;
 
 

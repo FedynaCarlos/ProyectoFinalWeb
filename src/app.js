@@ -10,7 +10,7 @@ const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/userRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 const productRoutes = require('./routes/productRoutes');
-const prueba = require('./routes/prueba');
+//const prueba = require('./routes/prueba');
 
 
 
@@ -18,8 +18,12 @@ const prueba = require('./routes/prueba');
 app.use('/',mainRoutes);
 app.use('/register',userRoutes);
 app.use('/login',loginRoutes);
-app.use('/productCart',productRoutes);
-app.use('/productDetail',prueba);
+//app.use('/productCart',productRoutes);
+//app.use('/createProduct',productRoutes);
+app.use('/productos',productRoutes);
+app.use('/about',mainRoutes);
+
+
 /*app.get('/productCart', (req,res)=>{
     res.sendFile(__dirname + '/views/productCart.html');
 });*/

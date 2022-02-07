@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<<%- include('./partials/head') %>
+<head>
+    <title>Crear Productos</title>
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <main>
+        <h2>Formulario de creación de productos</h2>
+        <!--Se realiza main con la finanlidad de poder realizar un flexbox y poder manejar sus propiedades-->
+        <form action="" method="post" class="createProduct">
+           <div class="controlIngresoProductos">
+               <label for="">Nombre del Producto</label>
+               <input type="text" name="nombreProducto" id="nProducto" placeholder="Ej: Vino casillero del Diablo">
+           </div>
+            <div class="controlIngresoProductos">
+                <label for="">Precio del produto:</label>
+                <input type="number" name="precioProducto" id="pProducto" placeholder="Ej: 5.400">
+            </div>
+            <div class="controlIngresoProductos">
+                <label for="">Descuento:</label>
+                <input type="number" name="precioProducto" id="pProducto" placeholder="Ej: 5.400">
+            </div>
+            <div class="controlIngresoProductos">
+                <label for="">Categoría:</label>
+                <select name="categoriaProducto" id="catProducto">
+                    <option value="1">Espumosos</option>
+                    <option selected="selected" value="2">Blanco</option>
+                    <option value="3">Tinto</option>
+                    <option value="4">Rosado</option>
+                </select>
+            </div>
+            <div class="controlIngresoProductos">
+                <label for="">Agregar imagen</label>
+                <input type="file" name="imgProducto" id="pProducto">
+            </div>
+            <div class="controlIngresoProductos">
+                <label for="">Descripción</label>
+                <textarea cols="20" name="descripción" id="descripcionProducto" rows="5">Descripción</textarea>
+            </div>
+            <div class="controlIngresoProductos">
+                <button type="reset" class="boton-guardarP">Guardar Producto</button>
+            </div>
+        </form>
+
+
+</body>
+</html>

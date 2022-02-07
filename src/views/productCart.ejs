@@ -1,44 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="css/stylesproductCart.css">
     <title>sección del carrito de compras</title>
 </head>
+<%- include ('./partials/head') %>
 <body>
-    <header>        
-        <div class="idiomas">
-                <p class="idiomas">
-                    <a href="index.html">
-                        <img src="/images/Espanol.png">
-                    </a>
-                    <a href="index.html">
-                        <img src="/images/ingles.png">
-                    </a>
-                </p>
-        </div>
-        <section class="cabecera">
-            <div> 
-                <a href="/"><img class="logo" src="/images/logo g5.png"  alt="Logo de Bodega G5"></a>
-            </div>
-        
-            <nav class="mainmenu">
-                <ul>
-                    <li><a href="menu1">Nuestra Historia</a></li>
-                    <li><a href="/productDetail">Productos</a></li>
-                    <li><a href="/register">Registrate</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="menu5">Contactenos</a></li>
-                    <li><a href="/productCart">Compras <i class="fas fa-shopping-cart"></i></a> </li>
-                </ul>  
-            </nav>    
-        </section>    
-    </header>
+    <%- include('./partials/header') %>
     <main>
         <h2 class="titulo-main">Tus productos</h2>
         <!-- TITULOS DEL CONTENIDO DEL CARRO -->
@@ -161,11 +128,7 @@
                     </div> </article>
         </section>
         <article>     
-    <footer>          
-        <div class="copyright">
-            <p>Copyright O 2022 Bodegas y Viñedos Grupo 5 S.R.L.</p>
-        </div>  
-    </footer> 
+    <%- include('./partials/footer') %>
 </body>
 
 </html>

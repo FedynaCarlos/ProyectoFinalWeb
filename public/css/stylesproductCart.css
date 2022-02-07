@@ -1,4 +1,4 @@
-*{
+/**{
   margin: 0px;
   padding: 0px;    
   box-sizing: border-box;
@@ -57,7 +57,7 @@ margin-top: 0.5%;
 }
 .busqueda{
 /*display: flex;
-justify-content:flex-start;*/
+justify-content:flex-start;
 font:bold;
 color: whitesmoke;
 }
@@ -80,6 +80,7 @@ header .busqueda .submit{
 }
 /*----Fin Header-----*/
 /*TITULOS DEL CONTENIDO DEL CARRO*/
+
 .titulo-main{  
   background-color:none;
   text-align: center;

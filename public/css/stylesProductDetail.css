@@ -1,4 +1,4 @@
-*{
+/**{
     margin: 0px;
     padding: 0px;    
     box-sizing: border-box;
@@ -10,7 +10,7 @@ header .cabecera {
 
 /****************************** Idiomas ******************************/
 
-.idiomas {
+/*.idiomas {
 	background:hsl(40, 7%, 74%);
 }
 
@@ -26,7 +26,7 @@ p.idiomas {
 
 /************************************************************************/
 
-header ul li{
+/*header ul li{
     list-style-type: none;
     
 }
@@ -73,7 +73,7 @@ header ul li{
 
 .busqueda{
 	/*display: flex;
-	justify-content:flex-start;*/
+	justify-content:flex-start;
 	font:bold;
 	color: whitesmoke;
 }
@@ -118,7 +118,7 @@ header .busqueda .submit{
     align-self: flex-start;
 }
     
-
+*/
 
 .contenedorMayor{
 	
@@ -142,7 +142,7 @@ header .busqueda .submit{
 }
 
 .contenedor2{
-	height: 300px;
+	height: auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -163,7 +163,7 @@ header .busqueda .submit{
     margin: 5px 5px;
 }
 /*footer*/
-
+/*
 footer{
     margin-top: 60px;
     padding: 10px;
@@ -220,3 +220,4 @@ footer{
     width: 100%;
 }
 
+*/
