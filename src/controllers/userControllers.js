@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const usuariosController = {
     register: (req,res) => {
         res.render('register.ejs');

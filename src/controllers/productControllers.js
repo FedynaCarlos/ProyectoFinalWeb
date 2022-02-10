@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const pController ={
     productos: (req,res) => {
         res.render('productDetail');
