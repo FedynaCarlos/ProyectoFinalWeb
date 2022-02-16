@@ -16,4 +16,11 @@ el link del tablero es este https://trello.com/b/fEkoz6sI/bodegagrupo5
 alli vamos anotando las tareas.
 
 en cuanto a código, nos esta faltando mas tiempo de trabajo, pero eso es por una situacion especifica de estos dias, estamos en conversacion para laburar mas en el código.
-se estan tomando deciciones como hacer partes del código que sean mas genericas, y centrarnos en los detalles mas delicados del proyecto.
+Se estan tomando deciciones como hacer partes del código que sean mas genericas, y centrarnos en los detalles mas delicados del proyecto.
+con el tema de directorios y archivos de las vistas eso ya lo tenemos funcional.
+
+Completamos la carpeta partials dentro de views con los archivos correspondiente.
+tenemos el sitio actualizado.
+ Con respecto al producto tomamos la decisión de de agregar la categoria, era un detalle que nos faltaba especificar.
+Como sintesis a mejorar, mas alla de que algo del código hemos pulido, decidimos mejorar la parte estetica visual, pero lo dejamos para lugo de implementar las los ultimos conceptos aprendidos.
+en cuanto a trabajo ya nos estamos adecuando a los conocimientos de unos y otros integrantes, a cada uno le gusta trabajar de la mejor manera,  y cada uno tiene habilidades diferentes, que de a poco queremos compatibilizar para sacar el mayor provecho a la hora de mejorar nuestro proyecto.
