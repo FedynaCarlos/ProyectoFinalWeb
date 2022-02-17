@@ -1,0 +1,15 @@
+[   {"nombre":"Espumante","precio":4000 ,"categoria":"espumoso","cepa":"Chardonnay","descripcion":"","image":"../public/images/clogoespumante.jpg"},
+
+    {"nombre":"Judas","precio":6000 ,"categoria":"Tinto","cepa":"Malbec","descripcion":"","image":"../public/images/Judas_Malbec.jpg"},
+    
+    {"nombre":"Junior Blend","precio":5500 ,"categoria":"Tinto","cepa":"Malbec","descripcion":"","image":"../public/images/Junior_Blend.jpg"},
+
+    {"nombre":"La consulta","precio":5000 ,"categoria":"Tinto","cepa":"Malbec","descripcion":"","image":"../public/images/LaConsulta.jpg"},
+
+    {"nombre":"Maria Magdalena","precio":4500 ,"categoria":"Blanco","cepa":"Chardonnay","descripcion":"","image":"../public/images/María_Magdalena.jpg/"},
+
+    {"nombre":"Malma","precio":5000 ,"categoria":"Tinto","cepa":"Malbec","descripcion":"","image":"../public/images/Reserva_de_Familia_Malbec.jpg"},
+
+    {"nombre":"Santa rita","precio":6000 ,"categoria":"Tinto","cepa":"Cabernet sauvignon","descripcion":"","image":"../public/images/SantaRita.jpg"}
+    
+]
