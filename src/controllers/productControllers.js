@@ -4,6 +4,9 @@ const pController ={
     productos: (req,res) => {
         res.render('productDetail');
     },
+    productosPrincipal: (req,res)=>{
+        res.render('products');
+    },
     productCart: (req,res) => {
         res.render('productCart');
     },  
