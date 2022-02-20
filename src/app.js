@@ -23,7 +23,7 @@ app.use('/productos',productRoutes);
 app.use('/about',mainRoutes);
 
 //Levantar servidor
-app.listen(3030, ()=>{
+app.listen(3000, ()=>{
     console.log('Servidor funcionando');
 });
 
