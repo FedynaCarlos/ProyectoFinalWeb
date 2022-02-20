@@ -1,4 +1,5 @@
 const express = require('express');
+const methodOverride =  require('method-override');
 
 const app = express();
 
@@ -10,6 +11,10 @@ app.set('view engine','ejs');
 const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+
+// middlewares
+app.use(methodOverride('_method'));
+
 
 //Rutas a usar
 app.use('/',mainRoutes);
