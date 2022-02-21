@@ -11,6 +11,7 @@ app.set('view engine','ejs');
 const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+const res = require('express/lib/response');
 
 // middlewares
 app.use(methodOverride('_method'));
@@ -26,4 +27,7 @@ app.use('/about',mainRoutes);
 app.listen(3000, ()=>{
     console.log('Servidor funcionando');
 });
-
+// error 404
+app.use(function(req,res,next) {
+    res.status(404).render('not-found');
+});
