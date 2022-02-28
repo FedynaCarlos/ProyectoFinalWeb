@@ -25,6 +25,8 @@ var upload = multer({storage: storage})
 router.get('/',uController.Users);
 router.get('usuariosPrincipal',uController.usuariosPrincipal)
 
+
+
 /*** CREAR UN PRODUCTO ***/ 
 
 router.get('/createUsers',uController.crear);
