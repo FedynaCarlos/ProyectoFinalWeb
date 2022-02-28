@@ -22,6 +22,8 @@ app.use('/',mainRoutes);
 app.use('/user',userRoutes);
 app.use('/productos',productRoutes);
 app.use('/about',mainRoutes);
+app.use('/users',mainRoutes);
+
 
 //Levantar servidor
 app.listen(3030, ()=>{

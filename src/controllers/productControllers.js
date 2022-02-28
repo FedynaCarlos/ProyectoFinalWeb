@@ -17,11 +17,15 @@ const pController ={
     productCart: (req,res) => {
         res.render('productCart');
     },  
+	
     /*formulario de creacion*/
 
     crear: (req,res) =>{
         res.render('createProduct')
     },
+	
+
+
 
     	// Create -  Method to store
 	almacenar: (req, res) => {
