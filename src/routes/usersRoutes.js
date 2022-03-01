@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const uController = require('../controllers/usersControllers');
+const pController = require('../controllers/productControllers');
 const validationCreate = require('../middlewares/validation');
 const multer = require('multer');
 const path = require('path');
@@ -22,15 +22,15 @@ var upload = multer({storage: storage})
 // fin
 
 
-router.get('/',uController.Users);
-router.get('usuariosPrincipal',uController.usuariosPrincipal)
-
-
+router.get('/',pController.productos);
+router.get('/productosPrincipal',pController.productosPrincipal)
 
 /*** CREAR UN PRODUCTO ***/ 
 
-router.get('/createUsers',uController.crear);
-router.post('/', upload.single('image'),validationCreate, uController.almacenar); 
+router.get('/createProduct',pController.crear);
+router.post('/', upload.single('image'),validationCreate, pController.almacenar); 
+
+router.get('/productCart',pController.productCart);
 
 
 

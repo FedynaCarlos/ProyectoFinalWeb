@@ -2,23 +2,29 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 
-const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const uController ={
-    usuarios: (req,res) => {
-        res.render('createUsers');
+const pController ={
+    productos: (req,res) => {
+        res.render('productDetail');
     },
-    
-	usuariosPrincipal: (req,res)=>{
-        res.render('Users');
+    productosPrincipal: (req,res)=>{
+        res.render('products');
     },
-    /*formulario de creacion*/
+    productCart: (req,res) => {
+        res.render('productCart');
+    },  
 	
+    /*formulario de creacion*/
+
     crear: (req,res) =>{
-        res.render('createUsers')
+        res.render('createProduct')
     },
+	
+
 
 
     	// Create -  Method to store
@@ -28,7 +34,7 @@ const uController ={
 		
 
 		if (!errors.isEmpty()) {
-            return res.render('createUsers', { errors: errors.mapped(), old: req.body })
+            return res.render('createProduct', { errors: errors.mapped(), old: req.body })
 			
 		}else{
 
@@ -39,18 +45,18 @@ const uController ={
 				image = 'default-image.png'
 			}
 			
-			let nuevoUsuario = {
-				id: usuarios[usuarios.length - 1].id + 1,
+			let nuevoProducto = {
+				id: productos[productos.length - 1].id + 1,
 				...req.body,
 				image
 
 			};
-			 let nuevoUsuario = [...usuarios, nuevoUsuario]
-			fs.writeFileSync(usersFilePath, JSON.stringify(usuarioNuevo, null, ' '));
+			 let productoNuevo = [...productos, nuevoProducto]
+			fs.writeFileSync(productsFilePath, JSON.stringify(productoNuevo, null, ' '));
 			res.redirect('/');
 		}
 
 	}
 };
 
-module.exports = uController;
+module.exports = pController;
