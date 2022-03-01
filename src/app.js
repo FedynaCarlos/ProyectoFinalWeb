@@ -11,6 +11,7 @@ app.set('view engine','ejs');
 const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 const res = require('express/lib/response');
 
 // middlewares
@@ -22,9 +23,7 @@ app.use('/',mainRoutes);
 app.use('/user',userRoutes);
 app.use('/productos',productRoutes);
 app.use('/about',mainRoutes);
-
-
-
+app.use('/administrar',adminRoutes);
 
 //Levantar servidor
 app.listen(3030, ()=>{

@@ -5,8 +5,13 @@
     <%- include('partials/header') %>
     <main class="body-produts">
         <section class="visita">
-            <h3>LISTADO DE PRODUCTOS</h3>
+            <h3>ADMINISTRADOR DE PRODUCTOS</h3>
         </section>
+        <article class="col-12">
+            <a href="/administrar/create">
+                <ion-icon name="add-circle-outline"></ion-icon>Agregar
+            </a>
+        </article>
         <div class="menu-productos">
             <table class="table">
                 <thead>
@@ -20,8 +25,16 @@
                 </thead>
 
                 <tbody>
-                     
-                    <td><%= %></td>
+                    <% productos.forEach(producto => { %>
+                      <tr>
+                        <td><%= producto.id%> </td>
+                        <td><%= producto.nombre%> </td>
+                        <td><a href="/administrar/detail/<%= producto.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                        <td><a href="/administrar/edit/<%= producto.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                        <td><a href="/administrar/delete/<%= producto.id%> "><ion-icon name="trash-outline"></ion-icon></a></td>
+                      </tr>
+                    <% }); %>
+                    
                 </tbody>
             </table>
 
@@ -29,7 +42,7 @@
 
         </div>
 
-
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </main>
 </body>
 </html>

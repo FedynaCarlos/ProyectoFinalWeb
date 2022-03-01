@@ -61,5 +61,14 @@
   "cepa": "Cabernet sauvignon",
   "descripcion": "",
   "image": "../public/images/SantaRita.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Prueba",
+  "precio": "5000",
+  "cepa": "Shiraa",
+  "categoria": "Tinto",
+  "descripcion": "Haciendo prueba del crud",
+  "image": "image-1646105601403.jpg"
  }
 ]
