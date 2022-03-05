@@ -41,7 +41,12 @@ const controllerAdmin = {
           miProducto = producto;
         }
       });
-      res.render('productDetail', {miProducto});
+      res.render('detail', {miProducto});
+    },
+    edit: (req,res) => {
+      const productoId = req.params.id;
+      let productosEditar = productos.find(producto => producto.id == productoId);
+      res.render('editProduct', { productosEditar })
     }
 }
 

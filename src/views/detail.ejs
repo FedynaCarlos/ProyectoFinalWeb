@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+  <head>
+    <title>Detalle Productos</title>
+  </head>
+
+  <body>
+    <%- include('./partials/header') %>
+    <section>
+      <!--div mostrar imagen-->
+      <div class="contenedor1">
+        <!--contenedor1-->
+        <div class="elemento1">
+          <!--elemento1-->
+          <img src="/images/<%= miProducto.image%>" width="110" class="product_img">
+          <i class="fas fa-truck"></i>
+    
+          <h4 class="description"><%= miProducto.nombre%></h4>
+        </div>
+        <!--fin de elemnto1-->
+        <!--descripcion del producto-->
+        <div class="elemento2">
+          <!--elemento 2-->
+          <h3>Producto</h3>
+          <br>
+          <br>
+          <p><%= miProducto.nombre%> <br>
+          <P><%= miProducto.descripcion%></P> <br>
+          <p><%= miProducto.cepa%></p>
+          <p><%= miProducto.categoria%></p>
+          <p><%= miProducto.precio%></p>
+          
+          <p></p>
+          <br>
+          <br>
+        </div>
+      </div>
+    </section>
+    <%- include('partials/footer') %>
+  </body>
+

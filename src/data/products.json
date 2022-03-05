@@ -23,7 +23,7 @@
   "precio": 5500,
   "categoria": "Tinto",
   "cepa": "Malbec",
-  "descripcion": "",
+  "descripcion": "Vino con excelentes aromas",
   "image": "../public/images/Junior_Blend.jpg"
  },
  {
@@ -51,7 +51,7 @@
   "categoria": "Tinto",
   "cepa": "Malbec",
   "descripcion": "",
-  "image": "../public/images/Reserva_de_Familia_Malbec.jpg"
+  "image": "Reserva_de_Familia_Malbec.jpg"
  },
  {
   "id": 7,
@@ -60,7 +60,7 @@
   "categoria": "Tinto",
   "cepa": "Cabernet sauvignon",
   "descripcion": "",
-  "image": "../public/images/SantaRita.jpg"
+  "image": "SantaRita.jpg"
  },
  {
   "id": 8,
