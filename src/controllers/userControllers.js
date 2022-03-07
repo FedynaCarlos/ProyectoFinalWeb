@@ -12,7 +12,7 @@ const usuariosController = {
     create: (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.render('createProduct', { errors: errors.mapped(), old: req.body })
+            return res.render('register', { errors: errors.mapped(), old: req.body })
         } else {
             let image
             if (req.file != undefined) {

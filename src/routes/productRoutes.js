@@ -30,6 +30,11 @@ router.get('/productosPrincipal',pController.productosPrincipal)
 router.get('/createProduct',pController.crear);
 router.post('/', upload.single('image'),validationCreate, pController.almacenar); 
 
+
+//CREAR UN USUARIO
+router.get('/createUsuario',pController.crear);
+router.post('/', upload.single('image'),validationCreate, pController.almacenar); 
+
 router.get('/productCart',pController.productCart);
 
 
