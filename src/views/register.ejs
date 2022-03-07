@@ -9,7 +9,7 @@
     <%- include('./partials/header') %>
     
     <main>  <!--Se realiza main con la finanlidad de poder realizar un flexbox y poder manejar sus propiedades-->
-        <form action="" method="post" class="create-user">
+        <form action="/user" method="POST" class="create-user" enctype="multipart/form-data">
             <div class="control-formulario">
                 <p>
                     <i class="far fa-question-circle"></i><b> Ya tienes cuenta? </b><a href="/user/login">!Inicie sesión¡</a>
@@ -30,8 +30,12 @@
             <div class="control-formulario">
                 <input type="date" name="fechaNacimiento" placeholder="Fecha Naciemiento" class="control">
             </div>
-            <div  class="control-formulario">
+            <div class="control-formulario">
                 <input type="text" name="telefono" placeholder="Telefono" class="control">
+            </div>
+            <div class="control-formulario">
+                <label for="">Agregar imagen</label>
+                <input type="file" name="image" id="image">
             </div>
             <div  class="control-formulario">
                 <input type="password" name="password" placeholder="Password" class="control">
@@ -40,7 +44,7 @@
                 <input type="password" name="cpassword" placeholder="Confirmar Password" class="control">
             </div>
             <div class="control-formulario">
-                <button type="reset" class="boton-formulario">Guardar</button>
+                <button type="submit" class="boton-formulario">Guardar</button>
             </div>
             
         </form>
