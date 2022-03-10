@@ -6,9 +6,8 @@
 </head>
 <body>
     <%- include('./partials/header') %>
-    
     <main>
-        <form action="" method="post" class="create-user">
+        <form action="/user/login" method="POST" class="create-user">
             
             <h3 class="titulo-register">
                 Ingresa tu e-mail y contraseña
@@ -23,7 +22,7 @@
                 <p class="ocontrasena"><a href="#">Olvidaste tu contraseña?</a></p>
             </div>
             <div class="control-formulario">
-                <button type="reset" class="boton-formulario">Ingresar</button>
+                <button type="submit" class="boton-formulario">Ingresar</button>
             </div>
             <div class="linea"></div>
             <div>

@@ -21,6 +21,7 @@ var upload = multer({storage})
 router.get('/register', usuariosController.register);
 router.post('/',upload.single('image'), usuariosController.create);
 router.get('/login',usuariosController.login);
+router.post('/login',usuariosController.authenticate);
 
 
 module.exports = router;

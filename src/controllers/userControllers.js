@@ -4,6 +4,7 @@ const { validationResult } = require('express-validator');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const bcrypt = require('bcryptjs');
 
 const usuariosController = {
     register: (req,res) => {
@@ -25,13 +26,23 @@ const usuariosController = {
                 ...req.body,
                 image
             }
-            let usuarioNuevo = [...usuarios, nuevoUser]
+            nuevoUser.category = 'user';
+            nuevoUser.password = bcrypt.hashSync(nuevoUser.password, 10);
+            delete nuevoUser.cpassword;
+            let usuarioNuevo = [...usuarios, nuevoUser];
+            usuarioNuevo.password = bcrypt.hashSync(nuevoUser.password, 10);
             fs.writeFileSync(usersFilePath, JSON.stringify(usuarioNuevo, null, ''));
             res.redirect('/');
         }
     },
+
     login:(req,res)=> {
         res.render('login.ejs');
+    },
+    authenticate: (req, res) => { 
+        // si existe el mail
+        res.send(req.body);
+        //const user = 
     }
 }
 
