@@ -5,7 +5,6 @@ const { validationResult } = require('express-validator');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcrypt = require('bcryptjs');
-
 const usuariosController = {
     register: (req,res) => {
         res.render('register.ejs');
@@ -21,10 +20,15 @@ const usuariosController = {
             } else {
                 image = '/users/404-user.jpg'
             }
+    
             let nuevoUser = {
                 id: usuarios[usuarios.length -1].id +1,
                 ...req.body,
-                image
+                //agregado hoy 8
+                //image:req.file ? req.file.filename : 'default-image.png',
+				//category : 'user'
+                
+                //image
             }
             nuevoUser.category = 'user';
             nuevoUser.password = bcrypt.hashSync(nuevoUser.password, 10);
