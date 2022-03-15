@@ -55,6 +55,8 @@ h2{
 }
 .textaread{
     border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: large; 
 }
 
 .boton-guardarP{

@@ -46,8 +46,28 @@ const controllerAdmin = {
     edit: (req,res) => {
       const productoId = req.params.id;
       let productosEditar = productos.find(producto => producto.id == productoId);
-      res.render('editProduct', { productosEditar })
+      res.render('editProduct', { productosEditar });
+    },
+    update: (req,res) => {
+      req.body.id = req.params.id;
+      req.body.image = req.file ? req.file.name : req.body.oldImagen;
+      let productosUpdate = productos.map(producto => {
+        if (producto.id == req.body.id){
+          return producto = req.body;
+        }
+        return producto;
+      })
+      let productoActualizar = JSON.stringify(productosUpdate, null, 2);
+      fs.writeFileSync(productsFilePath, productoActualizar)
+      res.redirect('/administrar');
+    },
+    destroy: (req, res) => {
+      const productoDeletId = req.params.id;
+      const productosFinal = productos.filter(producto => producto.id != productoDeletId);
+      let productoGuardar = JSON.stringify(productosFinal, null, 2);
+      fs.writeFileSync(productsFilePath, productoGuardar);
+      res.redirect('/administrar');
     }
 }
-
+ 
 module.exports = controllerAdmin;

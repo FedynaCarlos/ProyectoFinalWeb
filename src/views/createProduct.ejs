@@ -36,14 +36,14 @@
                 <label for="">Categoría:</label>
                 <select class="input1" name="categoria" id="categoria">
                     <option selected="selected" value="">  </option>
-                    <option value="Espumante">Espumante</option>
+                    <option value="Espumante">Espumoso</option>
                     <option value="Blanco">Blanco</option>
                     <option value="Tinto">Tinto</option>
                     <option value="Rosado">Rosado</option>
                 </select>
-                <% if (typeof errors != 'undefined' && typeof errors.categoria != 'undefined') { %>
+            <!--     <% if (typeof errors != 'undefined' && typeof errors.categoria != 'undefined') { %>
                     <span style="color: red"><%= errors.categoria.msg %></span> 
-                <% } %>
+                <% } %> -->
             </div>
             <div class="controlIngresoProductos">
                 <label for="">Agregar imagen</label>
@@ -52,7 +52,7 @@
             
             <div class="controlIngresoProductos2">
                 <label for="">Descripción</label>
-                <textarea class="textaread" cols="90" name="descripcion" id="descripcion" rows="8" placeholder="Breve descripción"></textarea>
+                <textarea class="textaread" cols="90" name="descripcion" id="descripcion" rows="6" placeholder="Breve descripción"></textarea>
             </div>
             <% if (typeof errors != 'undefined' && typeof errors.descripcion != 'undefined') { %>
                 <span style="color: red"><%= errors.descripcion.msg %></span> 
