@@ -8,6 +8,7 @@ const validationUsers = [
     check('email').notEmpty().withMessage('No puede estar vacio').bail().isEmail().withMessage('Debe ser un campo Email').bail(),
     check('fechaNacimiento').notEmpty().withMessage('No puede estar vacio').bail().isDate().withMessage('Debe ingresar una fecha valida').bail(),
     check('telefono').notEmpty().withMessage('No puede estar vacio').bail().isNumeric().withMessage('Debe ingresar un numero valido').bail(),
+    // chequeo que la imagen este y sea de un formato especifico
     check('image').custom((value, { req })=>{
         let file = req.file;
         let trueExtension = ['.jpg','.png','gif'];
