@@ -11,8 +11,9 @@ const usuariosController = {
     },
     create: (req, res) => {
         const errors = validationResult(req);
+        //return res.send(errors.mapped())
         if (!errors.isEmpty()) {
-            return res.render('register', { errors: errors.mapped(), old: req.body })
+            return res.render('register', { errors: errors.mapped(), oldData: req.body })
         } else {
             let image
             if (req.file != undefined) {
@@ -23,19 +24,14 @@ const usuariosController = {
     
             let nuevoUser = {
                 id: usuarios[usuarios.length -1].id +1,
-                ...req.body,
-                //agregado hoy 8
-                //image:req.file ? req.file.filename : 'default-image.png',
-				//category : 'user'
-                
-                //image
+                ...req.body, image
             }
             nuevoUser.category = 'user';
             nuevoUser.password = bcrypt.hashSync(nuevoUser.password, 10);
             delete nuevoUser.cpassword;
             let usuarioNuevo = [...usuarios, nuevoUser];
             usuarioNuevo.password = bcrypt.hashSync(nuevoUser.password, 10);
-            fs.writeFileSync(usersFilePath, JSON.stringify(usuarioNuevo, null, ''));
+            fs.writeFileSync(usersFilePath, JSON.stringify(usuarioNuevo, null, ' '));
             res.redirect('/');
         }
     },

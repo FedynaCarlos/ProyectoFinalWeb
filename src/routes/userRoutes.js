@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const usuariosController = require('../controllers/userControllers');
+const validationUsers = require('../middlewares/validationUsers');
 const multer = require('multer');
 const path = require('path');
 
@@ -19,7 +20,7 @@ var upload = multer({storage})
 
 
 router.get('/register', usuariosController.register);
-router.post('/',upload.single('image'), usuariosController.create);
+router.post('/',upload.single('image'), validationUsers, usuariosController.create);
 router.get('/login',usuariosController.login);
 router.post('/login',usuariosController.authenticate);
 

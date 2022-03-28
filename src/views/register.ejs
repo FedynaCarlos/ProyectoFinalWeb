@@ -19,29 +19,70 @@
                 Regístrate
             </h3>
             <div  class="control-formulario">
-                <input type="text" name="nombres" placeholder="Nombres " class="control" required>
+                <input 
+                    type="text" 
+                    name="nombres" 
+                    placeholder="Nombres" 
+                    class="control <%= locals.errors && errors.nombres ? 'is-invalid' : null %>"
+                    value="<%=locals.oldData ? oldData.nombres : null %>"
+                >
+                    <% if (locals.errors && errors.nombres) { %>
+                    <div>
+                        <span style="color: red; font-size: 10px"><%= errors.nombres.msg %></span> 
+                    </div>
+                    <% } %>
+                    
             </div>
             <div class="control-formulario">
-                <input type="text" name="apellidos" placeholder="Apellidos" class="control" required>
+                <input 
+                    type="text" 
+                    name="apellidos" 
+                    placeholder="Apellidos" 
+                    class="control <%= locals.errors && errors.apellidos ? oninvalid : null %>"
+                    value="<%=locals.oldData ? oldData.apellidos : null %>"
+                    >
+                <% if (typeof errors != 'undefined' && typeof errors.apellidos != 'undefined') { %>
+                    <span style="color: red; font-size: 10px"><%= errors.apellidos.msg %></span> 
+                <% } %>
             </div>
             <div  class="control-formulario">
-                <input type="email" name="email" placeholder="E-mail"class="control">
+                <input type="email" name="email" placeholder="E-mail"class="control"><br>
+                <% if (typeof errors != 'undefined' && typeof errors.email != 'undefined') { %>
+                    <span style="color: red; font-size: 10px"><%= errors.email.msg %></span> 
+                <% } %>
             </div>
             <div class="control-formulario">
-                <input type="date" name="fechaNacimiento" placeholder="Fecha Naciemiento" class="control">
+                <input type="date" name="fechaNacimiento" placeholder="Fecha Nacimiento" class="control"><br>
+                <% if (typeof errors != 'undefined' && typeof errors.fechaNacimiento != 'undefined') { %>
+                    <span style="color: red; font-size: 10px"><%= errors.fechaNacimiento.msg %></span> 
+                <% } %>
             </div>
             <div class="control-formulario">
-                <input type="text" name="telefono" placeholder="Telefono" class="control">
+                <input type="text" name="telefono" placeholder="Telefono" class="control"><br>
+                <% if (typeof errors != 'undefined' && typeof errors.telefono != 'undefined') { %>
+                    <span style="color: red; font-size: 10px"><%= errors.telefono.msg %></span> 
+                <% } %>
             </div>
             <div class="control-formulario">
                 <label for="">Agregar imagen</label>
                 <input type="file" name="image" id="image">
+                <% if (locals.errors && errors.image) { %>
+                    <div>
+                        <span style="color: red; font-size: 10px"><%= errors.image.msg %></span> 
+                    </div>
+                <% } %>
             </div>
             <div  class="control-formulario">
-                <input type="password" name="password" placeholder="Password" class="control">
+                <input type="password" name="password" placeholder="Password" class="control"><br>
+                <% if (typeof errors != 'undefined' && typeof errors.password != 'undefined') { %>
+                    <span style="color: red; font-size: 10px"><%= errors.password.msg %></span> 
+                <% } %>
             </div>
             <div  class="control-formulario">
-                <input type="password" name="cpassword" placeholder="Confirmar Password" class="control">
+                <input type="password" name="cpassword" placeholder="Confirmar Password" class="control"><br>
+                <% if (typeof errors != 'undefined' && typeof errors.cpassword != 'undefined') { %>
+                    <span style="color: red; font-size: 10px"><%= errors.cpassword.msg %></span> 
+                <% } %>
             </div>
             <div class="control-formulario">
                 <button type="submit" class="boton-formulario">Guardar</button>
