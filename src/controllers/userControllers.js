@@ -11,7 +11,7 @@ const usuariosController = {
     },
     create: (req, res) => {
         const errors = validationResult(req);
-        //return res.send(errors.mapped())
+        
         if (!errors.isEmpty()) {
             return res.render('register', { errors: errors.mapped(), oldData: req.body })
         } else {

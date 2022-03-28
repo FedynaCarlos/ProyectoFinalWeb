@@ -18,7 +18,7 @@ const validationUsers = [
         } else {
             let fileExtension = path.extname(file.originalname);
             if (!trueExtension.includes(fileExtension)){
-                throw new Error(`Las extensiones permitidas son ${trueExtension.join(', ')}`)
+                throw new Error(`Las extensiones permitidas son ${trueExtension.join(', ')}`);
             }
         };
             return true;

@@ -91,12 +91,7 @@
             </div>
             <div class="control-formulario">
                 <label for="">Agregar imagen</label>
-                <input 
-                  type="file" 
-                  name="image" 
-                  id="image"
-                  value="<%=locals.oldData ? oldData.image: null %>"
-                >
+                <input type="file" name="image" id="image">
                  <% if (locals.errors && errors.image) { %>
                     <div>
                         <span style="color: red; font-size: 12px"><%= errors.image.msg %></span> 
