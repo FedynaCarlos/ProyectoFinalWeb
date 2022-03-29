@@ -98,5 +98,11 @@
   "telefono": "02615693888",
   "password": "$2a$10$8W46QTm.XEWDWQAGPkmXr.p.6HqnZFPwApGo7ZYC0D5LQwXOAQpOa",
   "category": "user"
+ },
+ {
+  "id": 11,
+  "nombres": "Daniel",
+  "apellidos": "Modarelli",
+  "email": "dmodarelli@gmail.com"
  }
 ]
