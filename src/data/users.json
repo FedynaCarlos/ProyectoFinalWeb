@@ -104,5 +104,37 @@
   "nombres": "Daniel",
   "apellidos": "Modarelli",
   "email": "dmodarelli@gmail.com"
+ },
+ {
+  "id": 12,
+  "nombres": "Daniel",
+  "apellidos": "Modarelli",
+  "email": "modarellidaniel@gmail.com",
+  "fechaNacimiento": "2000-01-01",
+  "telefono": "02615693888",
+  "password": "123456",
+  "cpassword": "123456"
+ },
+ {
+  "id": 13,
+  "nombres": "Daniel",
+  "apellidos": "Modarelli",
+  "email": "modarellidaniel@gmail.com",
+  "fechaNacimiento": "2000-01-01",
+  "telefono": "02615693888",
+  "password": "123456",
+  "cpassword": "123456",
+  "image": "image"
+ },
+ {
+  "id": 14,
+  "nombres": "Daniel",
+  "apellidos": "Modarelli",
+  "email": "modarellidaniel@gmail.com",
+  "fechaNacimiento": "2000-01-01",
+  "telefono": "02615693888",
+  "password": "123456",
+  "cpassword": "123456",
+  "image": "image-1648568112311.jpg"
  }
 ]

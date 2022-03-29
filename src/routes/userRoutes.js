@@ -20,7 +20,7 @@ var upload = multer({storage})
 
 
 router.get('/register', usuariosController.register);
-router.post('/',upload.single('image'), validationUsers, usuariosController.create);
+router.post('/',upload.single('image'), validationUsers, usuariosController.processRegister);
 router.get('/login',usuariosController.login);
 router.post('/login',usuariosController.authenticate);
 
