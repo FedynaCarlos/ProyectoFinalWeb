@@ -28,8 +28,9 @@ app.use('/about',mainRoutes);
 app.use('/administrar',adminRoutes);
 
 //Levantar servidor
-app.listen(3030, ()=>{
-    console.log('Servidor funcionando');
+const puerto = 3030;
+app.listen(puerto, ()=>{
+    console.log('Servidor funcionando en el puerto ' + puerto);
 });
 // error 404
 app.use(function(req,res,next) {

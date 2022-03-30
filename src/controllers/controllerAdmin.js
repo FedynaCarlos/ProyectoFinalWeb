@@ -8,6 +8,7 @@ const { validationResult } = require('express-validator');
 
 const controllerAdmin = {
     index: (req,res) =>{
+      //res.render('listaProductos');
       res.render('listProducts',{ productos });
     },
     create: (req,res) => {

@@ -12,6 +12,51 @@
                 <ion-icon name="add-circle-outline"></ion-icon>Agregar
             </a>
         </article>
+
+    <section>
+      <div class="formulario-creacion">
+        <form method="POST" action="/listaProductos/crear">
+          <div class="campos-formulario">
+            <div>
+              <label for="id">Id</label>
+              <input type="number" name="id" readonly value="id" id="id" />
+              <label for="descripcion">Descripción</label>
+              <textarea name="descripcion" id="descripcion"></textarea>
+            </div>
+            <div>
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" id="nombre" />
+    
+              <label for="tipo">Categoria</label>
+              <select name="tipo" id="tipo">
+                <option selected="selected" value=""> </option>
+                <option value="Espumante">Espumoso</option>
+                <option value="Blanco">Blanco</option>
+                <option value="Tinto">Tinto</option>
+                <option value="Rosado">Rosado</option>
+              </select>
+            <!--  <input class="crear-boton no-mobile" type="submit" value="Crear Producto" /> -->
+            </div>
+            <div>
+              <label for="precio">Precio</label>
+              <input type="number" name="precio" id="precio" />
+              <label for="imagen">Archivo imagen</label>
+              <select name="imagen" id="imagen">
+    
+                <option value="imagen">
+    
+                </option>
+    
+              </select>
+              <input class="no-desktop crear-boton" type="submit" value="Crear Producto" />
+              <button class="no-mobile">Limpiar Campos</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <section>
         <div class="menu-productos">
             <table class="table">
                 <thead>
@@ -41,7 +86,7 @@
 
 
         </div>
-
+    </section>
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </main>
 </body>
