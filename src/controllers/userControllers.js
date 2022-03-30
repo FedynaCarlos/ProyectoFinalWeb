@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 const User = require('../models/User')
 //const usersFilePath = path.join(__dirname, '../data/users.json');
 //const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 const usuariosController = {
     register: (req,res) => {
         res.render('register.ejs');
@@ -35,13 +35,30 @@ const usuariosController = {
             res.redirect('/');
         }*/
        
+        /*Busco si el usuario esta en la base para no repetir el email */
+
+        let userInDb = User.findByField('email',req.body.email)
+
+        if (userInDb) {
+            return res.render('register', {
+                        errors: { 
+                            email: {
+                                msg: 'El mail se encuentra registrado'
+                            }
+                        },
+                 oldData: req.body
+             })
+        }
+
+
         let userToCreate = {
             ...req.body, 
-            image: req.file.filename
+            password: bcryptjs.hashSync(req.body.password,10),
+            image: req.file.filename,
         }
-       
+         delete userToCreate.cpassword,
          User.create(userToCreate);
-         return res.send('ok se guardo el usuario')
+        return res.send('ok se guardo el usuario')
         //console.log(req.body, req.file)
     },
 
