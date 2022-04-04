@@ -1,75 +1,84 @@
 [
-  {
-    "nombre": "Espumante",
-    "precio": "4600",
-    "cepa": "Chardonnay",
-    "categoria": "Espumoso",
-    "oldImagen": "clogoespumante.jpg",
-    "descripcion": "Para festejar",
-    "id": "1",
-    "image": "clogoespumante.jpg"
-  },
-  {
-    "id": 2,
-    "nombre": "Judas",
-    "precio": "6000",
-    "categoria": "Tinto",
-    "cepa": "Malbec",
-    "descripcion": "Excelente para cualquier tipo de comida",
-    "image": "Judas_Malbec.jpg"
-  },
-  {
-    "id": 3,
-    "nombre": "Junior Blend",
-    "precio": "5500",
-    "categoria": "Tinto",
-    "cepa": "Malbec",
-    "descripcion": "Vino con excelentes aromas",
-    "image": "Junior_Blend.jpg"
-  },
-  {
-    "id": 4,
-    "nombre": "La consulta",
-    "precio": "5000",
-    "categoria": "Tinto",
-    "cepa": "Malbec",
-    "descripcion": "Para comenzar una buena noche de compartir",
-    "image": "LaConsulta.jpg"
-  },
-  {
-    "id": 5,
-    "nombre": "Maria Magdalena",
-    "precio": "4500",
-    "categoria": "Blanco",
-    "cepa": "Chardonnay",
-    "descripcion": "Vino suave especial para cenar",
-    "image": "María_Magdalena.jpg"
-  },
-  {
-    "id": 6,
-    "nombre": "Malma",
-    "precio": "5000",
-    "categoria": "Tinto",
-    "cepa": "Malbec",
-    "descripcion": "Vino suave especial para cenar",
-    "image": "Reserva_de_Familia_Malbec.jpg"
-  },
-  {
-    "id": 7,
-    "nombre": "Santa rita",
-    "precio": "6000",
-    "categoria": "Tinto",
-    "cepa": "Cabernet sauvignon",
-    "descripcion": "Especial para acompañar carnes",
-    "image": "SantaRita.jpg"
-  },
-  {
-    "id": 8,
-    "nombre": "Prueba 1",
-    "precio": "5500",
-    "cepa": "Malbec",
-    "categoria": "Tinto",
-    "descripcion": "Perfecto",
-    "image": "default-image.png"
-  }
+ {
+  "nombre": "Espumante",
+  "precio": "4600",
+  "cepa": "Chardonnay",
+  "categoria": "Espumoso",
+  "oldImagen": "clogoespumante.jpg",
+  "descripcion": "Para festejar",
+  "id": "1",
+  "image": "clogoespumante.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "Judas",
+  "precio": "6000",
+  "categoria": "Tinto",
+  "cepa": "Malbec",
+  "descripcion": "Excelente para cualquier tipo de comida",
+  "image": "Judas_Malbec.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Junior Blend",
+  "precio": "5500",
+  "categoria": "Tinto",
+  "cepa": "Malbec",
+  "descripcion": "Vino con excelentes aromas",
+  "image": "Junior_Blend.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "La consulta",
+  "precio": "5000",
+  "categoria": "Tinto",
+  "cepa": "Malbec",
+  "descripcion": "Para comenzar una buena noche de compartir",
+  "image": "LaConsulta.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Maria Magdalena",
+  "precio": "4500",
+  "categoria": "Blanco",
+  "cepa": "Chardonnay",
+  "descripcion": "Vino suave especial para cenar",
+  "image": "María_Magdalena.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Malma",
+  "precio": "5000",
+  "categoria": "Tinto",
+  "cepa": "Malbec",
+  "descripcion": "Vino suave especial para cenar",
+  "image": "Reserva_de_Familia_Malbec.jpg"
+ },
+ {
+  "id": 7,
+  "nombre": "Santa rita",
+  "precio": "6000",
+  "categoria": "Tinto",
+  "cepa": "Cabernet sauvignon",
+  "descripcion": "Especial para acompañar carnes",
+  "image": "SantaRita.jpg"
+ },
+ {
+  "id": 8,
+  "nombre": "Prueba 1",
+  "precio": "5500",
+  "cepa": "Malbec",
+  "categoria": "Tinto",
+  "descripcion": "Perfecto",
+  "image": "default-image.png"
+ },
+ {
+  "id": 9,
+  "nombre": "Vino de la casa",
+  "precio": "5600",
+  "cepa": "Shiraa",
+  "categoria": "Tinto",
+  "descripcion": "Vino con suaves aromas",
+  "image": "default-image.png"
+ }
 ]

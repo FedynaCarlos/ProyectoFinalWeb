@@ -25,7 +25,7 @@ p.idiomas {
     background-color:transparent;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     align-content: center;
     width: 100%;
@@ -39,13 +39,14 @@ p.idiomas {
 }
 .logo {
     border-radius: 50%;
-    width: 120px;  
+    width: 100px;  
 }
 .mainmenu{
     display: none;
 }
 .mainmenu ul {
 	display: flex;
+    align-items: center;
 	margin-top: 0.5%;   
 }
 header ul li{
@@ -53,7 +54,7 @@ header ul li{
 }
 .mainmenu li a{
     font-size: 14px;
-	padding: 15px 15px 15px 10px;
+	padding: 15px 7px 15px 7px;
 	font: bolder;
     font-family: 'Raleway', sans-serif;
 	color:whitesmoke;
@@ -78,6 +79,19 @@ header ul li{
 }
 .burguermenu i{
     font-size: 25px;
+}
+
+.searchNavBar a{
+    
+    align-items: center;
+    padding: 0;
+    margin: 0 11px;
+    font-size: 17px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: white;
+
 }
 
 footer{
@@ -152,6 +166,7 @@ footer{
     }
     .mainmenu{
         display: block;
+        display: flex;
     }
     .burguermenu{
         display: none;
