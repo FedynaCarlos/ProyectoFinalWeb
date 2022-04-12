@@ -56,6 +56,63 @@ form div p{
     text-align: left;
     font-family: 'Raleway', sans-serif;
 }
+
+.boton-formulario {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #495057;
+  color: #4b402a;
+}
+.boton-formulario:hover {
+  color: #fff;
+}
+.boton-formulario:hover:after {
+  height: 100%;
+}
+.boton-formulario:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.4s ease;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  background: #bbac96;
+}
+
+/*
+.boton-formulario {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 2px solid #495057;
+  background: #635938;
+}
+.boton-formulario:hover {
+  background: #fff;
+  color: #495057
+}
+
 .boton-formulario {
     background: #604621;
     background-image: -webkit-linear-gradient(top, #604621, #8f8980);
@@ -82,6 +139,7 @@ form div p{
     background-image: linear-gradient(to bottom, #c4a781, #8a6a3e);
     text-decoration: none;
   }
+  */
   form div a{
       font-style: italic;
       font-size: 12px;

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <%- include('partials/header') %>
     <main class="body-produts">
@@ -64,7 +69,7 @@
         
             <div class="controlIngresoProductos2">
                 <label for="">Descripción</label>
-                <textarea class="textaread" cols="90" name="descripcion" id="descripcion" rows="6"
+                <textarea class="textaread" cols="90" name="descripcion" id="descripcion" rows="2"
                     placeholder="Breve descripción"></textarea>
             </div>
             <% if (typeof errors !='undefined' && typeof errors.descripcion !='undefined' ) { %>
@@ -73,7 +78,7 @@
                 </span>
                 <% } %>
                     <div class="controlIngresoProductos">
-                        <button type="submit" class="boton-guardarP">Guardar Producto</button>
+                        <button type="submit" class="boton-formulario">Guardar Producto</button>
                     </div>
         </form>
 
@@ -84,24 +89,27 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Type</th>
-                        <th scope="col">Column heading</th>
-                        <th scope="col">Column heading</th>
-                        <th scope="col">Column heading</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Ver</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="table-active">
-                        <th scope="row">Active</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                    </tr>
+                    <% productos.forEach(producto=> { %>
+                        <tr class="table-active">
+                           <!-- <th scope="row">Active</th> -->
+                            <td><%= producto.id%></td>
+                            <td><%= producto.nombre%></td>
+                            <td><a href="/administrar/detail/<%= producto.id%> "><ion-icon name="eye-outline"></ion-icon></a></td>
+                            <td><a href="/administrar/edit/<%= producto.id%> "><ion-icon name="pencil-outline"></ion-icon></a></td>
+                            <td><a href="/administrar/delete/<%= producto.id%> "><ion-icon name="trash-outline"></ion-icon></a></td>
+                      </tr>
+                    <% }); %>
                 </tbody>
             </table>
-
-
-
+<!-- 
             <table class="table">
                 
                 <thead>
@@ -126,7 +134,7 @@
                     <% }); %>
                     
                 </tbody>
-            </table>
+            </table> -->
 
 
 
