@@ -28,7 +28,7 @@
                 >
                     <% if (locals.errors && errors.nombres) { %>
                     <div>
-                        <span style="color: red; font-size: 12px"><%= errors.nombres.msg %></span> 
+                        <span style="color: yellow; font-size: 12px"><%= errors.nombres.msg %></span> 
                     </div>
                     <% } %>
                     
@@ -43,7 +43,7 @@
                     >
                     <% if (locals.errors && errors.apellidos) { %>
                         <div>
-                            <span style="color: red; font-size: 12px"><%= errors.apellidos.msg %></span> 
+                            <span style="color: yellow; font-size: 12px"><%= errors.apellidos.msg %></span> 
                         </div>
                     <% } %>
             </div>
@@ -57,7 +57,7 @@
                  >
                  <% if (locals.errors && errors.email) { %>
                      <div>
-                         <span style="color: red; font-size: 12px"><%= errors.email.msg %></span> 
+                         <span style="color: yellow; font-size: 12px"><%= errors.email.msg %></span> 
                      </div>
                  <% } %>
             </div>
@@ -71,7 +71,7 @@
                 >
                  <% if (locals.errors && errors.fechaNacimiento) { %>
                     <div>
-                        <span style="color: red; font-size: 12px"><%= errors.fechaNacimiento.msg %></span> 
+                        <span style="color: yellow; font-size: 12px"><%= errors.fechaNacimiento.msg %></span> 
                     </div>
                 <% } %>
             </div>
@@ -85,7 +85,7 @@
                 >
                  <% if (locals.errors && errors.telefono) { %>
                     <div>
-                        <span style="color: red; font-size: 12px"><%= errors.telefono.msg %></span> 
+                        <span style="color: yellow; font-size: 12px"><%= errors.telefono.msg %></span> 
                     </div>
                 <% } %>
             </div>
@@ -94,20 +94,20 @@
                 <input type="file" name="image" id="image">
                  <% if (locals.errors && errors.image) { %>
                     <div>
-                        <span style="color: red; font-size: 12px"><%= errors.image.msg %></span> 
+                        <span style="color: yellow; font-size: 12px"><%= errors.image.msg %></span> 
                     </div>
                 <% } %>
             </div>
             <div  class="control-formulario">
                 <input type="password" name="password" placeholder="Password" class="control"><br>
                 <% if (typeof errors != 'undefined' && typeof errors.password != 'undefined') { %>
-                    <span style="color: red; font-size: 12px"><%= errors.password.msg %></span> 
+                    <span style="color: yellow; font-size: 12px"><%= errors.password.msg %></span> 
                 <% } %>
             </div>
             <div  class="control-formulario">
                 <input type="password" name="cpassword" placeholder="Confirmar Password" class="control"><br>
                 <% if (typeof errors != 'undefined' && typeof errors.cpassword != 'undefined') { %>
-                    <span style="color: red; font-size: 12px"><%= errors.cpassword.msg %></span> 
+                    <span style="color: yellow; font-size: 12px"><%= errors.cpassword.msg %></span> 
                 <% } %>
             </div>
             <div class="control-formulario">
