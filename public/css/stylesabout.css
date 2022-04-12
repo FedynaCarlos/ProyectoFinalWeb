@@ -25,6 +25,8 @@ main h3{
 }
 .photoPersonal{
     text-align: center;
+    width: 250px;
+    height: 340px;
 }
 .historia{
     max-width: 400px;
