@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<body>
+    <%- include('partials/header') %>
+    <main class="body-produts">
+        <section class="visita">
+            <h3>ADMINISTRADOR DE PRODUCTOS</h3>
+        </section>
+        <article class="col-12">
+            <a href="/administrar/create">
+                <ion-icon name="add-circle-outline"></ion-icon>Agregar
+            </a>
+        </article>
+
+    <section>
+      <div class="formulario-creacion">
+        <form method="POST" action="/listaProductos/crear">
+          <div class="campos-formulario">
+            <div>
+              <label for="id">Id</label>
+              <input type="number" name="id" readonly value="id" id="id" />
+              <label for="descripcion">Descripción</label>
+              <textarea name="descripcion" id="descripcion"></textarea>
+            </div>
+            <div>
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" id="nombre" />
+    
+              <label for="tipo">Categoria</label>
+              <select name="tipo" id="tipo">
+                <option selected="selected" value=""> </option>
+                <option value="Espumante">Espumoso</option>
+                <option value="Blanco">Blanco</option>
+                <option value="Tinto">Tinto</option>
+                <option value="Rosado">Rosado</option>
+              </select>
+            <!--  <input class="crear-boton no-mobile" type="submit" value="Crear Producto" /> -->
+            </div>
+            <div>
+              <label for="precio">Precio</label>
+              <input type="number" name="precio" id="precio" />
+              <label for="imagen">Archivo imagen</label>
+              <select name="imagen" id="imagen">
+    
+                <option value="imagen">
+    
+                </option>
+    
+              </select>
+              <input class="no-desktop crear-boton" type="submit" value="Crear Producto" />
+              <button class="no-mobile">Limpiar Campos</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+    <section>
+        <div class="menu-productos">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Ver</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Borrar</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% productos.forEach(producto => { %>
+                      <tr>
+                        <td><%= producto.id%> </td>
+                        <td><%= producto.nombre%> </td>
+                        <td><a href="/administrar/detail/<%= producto.id%> "> <ion-icon name="eye-outline"></ion-icon></a></td>
+                        <td><a href="/administrar/edit/<%= producto.id%> "> <ion-icon name="pencil-outline"></ion-icon></a></td>
+                        <td><a href="/administrar/delete/<%= producto.id%> "><ion-icon name="trash-outline"></ion-icon></a></td>
+                      </tr>
+                    <% }); %>
+                    
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    </main>
+</body>
+</html>

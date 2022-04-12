@@ -14,49 +14,72 @@
         </article>
 
     <section>
-      <div class="formulario-creacion">
-        <form method="POST" action="/listaProductos/crear">
-          <div class="campos-formulario">
-            <div>
-              <label for="id">Id</label>
-              <input type="number" name="id" readonly value="id" id="id" />
-              <label for="descripcion">Descripción</label>
-              <textarea name="descripcion" id="descripcion"></textarea>
+      <!-- <div class="formulario-creacion"> -->
+        <form class="createProduct" action="/productos" s method="POST" enctype="multipart/form-data">
+            <!--<form action="" method="post" class="createProduct"> -->
+            <div class="controlIngresoProductos">
+                <label for="">Nombre del Producto</label>
+                <input class="input1" type="text" name="nombre" id="nombre" placeholder="Ej: Vino casillero del Diablo">
+                <% if (typeof errors !='undefined' && typeof errors.nombre !='undefined' ) { %>
+                    <span style="color: red">
+                        <%= errors.nombre.msg %>
+                    </span>
+                    <% } %>
             </div>
-            <div>
-              <label for="nombre">Nombre</label>
-              <input type="text" name="nombre" id="nombre" />
-    
-              <label for="tipo">Categoria</label>
-              <select name="tipo" id="tipo">
-                <option selected="selected" value=""> </option>
-                <option value="Espumante">Espumoso</option>
-                <option value="Blanco">Blanco</option>
-                <option value="Tinto">Tinto</option>
-                <option value="Rosado">Rosado</option>
-              </select>
-            <!--  <input class="crear-boton no-mobile" type="submit" value="Crear Producto" /> -->
+            <div class="controlIngresoProductos">
+                <label for="">Precio del produto:</label>
+                <input class="input1" type="number" name="precio" id="precio" placeholder="Ej: 5.400">
+                <% if (typeof errors !='undefined' && typeof errors.precio !='undefined' ) { %>
+                    <span style="color: red">
+                        <%= errors.precio.msg %>
+                    </span>
+                    <% } %>
             </div>
-            <div>
-              <label for="precio">Precio</label>
-              <input type="number" name="precio" id="precio" />
-              <label for="imagen">Archivo imagen</label>
-              <select name="imagen" id="imagen">
-    
-                <option value="imagen">
-    
-                </option>
-    
-              </select>
-              <input class="no-desktop crear-boton" type="submit" value="Crear Producto" />
-              <button class="no-mobile">Limpiar Campos</button>
+            <div class="controlIngresoProductos">
+                <label for="">Cepa:</label>
+                <input class="input1" type="text" name="cepa" id="cepa" placeholder="Ej: Malbec">
+                <% if (typeof errors !='undefined' && typeof errors.cepa !='undefined' ) { %>
+                    <span style="color: red">
+                        <%= errors.cepa.msg %>
+                    </span>
+                    <% } %>
             </div>
-          </div>
+            <div class="controlIngresoProductos">
+                <label for="">Categoría:</label>
+                <select class="input1" name="categoria" id="categoria">
+                    <option selected="selected" value=""> </option>
+                    <option value="Espumante">Espumoso</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Tinto">Tinto</option>
+                    <option value="Rosado">Rosado</option>
+                </select>
+                <!--     <% if (typeof errors != 'undefined' && typeof errors.categoria != 'undefined') { %>
+                            <span style="color: red"><%= errors.categoria.msg %></span> 
+                        <% } %> -->
+            </div>
+            <div class="controlIngresoProductos">
+                <label for="">Agregar imagen</label>
+                <input type="file" name="image" id="image">
+            </div>
+        
+            <div class="controlIngresoProductos2">
+                <label for="">Descripción</label>
+                <textarea class="textaread" cols="90" name="descripcion" id="descripcion" rows="6"
+                    placeholder="Breve descripción"></textarea>
+            </div>
+            <% if (typeof errors !='undefined' && typeof errors.descripcion !='undefined' ) { %>
+                <span style="color: red">
+                    <%= errors.descripcion.msg %>
+                </span>
+                <% } %>
+                    <div class="controlIngresoProductos">
+                        <button type="submit" class="boton-guardarP">Guardar Producto</button>
+                    </div>
         </form>
-      </div>
+
     </section>
     
-    <section>
+    <section class= "CRUD">
         <div class="menu-productos">
             <table class="table">
                 <thead>
@@ -87,7 +110,7 @@
 
         </div>
     </section>
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     </main>
 </body>
 </html>

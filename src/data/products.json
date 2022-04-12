@@ -64,12 +64,12 @@
     "image": "SantaRita.jpg"
   },
   {
-    "id": 8,
-    "nombre": "Prueba 1",
-    "precio": "5500",
-    "cepa": "Malbec",
+    "id": 9,
+    "nombre": "Vino de la casa",
+    "precio": "5600",
+    "cepa": "Shiraa",
     "categoria": "Tinto",
-    "descripcion": "Perfecto",
+    "descripcion": "Vino con suaves aromas",
     "image": "default-image.png"
   }
 ]

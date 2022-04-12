@@ -39,6 +39,10 @@
 }
 
 /*---List Products---*/
+
+.visita{
+  margin-top: 10px;
+}
 .col-12{
     margin-left: 5%;
 }
@@ -96,6 +100,10 @@
 .formulario-creacion button {
   background-color: var(--grisOscuro);
   margin-top: 9px;*/
+}
+
+.CRUD{
+  margin-top: 20px;
 }
 
 .table{

@@ -26,4 +26,19 @@ tenemos el sitio actualizado.
  Con respecto al producto tomamos la decisión de de agregar la categoria, era un detalle que nos faltaba especificar.
 Como sintesis a mejorar, mas alla de que algo del código hemos pulido, decidimos mejorar la parte estetica visual, pero lo dejamos para lugo de implementar las los ultimos conceptos aprendidos.
 en cuanto a trabajo ya nos estamos adecuando a los conocimientos de unos y otros integrantes, a cada uno le gusta trabajar de la mejor manera,  y cada uno tiene habilidades diferentes, que de a poco queremos compatibilizar para sacar el mayor provecho a la hora de mejorar nuestro proyecto.
-estamos realizando los retooques necesarios para 
+estamos realizando los retooques necesarios para terminar.
+
+Sprint 6
+nos encontramos frente a una realidad donde debemos aplicar conceptos importantes
+Objetivo:
+Crear la estructura de la base de datos, tablas, campos, tipos de datos y relaciones.
+y tambien se implemeta el modulo Sequalize.
+actualizamos el trello
+https://trello.com/b/fEkoz6sI/bodegagrupo5
+
+Realizamos el diagrama de la base de datos.
+Usuarios, Productos, tablas.
+Creacion de base de datos (create_database) (create_tabla) (ferein keys)
+tenemos el structure.sql.
+en este sprint nos costo un poco mas ya que se nos complejizo la acumulacion de tareas pendientes, pero eso no impidio reforzar el equipo y dedicarnos a seguir trabajandolo, 
+orgullosos del laburo en quipo aqui estamos. dispuestos a mostrar nuestros logros.
