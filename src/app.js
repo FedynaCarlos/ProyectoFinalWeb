@@ -11,7 +11,10 @@ app.set('view engine','ejs');
 const mainRoutes = require('./routes/mainRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
-const adminRoutes = require('./routes/adminRoutes');
+const cepaRoutes = require('./routes/cepaRoutes');
+//const adminRoutes = require('./routes/adminRoutes'); --  deshabilito mientras configuro el sequelize ---- 
+const adminRoutes = require('./routes/adminRoutesSeq');
+
 
 const res = require('express/lib/response');
 
@@ -23,7 +26,7 @@ app.use(methodOverride('_method'));
 app.use('/',mainRoutes);
 app.use('/user',userRoutes);
 app.use('/productos',productRoutes);
-
+app.use('/cepa',cepaRoutes);
 app.use('/about',mainRoutes);
 app.use('/administrar',adminRoutes);
 

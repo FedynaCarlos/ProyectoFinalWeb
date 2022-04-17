@@ -1,8 +1,6 @@
-const { isGeneratorFunction } = require("util/types");
-const { getEnvironmentData } = require("worker_threads");
 
 module.exports = function (sequelize, dataTypes) {
-  let alias = "productos";
+  let alias = "Producto";
   
   let cols = {
     produc_id: {
@@ -11,7 +9,7 @@ module.exports = function (sequelize, dataTypes) {
       autoIncrement: true
     },
     nombre: {
-      type:dataTypes.VARCHAR(100)
+      type:dataTypes.STRING
     },
     precio: {
       type:dataTypes.DECIMAL
@@ -20,19 +18,20 @@ module.exports = function (sequelize, dataTypes) {
       type:dataTypes.INTEGER
     },
     categoria: {
-      type:dataTypes.VARCHAR(100)
+      type:dataTypes.STRING
     },
     descripcion: {
-      type:dataTypes.text
+      type:dataTypes.TEXT
     },
     imagen: {
-      type:dataTypes.VARCHAR(255)
+      type:dataTypes.STRING
     }
   }
   
   let config = {
     tableName: "productos" ,
-    timestamps: false
+    timestamps: false,
+    underscore: true
   }
 
   let Producto = sequelize.define(alias, cols, config);

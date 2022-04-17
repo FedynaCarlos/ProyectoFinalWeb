@@ -1,5 +1,5 @@
 module.exports = function (sequelize, dataTypes) {
-  let alias = "usuarios";
+  let alias = "Usuario";
   
   let cols = {
     id: {
@@ -8,13 +8,13 @@ module.exports = function (sequelize, dataTypes) {
       autoIncrement: true
     },
     nombres: {
-      type:dataTypes.VARCHAR(100)
+      type:dataTypes.STRING
     },
     apellidos: {
-      type:dataTypes.VARCHAR(100)
+      type:dataTypes.STRING
     },
     email: {
-      type:dataTypes.VARCHAR(100)
+      type:dataTypes.STRING
     },
     fechaNac: {
       type:dataTypes.DATE
@@ -23,13 +23,13 @@ module.exports = function (sequelize, dataTypes) {
       type:dataTypes.INTEGER
     },
     password: {
-      type:dataTypes.VARCHAR(100)
+      type:dataTypes.STRING
     },
     categoria: {
-      type:dataTypes.VARCHAR(10)
+      type:dataTypes.STRING
     },
     avatar: {
-      type:dataTypes.VARCHAR(255)
+      type:dataTypes.STRING
     }
   }
   
