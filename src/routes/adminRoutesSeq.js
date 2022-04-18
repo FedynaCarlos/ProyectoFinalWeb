@@ -21,11 +21,9 @@ router.get('/', controllerAdminSeq.index);
 router.get('/create', controllerAdminSeq.create);
 router.post('/create', upload.single('image'), controllerAdminSeq.save);
 router.get('/detail/:id', controllerAdminSeq.show);
+router.get('/edit/:id', controllerAdminSeq.edit);
+router.put('/edit/:id', upload.single('image'), controllerAdminSeq.update);
+router.get('/delete/:id', controllerAdminSeq.destroy);
 
-/*
-router.get('/edit/:id', controllerAdmin.edit);
-router.put('/edit/:id', upload.single('image'), controllerAdmin.update);
-router.get('/delete/:id', controllerAdmin.destroy);
-*/
 
 module.exports = router;
