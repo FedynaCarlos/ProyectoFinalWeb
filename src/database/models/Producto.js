@@ -6,7 +6,8 @@ module.exports = function (sequelize, dataTypes) {
     produc_id: {
       type:dataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
+      allowNull : false
     },
     nombre: {
       type:dataTypes.STRING
