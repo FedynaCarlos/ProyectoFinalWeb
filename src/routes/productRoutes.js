@@ -4,7 +4,8 @@ const pController = require('../controllers/productControllers');
 const validationCreate = require('../middlewares/validation');
 const multer = require('multer');
 const path = require('path');
-const controllerAdminSeqPrueba = require('../controllers/productControllers');
+
+//const controllerAdminSeqPrueba = require('../controllers/productControllers');
 
 //multer para imagenes
 

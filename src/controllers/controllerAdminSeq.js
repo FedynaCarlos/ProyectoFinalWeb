@@ -77,7 +77,7 @@ const controllerAdminSeq = {
   }
  
 }
-const controllerAdminSeqPrueba = {
+/*const controllerAdminSeqPrueba = {
   index: (req,res) =>{
    db.Producto.findAll()
      .then(function(productos){
@@ -114,7 +114,7 @@ const controllerAdminSeqPrueba = {
      res.render('productDetail', {miVino})
    })
    .catch(error => res.send(error))}
-}
+}*/
 
 module.exports = controllerAdminSeq;
-module.exports = controllerAdminSeqPrueba;
+//module.exports = controllerAdminSeqPrueba;

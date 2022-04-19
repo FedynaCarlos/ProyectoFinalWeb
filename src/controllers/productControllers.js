@@ -14,18 +14,15 @@ const pController ={
     productosPrincipal: (req,res)=>{
         res.render('products');
     },
-    productCart: (req,res) => {
+    /*productCart: (req,res) => {
         res.render('productCart');
-    },  
+    },*/  
 	
     /*formulario de creacion*/
 
     crear: (req,res) =>{
         res.render('createProduct')
     },
-	
-
-
 
     	// Create -  Method to store
 	almacenar: (req, res) => {
