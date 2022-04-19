@@ -1,6 +1,5 @@
-module.exports =
-{
-  "development": {
+module.exports = {
+    "development": {
     "username": "root",
     "password": null,
     "database": "grupo_5",

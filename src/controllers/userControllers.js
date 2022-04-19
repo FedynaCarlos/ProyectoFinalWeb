@@ -10,30 +10,12 @@ const usuariosController = {
         res.render('register.ejs');
     },
     processRegister: (req, res) => {
+        
         const errors = validationResult(req);
         
         if (!errors.isEmpty()) {
             return res.render('register', { errors: errors.mapped(), oldData: req.body })
-        }/* else {
-            let image
-            if (req.file != undefined) {
-                image = req.file.filename
-            } else {
-                image = '/users/404-user.jpg'
-            }
-    
-            let nuevoUser = {
-                id: usuarios[usuarios.length -1].id +1,
-                ...req.body, image
-            }
-            nuevoUser.category = 'user';
-            nuevoUser.password = bcrypt.hashSync(nuevoUser.password, 10);
-            delete nuevoUser.cpassword;
-            let usuarioNuevo = [...usuarios, nuevoUser];
-            usuarioNuevo.password = bcrypt.hashSync(nuevoUser.password, 10);
-            fs.writeFileSync(usersFilePath, JSON.stringify(usuarioNuevo, null, ' '));
-            res.redirect('/');
-        }*/
+        }
        
         /*Busco si el usuario esta en la base para no repetir el email */
 
@@ -48,7 +30,7 @@ const usuariosController = {
                         },
                  oldData: req.body
              })
-        }
+        }6
 
 
         let userToCreate = {
@@ -58,17 +40,46 @@ const usuariosController = {
         }
          delete userToCreate.cpassword,
          User.create(userToCreate);
-        return res.send('ok se guardo el usuario')
+        return res.redirect('/user/login')
         //console.log(req.body, req.file)
     },
 
-    login:(req,res)=> {
-        res.render('login.ejs');
+    login: (req,res) => {
+         res.render('login.ejs');
+         console.log(req.session)
     },
     authenticate: (req, res) => { 
-        // si existe el mail
-        res.send(req.body);
-        //const user = 
+       
+        let userToLogin = User.findByField('email' , req.body.email);
+        
+
+        if (userToLogin){
+
+            let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (isOkpassword){
+                delete userToLogin.password;    
+                req.session.userlogeado = userToLogin;
+                return res.redirect('/');
+            }
+           
+        return res.render('login.ejs',{
+            errors: {
+                email:{ 
+                    msg: 'Las credenciales no son válidos'
+                }
+            }   
+           });
+        }
+    },
+    userLogeado: (req, res) => {
+        return res.render('index.ejs',{
+            user: req.session.userlogin
+        })
+
+    },
+    logout: (req, res) =>{
+        req.session.destroy();
+        return res.redirect('/');
     }
 }
 
