@@ -4,7 +4,7 @@ const router = express.Router();
 const path = require('path');
 const controllerAdminSeq = require('../controllers/controllerAdminSeq');
 const multer = require('multer');
-const controllerAdminSeqPrueba = require('../controllers/controllerAdminSeq');
+//const controllerAdminSeqPrueba = require('../controllers/controllerAdminSeq');
 
 var storage = multer.diskStorage({
     destination:function(req,file,cb){

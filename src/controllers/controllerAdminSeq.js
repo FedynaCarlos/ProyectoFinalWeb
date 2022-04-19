@@ -117,4 +117,4 @@ const controllerAdminSeqPrueba = {
 }
 
 module.exports = controllerAdminSeq;
-module.exports = controllerAdminSeqPrueba;
+//module.exports = controllerAdminSeqPrueba;

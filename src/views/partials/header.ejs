@@ -21,10 +21,19 @@
                         <a href="/"><img class="logo" src="/images/logo g5.png" alt="Logo de Bodega G5"></a>
                     </div>
                 </li>
+                <% if (locals.isLogged) {%>
+                <li>
+                    <a href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="/images/users/imagen1.jpg" width="40" style="border-radius: 100%">
+                    Hola 
+                    </a>
+                </li>   
+                <% } else { %>    
                 <li><a href="/user/register">Registrate</a></li>
                 <li><a href="/user/login">Login</a></li>
+                <% } %>
                 <!--<li><a href="/productos/productosPrincipal">Listado Productos</a></li>-->
-               <li><a href="/administrar">Administrar</a></li>
+                <li><a href="/administrar">Administrar</a></li>
                 <li><a href="/productos/productCart">Compras &nbsp<i class="fas fa-shopping-cart"></i></a> </li>
             </ul>
         </nav>

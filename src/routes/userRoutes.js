@@ -26,7 +26,7 @@ router.post('/',upload.single('image'), validationUsers, usuariosController.proc
 
 router.get('/login', usuariosController.login);
 router.post('/login', usuariosController.authenticate);
-router.get('/logout/', usuariosController.logout)
+router.get('/logout', usuariosController.logout);
 
 
 module.exports = router;
