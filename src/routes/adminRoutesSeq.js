@@ -4,6 +4,7 @@ const router = express.Router();
 const path = require('path');
 const controllerAdminSeq = require('../controllers/controllerAdminSeq');
 const multer = require('multer');
+const controllerAdminSeqPrueba = require('../controllers/controllerAdminSeq');
 
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
@@ -21,6 +22,7 @@ router.get('/', controllerAdminSeq.index);
 router.get('/create', controllerAdminSeq.create);
 router.post('/create', upload.single('image'), controllerAdminSeq.save);
 router.get('/detail/:id', controllerAdminSeq.show);
+router.get('/productDetail/:id', controllerAdminSeqPrueba.show);
 
 /*
 router.get('/edit/:id', controllerAdmin.edit);

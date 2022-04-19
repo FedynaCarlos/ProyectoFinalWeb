@@ -4,6 +4,7 @@ const pController = require('../controllers/productControllers');
 const validationCreate = require('../middlewares/validation');
 const multer = require('multer');
 const path = require('path');
+const controllerAdminSeqPrueba = require('../controllers/productControllers');
 
 //multer para imagenes
 
@@ -28,7 +29,8 @@ router.get('/productosPrincipal',pController.productosPrincipal)
 /*** CREAR UN PRODUCTO ***/ 
 
 router.get('/createProduct',pController.crear);
-router.post('/', upload.single('image'),validationCreate, pController.almacenar); 
+router.post('/', upload.single('image'),validationCreate, pController.almacenar);
+
 
 
 //CREAR UN USUARIO
@@ -40,6 +42,6 @@ router.get('/productCart',pController.productCart);*/
 
 
 
-
 module.exports = router;
+
 

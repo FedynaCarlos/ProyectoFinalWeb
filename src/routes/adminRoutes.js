@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const controllerAdmin = require('../controllers/controllerAdmin');
 const multer = require('multer');
+const controllerAdminPrueba = require('../controllers/controllerAdmin');
 
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
@@ -19,6 +20,7 @@ router.get('/', controllerAdmin.index);
 router.get('/create', controllerAdmin.create);
 router.post('/create', upload.single('image'), controllerAdmin.save);
 router.get('/detail/:id', controllerAdmin.show);
+router.get('/productDetail/:id', controllerAdminPrueba.show);
 router.get('/edit/:id', controllerAdmin.edit);
 router.put('/edit/:id', upload.single('image'), controllerAdmin.update);
 router.get('/delete/:id', controllerAdmin.destroy);
