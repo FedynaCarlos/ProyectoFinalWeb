@@ -6,38 +6,39 @@
   </head>
   <body>
   <%- include('./partials/header') %>
-    <section>
-      <!--div mostrar imagen-->
-      <div class="contenedor1">
-        <!--contenedor1-->
-        <div class="elemento1">
-          <!--elemento1-->
-          <img src="/images/<%= miVino.imagen%>" width="110" class="product_img">
-          <i class="fas fa-truck"></i> 
     
-          <h4 class="description"><%= miVino.nombre%></h4>
-        </div>
-        <!--fin de elemnto1-->
-        <!--descripcion del producto-->
-        <div class="elemento2">
-          <!--elemento 2-->
-          <h3>Producto</h3>
-          <br>
-          <br>
-          <p><%= miVino.nombre%> <br>
-          <P><%= miVino.descripcion%></P> <br>
-          <p><%= miVino.cepa_id%></p>
-          <p><%= miVino.categoria%></p>
-          <p><%= miVino.precio%></p>
-          
-          <p></p>
-          <br>
-          <br>
-        </div>
-      </div>
-
-      
-                <!--contenedor de productos en miniatura-->
+  <h2>Nuestros productos con la mejor calidad</h2>
+  
+  <section class="allProducts">
+      <!--div mostrar imagen-->
+      <% for(let i=0; i < productos.length; i++){ %>
+      <article  class="contenedor1">
+        
+          <!--contenedor1-->
+          <div class="elemento1">
+            <!--elemento1-->
+            <img src="/images/<%= productos[i].imagen%>" width="110" class="product_img">
+            <i class="fas fa-truck"></i> 
+            
+            <h4 class="description"><%= productos[i].nombre%></h4>
+          </div>
+          <!--fin de elemnto1-->
+          <!--descripcion del producto-->
+          <div class="elemento2">
+            <!--elemento 2-->
+            
+            <h3><%= productos[i].nombre%> </h3>
+            <P><%= productos[i].descripcion%></p>
+            <p><%= productos[i].cepa_id%></p>
+            <p><%= productos[i].categoria%></p>
+            <p><%= productos[i].precio%></p>
+            
+            <button type="reset" class="boton-formulario">Agregar al carrito</button>
+          </div>
+        </article>
+        <% } %>
+        
+        <!--contenedor de productos en miniatura
                 <div class="contenedor2">
                   <div class="elemento3">
                       <img src="images/clogoespumante.jpg" width="90"halt="Vino blanco" class="product_img">
@@ -71,7 +72,7 @@
                   <h4 class="description">Vino Tinto</h4>
                   <button type="reset" class="boton-formulario">Agregar al carrito</button>
                   </div>
-              </div>  
+              </div> -->
 
     </section>
     <%- include('partials/footer') %>

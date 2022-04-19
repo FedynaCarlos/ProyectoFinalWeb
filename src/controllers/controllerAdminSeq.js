@@ -2,6 +2,7 @@ const path = require('path');
 const { devNull } = require('os');
 const db = require('../../src/database/models');
 const res = require('express/lib/response');
+const Op = db.Sequelize.Op;
 
 const controllerAdminSeq = {
    index: (req,res) =>{
@@ -37,6 +38,7 @@ const controllerAdminSeq = {
       include : [{association : 'cepa'}]
     })
     .then(miVino=> {
+      
       res.render('detail', {miVino})
     })
     .catch(error => res.send(error))
@@ -74,9 +76,27 @@ const controllerAdminSeq = {
       }
     })
     .then(() => res.redirect('/administrar'))
+    .catch(error => res.send(error))
+  },
+  search: (req,res) => {
+    db.Producto.findAll({
+      include: [{association : 'cepa'}],
+      where : {
+        nombre: {[Op.like]: `%${req.query.search}%`}
+      }
+    })
+    
+    .then(resultado => { 
+      //console.log(resultado)
+      res.render('listProducts', {productos : resultado}); })
+    .catch(error => res.send(error))
   }
  
 }
+
+
+
+
 /*const controllerAdminSeqPrueba = {
   index: (req,res) =>{
    db.Producto.findAll()

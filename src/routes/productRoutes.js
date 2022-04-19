@@ -25,12 +25,13 @@ var upload = multer({storage: storage})
 
 
 router.get('/',pController.productos);
-router.get('/productosPrincipal',pController.productosPrincipal)
+
+//router.get('/productosPrincipal',pController.productosPrincipal)
 
 /*** CREAR UN PRODUCTO ***/ 
 
-router.get('/createProduct',pController.crear);
-router.post('/', upload.single('image'),validationCreate, pController.almacenar);
+//router.get('/createProduct',pController.crear);
+//router.post('/', upload.single('image'),validationCreate, pController.almacenar);
 
 
 

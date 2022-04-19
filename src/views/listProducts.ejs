@@ -17,11 +17,18 @@
                 <ion-icon name="add-circle-outline"></ion-icon>Agregar
             </a>
         </article>
-
+        <article class="col-6">
+            <form action="/administrar/search_results" method="GET">
+                <input type="search" name="search">
+                <button class="btn btn-primary" type="submit">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </form>
+        </article>
     <section>
-      <!-- <div class="formulario-creacion"> -->
+      
+        <!-- <div class="formulario-creacion"> 
         <form class="createProduct" action="/administrar/create" s method="POST" enctype="multipart/form-data">
-            <!--<form action="" method="post" class="createProduct"> -->
             <div class="controlIngresoProductos">
                 <label for="">Nombre del Producto</label>
                 <input class="input1" type="text" name="nombre" id="nombre" placeholder="Ej: Vino casillero del Diablo">
@@ -58,9 +65,9 @@
                     <option value="Tinto">Tinto</option>
                     <option value="Rosado">Rosado</option>
                 </select>
-                <!--     <% if (typeof errors != 'undefined' && typeof errors.categoria != 'undefined') { %>
+                <% if (typeof errors != 'undefined' && typeof errors.categoria != 'undefined') { %>
                             <span style="color: red"><%= errors.categoria.msg %></span> 
-                        <% } %> -->
+                        <% } %> 
             </div>
             <div class="controlIngresoProductos">
                 <label for="">Agregar imagen</label>
@@ -80,7 +87,7 @@
                     <div class="controlIngresoProductos">
                         <button type="submit" class="boton-formulario">Guardar Producto</button>
                     </div>
-        </form>
+        </form> -->
 
     </section>
     
