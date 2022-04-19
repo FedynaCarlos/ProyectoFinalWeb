@@ -9,7 +9,7 @@
   "password": "LjxFNJTBZFu",
   "cpassword": "XEmgawf0qxzw",
   "category": "admin",
-  "image": "https://robohash.org/rerumdoloremqueexpedita.png?size=50x50&set=set1"
+  "image": "imagen1.jpg"
  },
  {
   "id": 2,
@@ -21,7 +21,7 @@
   "password": "IcponalH",
   "cpassword": "F0wlHyrJLPQ",
   "category": "admin",
-  "image": "https://robohash.org/mollitiaassumendaaut.png?size=50x50&set=set1"
+  "image": "imagen1.jpg"
  },
  {
   "id": 3,
@@ -33,7 +33,7 @@
   "password": "eb2ITrgZN8",
   "cpassword": "r7eB67qeN",
   "category": "admin",
-  "image": "https://robohash.org/quioccaecatiautem.png?size=50x50&set=set1"
+  "image": "imagen1.jpg"
  },
  {
   "id": 4,
@@ -45,7 +45,7 @@
   "password": "bodega1234",
   "cpassword": "bodega1234",
   "category": "admin",
-  "image": "https://robohash.org/omnisinciduntfacere.png?size=50x50&set=set1"
+  "image": "imagen2.jpg"
  },
  {
   "id": 5,
@@ -57,7 +57,7 @@
   "password": "bodega1234",
   "cpassword": "bodega1234",
   "category": "user",
-  "image": "https://robohash.org/vitaelaborererum.png?size=50x50&set=set1"
+  "image": "imagen2.jpg"
  },
  {
   "id": 6,
@@ -67,7 +67,7 @@
   "fechaNacimiento": "1978-10-19",
   "telefono": "123456",
   "password": "$2a$10$iNXJvhyrc2Ur716RvhYlOuA4BBnjH5rvYziI2xzITkIAqZEu8N5b6",
-  "image": "/users/404-user.jpg"
+  "image": "imagen3.jpg"
  },
  {
   "id": 7,
@@ -87,6 +87,7 @@
   "fechaNacimiento": "",
   "telefono": "+542615693888",
   "password": "$2a$10$yee3bE.vyWDTtT7/71v7yuDM2dUw0brqUZFBfOmSNB9a5biGhSLRS",
+  "image": "imagen3.jpg",
   "category": "user"
  },
  {
@@ -97,6 +98,18 @@
   "fechaNacimiento": "1965-06-23",
   "telefono": "02615693888",
   "password": "$2a$10$xP/4KH8hrMAyFO5NqwVt9OengjIgG7DZ1H7Mn2iiPawMxJW8ZINK2",
-  "image": "image-1648670603122.jpg"
+  "image": "imagen3.jpg",
+  "category": "user"
+ },
+ {
+  "id": 10,
+  "nombres": "Daniel",
+  "apellidos": "Modarelli",
+  "email": "modarellid@net.ar",
+  "fechaNacimiento": "1965-06-23",
+  "telefono": "02615693888",
+  "password": "$2a$10$e5o93yKilUWSOhWvl0R5y.Y4NoXZig.YD7HB4vdkN.tdx2ctyk0.2",
+  "image": "imagen3.jpg",
+  "category": "admin"
  }
 ]

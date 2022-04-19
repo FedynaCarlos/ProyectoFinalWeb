@@ -11,7 +11,7 @@ const validationUsers = [
     // chequeo que la imagen este y sea de un formato especifico
     check('image').custom((value, { req })=>{
         let file = req.file;
-        let trueExtension = ['.jpg','.png','gif'];
+        let trueExtension = ['.jpg','.png','.gif','.jpeg'];
          
         if (!file){
             throw new Error('Debes subir una imagen')
