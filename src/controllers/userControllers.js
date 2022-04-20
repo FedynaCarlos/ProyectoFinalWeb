@@ -42,6 +42,7 @@ const usuariosController = {
     },
 
     login: (req,res) => {
+         
          res.render('login.ejs');
          
          
@@ -50,32 +51,37 @@ const usuariosController = {
        
         let userToLogin = User.findByField('email' , req.body.email);
         
-
+        
         if (userToLogin){
 
             let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkpassword){
                 delete userToLogin.password;    
+                //console.log(userToLogin);
                 req.session.userLogeado = userToLogin;
                 return res.redirect('/');
             }
-           
-        return res.render('login.ejs',{
+            else {
+            return res.render('login.ejs',{
             errors: {
                 email:{ 
                     msg: 'Las credenciales no son válidos'
                 }
             }   
-           });
+            });
         }
-    },
+        }
+    },/*
     userLogeado: (req, res) => {
-        return res.render('index.ejs',{
-            user: req.session.userlogin
+        
+        return res.render('/',{
+            
+            user: req.session.userlogeado
         })
-
-    },
+        
+    },*/
     logout: (req, res) =>{
+        
         req.session.destroy();
         return res.redirect('/');
     }

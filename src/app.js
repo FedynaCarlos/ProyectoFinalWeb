@@ -23,7 +23,7 @@ const adminRoutes = require('./routes/adminRoutesSeq');
 
 
 const res = require('express/lib/response');
-const userLogeado = require('./middlewares/userLogeado');
+const userLogeadoMiddlewares = require('./middlewares/userLogeadoMiddlewares');
 
 // middlewares
 app.use(methodOverride('_method'));
@@ -37,7 +37,7 @@ app.use(session({
 }));
 
 app.use(cookies());
-app.use(userLogeado);
+app.use(userLogeadoMiddlewares);
 
 //Rutas a usar
 app.use('/',mainRoutes);
