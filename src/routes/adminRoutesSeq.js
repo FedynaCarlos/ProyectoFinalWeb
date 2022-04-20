@@ -25,6 +25,7 @@ router.get('/detail/:id', controllerAdminSeq.show);
 router.get('/edit/:id', controllerAdminSeq.edit);
 router.put('/edit/:id', upload.single('image'), controllerAdminSeq.update);
 router.get('/delete/:id', controllerAdminSeq.destroy);
+router.get('/administrar/search_results', controllerAdminSeq.search);
 
 
 module.exports = router;

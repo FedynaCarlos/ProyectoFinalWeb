@@ -2,33 +2,47 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../../src/database/models');
+
+//const productsFilePath = path.join(__dirname, '../data/products.json');
+//const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 //const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const pController ={
     productos: (req,res) => {
-        res.render('productDetail');
+			/*const cepas=db.Cepa.findAll()
+			const productos= db.Producto.findAll({
+				incluede : [{association : 'cepa'}]
+			})
+			Promise.all([productos,cepas])
+			.then( ([productos,cepas]) => {
+				res.render('productDetail',{productos,cepas})
+			}) */
+			
+			db.Producto.findAll()
+			.then(function(productos){
+        
+				res.render('productDetail',{productos});
+			})
+			.catch(error => res.send(error))
     },
-    productosPrincipal: (req,res)=>{
-        res.render('products');
-    },
-    productCart: (req,res) => {
+    //productosPrincipal: (req,res)=>{
+      //(())  res.render('products');
+    //},
+
+    /*productCart: (req,res) => {
         res.render('productCart');
-    },  
+    },*/  
 	
     /*formulario de creacion*/
 
-    crear: (req,res) =>{
-        res.render('createProduct')
-    },
-	
-
-
+    //crear: (req,res) =>{
+      //  res.render('createProduct')
+    //},
 
     	// Create -  Method to store
-	almacenar: (req, res) => {
+	/*almacenar: (req, res) => {
 
         const errors = validationResult(req);
 		
@@ -56,7 +70,7 @@ const pController ={
 			res.redirect('/');
 		}
 
-	}
+	}*/
 };
 
 
