@@ -111,5 +111,15 @@
   "password": "$2a$10$e5o93yKilUWSOhWvl0R5y.Y4NoXZig.YD7HB4vdkN.tdx2ctyk0.2",
   "image": "imagen3.jpg",
   "category": "admin"
+ },
+ {
+  "id": 11,
+  "nombres": "Juan",
+  "apellidos": "Diez",
+  "email": "hfsdhyfiu@gmail.com",
+  "fechaNacimiento": "1950-02-10",
+  "telefono": "25646",
+  "password": "$2a$10$LoCurC/Bktk523r2awcEreWYU/3OTzAYZSCvMVDzDgC8bIJTNP74.",
+  "image": "image-1650416141549.jpg"
  }
 ]

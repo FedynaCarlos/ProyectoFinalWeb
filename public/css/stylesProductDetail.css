@@ -68,6 +68,40 @@
 .col-12{
     margin-left: 5%;
 }
+
+a.btn.btn-outline-primary {
+  min-width: 130px;
+  height: 40px;
+  
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #604621;
+  
+  background: #fff;
+  color: #604621
+}
+a.btn.btn-outline-primary:hover {
+  background: #604621;
+  color: #fff;
+}
+
+
+button.btn.btn-primary{
+  background-color: #604621;
+  border-color: white;
+}
+.col-6a{
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .menu-productos{
     padding: 2%;
     width: 80%;
@@ -154,6 +188,19 @@ th {
     font-weight: bolder;
     font-size: 18px;
 }
+a.btn.btn-info{
+  background-color: rgb(250, 241, 227);
+  border-color: #604621;
+}
+a.btn.btn-success{
+  background-color: rgb(233, 204, 161);
+  border-color: #604621;
+}
+a.btn.btn-danger{
+  background-color: rgba(253, 150, 150, 0.836);
+  border-color: #604621;
+}
+
 
 /*---edit Products---*/
 
