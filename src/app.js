@@ -2,7 +2,9 @@ const express = require('express');
 const methodOverride =  require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+//const userlogeado = require('./middlewares/userLogeado');
+
 
 const app = express();
 
@@ -21,6 +23,7 @@ const adminRoutes = require('./routes/adminRoutesSeq');
 
 
 const res = require('express/lib/response');
+const userLogeadoMiddlewares = require('./middlewares/userLogeadoMiddlewares');
 
 // middlewares
 app.use(methodOverride('_method'));
@@ -34,7 +37,7 @@ app.use(session({
 }));
 
 app.use(cookies());
-//app.use(userLogged);
+app.use(userLogeadoMiddlewares);
 
 //Rutas a usar
 app.use('/',mainRoutes);

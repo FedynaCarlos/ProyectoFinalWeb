@@ -1,8 +1,9 @@
-function userlogin(req, res, next) {
-    if(req.session.userlogeado){
+function userLogin(req, res, next) {
+    if(req.session.userLogeado){
+        
         return res.redirect('/')
     }
     next();
 }
 
-module.exports = userlogin;
+module.exports = userLogin;
