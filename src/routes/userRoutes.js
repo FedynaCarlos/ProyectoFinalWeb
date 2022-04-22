@@ -3,7 +3,7 @@ const router = express.Router();
 const usuariosController = require('../controllers/userControllers');
 const validationUsers = require('../middlewares/validationUsers');
 const userLogin = require('../middlewares/userLogin');
-const userlogout = require('../middlewares/userlogout');
+const userlogout = require('../middlewares/userLogout');
 const multer = require('multer');
 const path = require('path');
 

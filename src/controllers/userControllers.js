@@ -59,6 +59,7 @@ const usuariosController = {
                 delete userToLogin.password;    
                 //console.log(userToLogin);
                 req.session.userLogeado = userToLogin;
+                //console.log(req.session.userLogeado)
                 return res.redirect('/');
             }
             else {
