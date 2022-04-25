@@ -2,6 +2,7 @@ const fs = require('fs');
 const { validationResult } = require('express-validator');
 const User = require('../models/User')
 const bcryptjs = require('bcryptjs');
+
 const usuariosController = {
     register: (req,res) => {
         res.render('register.ejs');
