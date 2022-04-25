@@ -2,6 +2,7 @@ const fs = require('fs');
 const { validationResult } = require('express-validator');
 const User = require('../models/User')
 const bcryptjs = require('bcryptjs');
+
 const usuariosController = {
     register: (req,res) => {
         res.render('register.ejs');
@@ -59,6 +60,7 @@ const usuariosController = {
                 delete userToLogin.password;    
                 //console.log(userToLogin);
                 req.session.userLogeado = userToLogin;
+                //console.log(req.session.userLogeado)
                 return res.redirect('/');
             }
             else {

@@ -1,4 +1,4 @@
-function userLogeado(req, res, next) {
+function userLogeadoMiddlewares(req, res, next) {
     res.locals.isLogged = false;
     
     if (req.session.userLogeado) {
@@ -10,4 +10,4 @@ function userLogeado(req, res, next) {
 
     next();
 }
-module.exports = userLogeado;
+module.exports = userLogeadoMiddlewares;

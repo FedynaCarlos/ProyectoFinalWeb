@@ -7,7 +7,7 @@ const Op = db.Sequelize.Op;
 const controllerAdminSeq = {
    index: (req,res) =>{
     db.Producto.findAll()
-      .then(function(productos){
+      .then(function(productos){ 
         res.render('listProducts', {productos});
       })
       .catch(error => res.send(error))

@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 19-04-2022 a las 23:06:13
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.2
+-- Host: 127.0.0.1
+-- Generation Time: Apr 22, 2022 at 08:21 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `grupo_5`
+-- Database: `grupo_5`
 --
 CREATE DATABASE IF NOT EXISTS `grupo_5` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `grupo_5`;
@@ -26,7 +26,7 @@ USE `grupo_5`;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `cepas`
+-- Table structure for table `cepas`
 --
 
 CREATE TABLE `cepas` (
@@ -35,7 +35,7 @@ CREATE TABLE `cepas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `cepas`
+-- Dumping data for table `cepas`
 --
 
 INSERT INTO `cepas` (`descripcion`, `cepa_id`) VALUES
@@ -48,7 +48,18 @@ INSERT INTO `cepas` (`descripcion`, `cepa_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `productos`
+-- Table structure for table `perfil`
+--
+
+CREATE TABLE `perfil` (
+  `perfil_id` int(10) NOT NULL,
+  `descripcion` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `productos`
 --
 
 CREATE TABLE `productos` (
@@ -62,23 +73,19 @@ CREATE TABLE `productos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Tabla de productos';
 
 --
--- Volcado de datos para la tabla `productos`
+-- Dumping data for table `productos`
 --
 
 INSERT INTO `productos` (`nombre`, `precio`, `cepa_id`, `categoria`, `descripcion`, `imagen`, `produc_id`) VALUES
 ('Espumante', '4600', 1, 'Espumoso', 'Para Festejar', 'clogoespumante.jpg', 1),
 ('Judas', '6000', 4, 'Tinto', 'Excelente para cualquier tipo de comida', 'Judas_Malbec.jpg', 2),
 ('Junior Blend', '5500', 4, 'Tinto', 'Vino con excelentes aromas', 'Junior_Blend.jpg', 3),
-('La consulta', '5000', 4, 'Tinto', 'Para comenzar una buena noche de compartir', 'LaConsulta.jpg', 4),
-('Maria Magdalena', '4500', 5, 'Blanco', 'Vino suave especial para cenar', 'María_Magdalena.jpg', 5),
-('Malma', '5000', 4, 'Tinto', 'Vino suave especial para cenar', 'Reserva_de_Familia_Malbec.jpg', 6),
-('Santa rita', '6000', 5, 'Tinto', 'Especial para acompañar carnes', 'SantaRita.jpg', 7),
-('Vino de la casa', '5600', 1, 'Tinto', 'Vino con suaves aromas', 'default-image.png', 9);
+('Hola', '1000', 3, 'Blanco', 'Hola de nuevo', 'Vino-1650247097307.jpg', 4);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -89,52 +96,65 @@ CREATE TABLE `usuario` (
   `fechaNac` date NOT NULL COMMENT 'Fecha de Nacimiento',
   `telefono` int(11) NOT NULL COMMENT 'teléfono',
   `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Clave de usuario',
-  `categoria` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `avatar` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Imagen del usuario'
+  `avatar` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Imagen del usuario',
+  `perfil_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `cepas`
+-- Indexes for table `cepas`
 --
 ALTER TABLE `cepas`
   ADD PRIMARY KEY (`cepa_id`);
 
 --
--- Indices de la tabla `productos`
+-- Indexes for table `perfil`
+--
+ALTER TABLE `perfil`
+  ADD PRIMARY KEY (`perfil_id`);
+
+--
+-- Indexes for table `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`produc_id`),
   ADD KEY `cepa_id` (`cepa_id`);
 
 --
--- Indices de la tabla `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `perfil_id` (`perfil_id`) USING BTREE;
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `productos`
+-- AUTO_INCREMENT for table `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `produc_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'índice de productos', AUTO_INCREMENT=10;
+  MODIFY `produc_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'índice de productos', AUTO_INCREMENT=5;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `productos`
+-- Constraints for table `productos`
 --
 ALTER TABLE `productos`
   ADD CONSTRAINT `cepas_producto` FOREIGN KEY (`cepa_id`) REFERENCES `cepas` (`cepa_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `perfil_usuario` FOREIGN KEY (`perfil_id`) REFERENCES `perfil` (`perfil_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
