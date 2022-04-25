@@ -6,6 +6,10 @@ const principalController ={
     },
     about: (req,res) => {
         res.render('about');
+    },
+    //agrego paco prueba
+    contact: (req,res) => {
+        res.render('contacto');
     }
 };
 
