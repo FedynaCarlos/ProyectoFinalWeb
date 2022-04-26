@@ -4,8 +4,8 @@ const db = require('../../src/database/models');
 const res = require('express/lib/response');
 const Op = db.Sequelize.Op;
 
-const controllerAdminSeq = {
-   index: (req,res) =>{ 
+const userControllersSeq = {
+   index: (req,res) =>{
     db.Producto.findAll()
       .then(function(productos){ 
         res.render('listProducts', {productos});
@@ -96,4 +96,4 @@ const controllerAdminSeq = {
 
 
 
-module.exports = controllerAdminSeq;
+module.exports = userControllersSeq;

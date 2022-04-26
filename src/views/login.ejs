@@ -31,20 +31,26 @@
                         </div>
                     <% } %> 
             </div>
+            <div class="titulo-usuario">
+                <input type="checkbox" id="recordar" name="recordar">
+                <label for="recordar">Recordar Usuario</label>                     
+            </div>
             <div>
                 <p class="ocontrasena"><a href="#">Olvidaste tu contraseña?</a></p>
             </div>
             <div class="control-formulario">
                 <button type="submit" class="boton-formulario">Ingresar</button>
             </div>
+                
+
             <div class="linea"></div>
             <div>
                 <p>No tienes cuenta? <a href="/user/register"> Crea una aqui</a></p>
             </div>
         </form>
     </main>
-    <script src="/js/login.js"></script>
+   
     <%- include('./partials/footer') %>
-    
+    <script src="/js/login.js"></script>
 </body>
 </html>
