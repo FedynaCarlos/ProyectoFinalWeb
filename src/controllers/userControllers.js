@@ -28,7 +28,7 @@ const usuariosController = {
                         },
                  oldData: req.body
              })
-        }6
+        }
 
 
         let userToCreate = {

@@ -10,16 +10,16 @@ header {
     width: 400px;
     background-color: transparent;
 }
+
 .idiomas {
-	background:hsl(40, 7%, 74%);
-}
-p.idiomas {
 	font-size:11px;
 	text-align:right;
 	text-shadow:none;
 	padding-top:5px;
 	padding-bottom:2px;
 	padding-right:10px;
+    background:hsl(40, 7%, 74%);
+    margin-bottom: 0rem;
 }
 .cabecera {
     background-color:transparent;
@@ -103,6 +103,10 @@ footer{
     flex-wrap: wrap;
     width: 400px;
 }
+.pAbout {
+    padding: 1px;
+    margin-bottom: 3px;
+}
 .fLogo{
     border-radius: 50%;
     width: 80px;
@@ -141,6 +145,7 @@ footer{
 
 .fLogoyTexto{
     display: flex;
+    padding: 1px;
 }
 .fLogoyTextoBajo{
     display: flex;

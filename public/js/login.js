@@ -1,3 +1,5 @@
+
+/*
 window.addEventListener("load", function() {
 
     let formulario = document.querySelector(".create-user");
@@ -12,3 +14,5 @@ window.addEventListener("load", function() {
             }
         });
     });
+
+    */

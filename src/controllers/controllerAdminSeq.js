@@ -2,6 +2,7 @@ const path = require('path');
 const { devNull } = require('os');
 const db = require('../../src/database/models');
 const res = require('express/lib/response');
+
 const Op = db.Sequelize.Op;
 
 const controllerAdminSeq = {
@@ -85,9 +86,8 @@ const controllerAdminSeq = {
         nombre: {[Op.like]: `%${req.query.search}%`}
       }
     })
-    
-    .then(resultado => { 
-      //console.log(resultado)
+        
+    .then(function(resultado){
       res.render('listProducts', {productos : resultado}); })
     .catch(error => res.send(error))
   }

@@ -1,9 +1,10 @@
-main h3{
+
+.about-usbd{
+    margin-top: 6px;
     text-align: center;
     font-size: 24px;
-}
-.about-us{
-    margin-top: 5px;
+    font-weight: 800;
+
 }
 .about{
     text-align: justify;
@@ -27,6 +28,9 @@ main h3{
     text-align: center;
     width: 250px;
     height: 340px;
+}
+.nombreAbout{
+     font-weight: 700;
 }
 .historia{
     max-width: 400px;
@@ -61,9 +65,7 @@ main h3{
 .listRedirection{
     list-style: none;
 }
-.listRedirection li, p{
-    padding: 4px;
-}
+
 .listRedirection a{
     text-decoration: none;   
 }
