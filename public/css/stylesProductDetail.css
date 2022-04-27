@@ -20,7 +20,6 @@
 	opacity: 0.5;
 }
 .contenedor1{
-  /*height: 200px;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -29,8 +28,16 @@
   box-shadow: 0px 0px 6px 3px rgba(68, 68, 68, 0.3);
   border-radius: 5px;
   margin-top: 15px;
+  align-items: center;
+
+  
+  
 }
 
+.product_img{
+  height: 410px;
+  
+}
 .elemento1{
   width: 110px;
 
@@ -64,6 +71,10 @@
 
 .visita{
   margin-top: 10px;
+}
+.tituloListP {
+  text-align: center;
+  font-weight: 800;
 }
 .col-12{
     margin-left: 5%;
@@ -99,9 +110,13 @@ button.btn.btn-primary{
 .col-6a{
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  margin: 10px;
 }
-
+.formSearcLp{
+  margin: 15px;
+  height: 60px;
+  text-align: center;
+}
 .menu-productos{
     padding: 2%;
     width: 80%;

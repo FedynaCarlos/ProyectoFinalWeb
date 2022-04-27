@@ -10,7 +10,7 @@ header {
     width: 400px;
     background-color: transparent;
 }
-
+ 
 .idiomas {
 	font-size:11px;
 	text-align:right;
@@ -95,7 +95,7 @@ header ul li{
 }
 
 footer{
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 10px;
     background-color: #bbac96;
     display: flex;

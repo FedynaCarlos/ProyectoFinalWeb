@@ -8,14 +8,14 @@
     <%- include('partials/header') %>
     <main class="body-produts">
         <section class="visita">
-            <h3>ADMINISTRADOR DE PRODUCTOS</h3> 
+            <h3 class="tituloListP">ADMINISTRADOR DE PRODUCTOS</h3> 
         </section>
         <article class="col-12">
             
             <a href="/administrar/create" class="btn btn-outline-primary">Nuevo Producto</a>
         </article>
         <article class="col-6a">
-            <form action="/administrar/search_results" method="GET">
+            <form class="formSearcLp" action="/administrar/search_results" method="GET">
                 <input type="search" name="search">
                 <button class="btn btn-primary" type="submit">
                     <ion-icon name="search-outline"></ion-icon>
