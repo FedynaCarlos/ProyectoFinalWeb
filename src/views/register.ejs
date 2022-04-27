@@ -19,6 +19,7 @@
             <div  class="control-formulario">
                 <input 
                     type="text" 
+                    id="nombres"
                     name="nombres" 
                     placeholder="Nombres" 
                     class="control <%= locals.errors && errors.nombres ? 'is-invalid' : null %>"
@@ -34,6 +35,7 @@
             <div class="control-formulario">
                 <input 
                     type="text" 
+                    id="apellidos"
                     name="apellidos" 
                     placeholder="Apellidos" 
                     class="control <%= locals.errors && errors.apellidos ? 'is-invalid' : null %>"
@@ -48,6 +50,7 @@
             <div  class="control-formulario">
                 <input 
                  type="email" 
+                 id="email"
                  name="email" 
                  placeholder="E-mail"
                  class="control <%= locals.errors && errors.email? 'is-invalid' : null %>"
@@ -62,6 +65,7 @@
             <div class="control-formulario">
                 <input 
                  type="date" 
+                 id="fechaNac"
                  name="fechaNacimiento" 
                  placeholder="Fecha Nacimiento" 
                  class="control <%= locals.errors && errors.fechaNacimiento ? 'is-invalid' : null %>"
@@ -89,7 +93,7 @@
             </div>
             <div class="control-formulario">
                 <label for="">Agregar imagen</label>
-                <input type="file" name="image" id="image">
+                <input type="file" id="avatar" name="image" id="image">
                  <% if (locals.errors && errors.image) { %>
                     <div>
                         <span style="color: yellow; font-size: 12px"><%= errors.image.msg %></span> 
@@ -97,7 +101,7 @@
                 <% } %>
             </div>
             <div  class="control-formulario">
-                <input type="password" name="password" placeholder="Password" class="control"><br>
+                <input type="password" id="password" name="password" placeholder="Password" class="control"><br>
                 <% if (typeof errors != 'undefined' && typeof errors.password != 'undefined') { %>
                     <span style="color: yellow; font-size: 12px"><%= errors.password.msg %></span> 
                 <% } %>
@@ -114,6 +118,8 @@
             
         </form>
     </main>
-    <%- include('./partials/footer') %>
+    
+       <%- include('./partials/footer') %>
+       <script src="/js/register.js"></script>  
 </body>
 </html>

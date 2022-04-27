@@ -40,5 +40,11 @@ module.exports = function (sequelize, dataTypes) {
 
   let Usuario = sequelize.define(alias, cols, config);
 
+  Usuario.associate = function(models) {
+    Usuario.belongsTo(models.Perfil, {
+      as: "perfil",
+      foreignKey: "perfil_id"
+    })
+  }  
   return Usuario;
 }

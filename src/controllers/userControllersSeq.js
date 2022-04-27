@@ -2,14 +2,13 @@ const path = require('path');
 const { devNull } = require('os');
 const db = require('../../src/database/models');
 const res = require('express/lib/response');
-
 const Op = db.Sequelize.Op;
 
-const controllerAdminSeq = {
-   index: (req,res) =>{ 
-    db.Producto.findAll()
-      .then(function(productos){ 
-        res.render('listProducts', {productos});
+const userControllersSeq = {
+   index: (req,res) =>{
+    db.Usuario.findAll()
+      .then(function(usuarios){ 
+        res.render('listUsers', {usuarios});
       })
       .catch(error => res.send(error))
    },
@@ -86,8 +85,9 @@ const controllerAdminSeq = {
         nombre: {[Op.like]: `%${req.query.search}%`}
       }
     })
-        
-    .then(function(resultado){
+    
+    .then(resultado => { 
+      //console.log(resultado)
       res.render('listProducts', {productos : resultado}); })
     .catch(error => res.send(error))
   }
@@ -96,4 +96,4 @@ const controllerAdminSeq = {
 
 
 
-module.exports = controllerAdminSeq;
+module.exports = userControllersSeq;

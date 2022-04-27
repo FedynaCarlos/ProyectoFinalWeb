@@ -45,6 +45,7 @@ app.use('/user',userRoutes);
 app.use('/productos',productRoutes);
 app.use('/cepa',cepaRoutes);
 app.use('/about',mainRoutes);
+app.use('/prueba',mainRoutes);
 app.use('/administrar',adminRoutes);
 
 //Levantar servidor

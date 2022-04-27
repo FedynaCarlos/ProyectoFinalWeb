@@ -4,6 +4,7 @@ const router = express.Router();
 const controllerAdmin = require('../controllers/controllerAdmin');
 const multer = require('multer');
 const controllerAdminPrueba = require('../controllers/controllerAdmin');
+const userLogout = require('../middlewares/userLogout')
 
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
@@ -16,7 +17,7 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage})
 
 
-router.get('/', controllerAdmin.index);
+router.get('/', userLogout, controllerAdmin.index);
 router.get('/create', controllerAdmin.create);
 router.post('/create', upload.single('image'), controllerAdmin.save);
 router.get('/detail/:id', controllerAdmin.show);

@@ -121,5 +121,35 @@
   "telefono": "25646",
   "password": "$2a$10$LoCurC/Bktk523r2awcEreWYU/3OTzAYZSCvMVDzDgC8bIJTNP74.",
   "image": "image-1650416141549.jpg"
+ },
+ {
+  "id": 12,
+  "nombres": "Juan",
+  "apellidos": "Fedyna",
+  "email": "pacofedyna@gmail.com",
+  "fechaNacimiento": "1986-04-13",
+  "telefono": "01132712055",
+  "password": "$2a$10$/drR7ly5pOz2OjRnzTwgWuU4BOJyJzgA1e8W1fbp8k6mvqgIr7JJu",
+  "image": "image-1650812917879.jpg"
+ },
+ {
+  "id": 13,
+  "nombres": "Juan",
+  "apellidos": "Fedyna",
+  "email": "pacofedyna@hotmail.com",
+  "fechaNacimiento": "1986-04-13",
+  "telefono": "01132712055",
+  "password": "$2a$10$7VT7AHkeUwYIchDjxo6AwewJjDc/BMqfQ5zSgtYfzksZJKO2XMWXG",
+  "image": "image-1650813375626.jpg"
+ },
+ {
+  "id": 14,
+  "nombres": "fran",
+  "apellidos": "fort",
+  "email": "fort@gmail.com",
+  "fechaNacimiento": "1987-12-12",
+  "telefono": "1532723456",
+  "password": "$2a$10$lc8aMOOSMy56wTTl8/pX7OFhAX1vyHmcphuBEJa2b10utzv4NAZMO",
+  "image": "image-1650831661330.jpg"
  }
 ]
