@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+<head>
+    
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="body-produts">
+        <section class="visita">
+            <h3>ADMINISTRADOR DE USUARIOS</h3> 
+        </section>
+        <article class="col-12">
+            
+            <a href="/user" class="btn btn-outline-primary">Nuevo Usuario</a>
+        </article>
+        <article class="col-6a">
+            <form action="/administrar/search_results" method="GET">
+                <input type="search" name="search">
+                <button class="btn btn-primary" type="submit">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </form>
+        </article>
+        
+    <section class= "CRUD">
+        <div class="menu-productos">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Ver/Editar/Eliminar</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <% productos.forEach(producto=> { %>
+                        <tr class="table-active">
+                           <!-- <th scope="row">Active</th> -->
+                            <td><%= producto.produc_id%></td>
+                            <td><%= producto.nombre%></td>
+                            <td>
+                                <a href="/administrar/detail/<%= producto.produc_id%> " class="btn btn-info">Detalle</a>
+                                <a href="/administrar/edit/<%= producto.produc_id%> " class="btn btn-success">Editar</a>
+                                <a href="/administrar/delete/<%= producto.produc_id%> "class="btn btn-danger">Eliminar</a>
+                            </td>
+                            
+                      </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+
+        </div>
+    </section>
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    </main>
+</body>
+</html>

@@ -6,9 +6,9 @@ const Op = db.Sequelize.Op;
 
 const userControllersSeq = {
    index: (req,res) =>{
-    db.Producto.findAll()
-      .then(function(productos){ 
-        res.render('listProducts', {productos});
+    db.Usuario.findAll()
+      .then(function(usuarios){ 
+        res.render('listUsers', {usuarios});
       })
       .catch(error => res.send(error))
    },
