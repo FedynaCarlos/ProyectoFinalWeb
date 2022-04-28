@@ -7,7 +7,7 @@
   <body>
   <%- include('./partials/header') %>
     
-  <h2>Nuestros productos con la mejor calidad</h2>
+  <h2 class="tituloproduct">Nuestros productos con la mejor calidad</h2>
   
   <section class="allProducts">
       <!--div mostrar imagen-->
@@ -18,18 +18,16 @@
           <div class="elemento1">
             <!--elemento1-->
             <img src="/images/<%= productos[i].imagen%>"  class="product_img">
-            <!--<i class="fas fa-truck"></i> 
             
-            <h4 class="description"><%= productos[i].nombre%></h4> -->
           </div>
           <!--fin de elemnto1-->
           <!--descripcion del producto-->
           <div class="elemento2">
             <!--elemento 2-->
             
-            <h3><%= productos[i].nombre%> </h3>
+            <h3 class="nombreProdDetail"><%= productos[i].nombre%> </h3>
             <P><%= productos[i].descripcion%></p>
-            <p><%= productos[i].cepa_id%></p>
+            <p><%= productos[i].cepa.descripcion%></p>
             <p><%= productos[i].categoria%></p>
             <p><%= productos[i].precio%></p>
             
@@ -37,44 +35,6 @@
           </div>
         </article>
         <% } %>
-        
-
-
-        <!--contenedor de productos en miniatura
-                <div class="contenedor2">
-                  <div class="elemento3">
-                      <img src="images/clogoespumante.jpg" width="90"halt="Vino blanco" class="product_img">
-                      <i class="fas fa-truck"></i>
-                   <p class="price">$4.000</p>
-                   <h3 class="nombre">Espumante</h3>
-                  <h4 class="description">Espumoso</h4>
-                 <button type="reset" class="boton-formulario">Agregar al carrito</button>
-                  </div>
-                  <div class="elemento4">
-                      <img src="images/Junior_Blend.jpg" width="80"halt="Vino tinto" class="product_img">
-                      <i class="fas fa-truck"></i>
-                   <p class="price">$5.000</p>
-                   <h3 class="nombre">Junior Blend</h3>
-                  <h4 class="description">Vino tinto</h4>
-                  <button type="reset" class="boton-formulario">Agregar al carrito</button>
-                  </div>
-                  <div class="elemento5">
-                      <img src="images/María_Magdalena.jpg" width="90"halt="Vino Blanco" class="product_img">
-                      <i class="fas fa-truck"></i>
-                   <p class="price">$4.500</p>
-                   <h3 class="nombre">María Magdalena</h3>
-                  <h4 class="description">Vino Blanco</h4>
-                  <button type="reset" class="boton-formulario">Agregar al carrito</button>
-                  </div>
-                  <div class="elemento6">
-                      <img src="/public/images/SantaRita.jpg" width="80"halt="Vino Tinto" class="product_img">
-                      <i class="fas fa-truck"></i>
-                   <p class="price">$6.000</p>
-                   <h3 class="nombre">Santa Rita</h3>
-                  <h4 class="description">Vino Tinto</h4>
-                  <button type="reset" class="boton-formulario">Agregar al carrito</button>
-                  </div>
-              </div> -->
 
     </section>
     <%- include('partials/footer') %>

@@ -29,7 +29,8 @@
                 <label for="">Cepa:</label>
                 <select class="input1" name="cepa" id="cepa">
                     <% for (let i=0; i < cepas.length; i++) { %>
-                        <option value="<%= cepas[i].cepa_id %>"><%= cepas[i].descripcion%></option>
+                        <option value="<%= cepas[i].cepa_id %>" <%= vinoEditar.cepa_id == cepas[i].cepa_id ? "selected" : null %>><%= cepas[i].descripcion%></option>
+                        
                     <% } %>
                     <% if (typeof errors !='undefined' && typeof errors.cepa !='undefined' ) { %>
                         <span style="color: red"><%= errors.cepa.msg %></span>
