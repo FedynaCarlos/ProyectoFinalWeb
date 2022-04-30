@@ -2,10 +2,12 @@ const path = require('path');
 const { devNull } = require('os');
 const db = require('../../src/database/models');
 const res = require('express/lib/response');
+const { validationResult } = require("express-validator");
+
 const Op = db.Sequelize.Op;
 
 const controllerAdminSeq = {
-   index: (req,res) =>{
+   index: (req,res) =>{ 
     db.Producto.findAll()
       .then(function(productos){ 
         res.render('listProducts', {productos});
@@ -13,25 +15,35 @@ const controllerAdminSeq = {
       .catch(error => res.send(error))
    },
    create: (req,res) => {
+    const valores = req.body;
     db.Cepa.findAll()
       .then(function(cepas){
-        res.render("createProduct", {cepas});
+        res.render("createProduct", {cepas,valores});
       })
    },
   save: (req,res) => {
-    db.Producto.create({
-      nombre: req.body.nombre,
-      precio: req.body.precio,
-      cepa_id: req.body.cepa,
-      categoria: req.body.categoria,
-      descripcion: req.body.descripcion,
-      imagen: req.file.filename
-      
-    })
-    .then(vinos => {
-      res.redirect("/administrar");
-    })
-    .catch(error => res.send(error))
+    
+    const errors= validationResult(req);
+    if (!errors.isEmpty()){
+      return (     
+      db.Cepa.findAll()
+        .then (function(cepas){
+          res.render('createProduct', {errors:errors.mapped(), oldData:req.body, cepas})
+        }))
+    } else {
+      db.Producto.create({
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        cepa_id: req.body.cepa,
+        categoria: req.body.categoria,
+        descripcion: req.body.descripcion,
+        imagen: req.file.filename,
+      })
+        .then((vinos) => {
+          res.redirect("/administrar");
+        })
+        .catch((error) => res.send(error));
+    }
   },
   show: (req,res)=>{
     db.Producto.findByPk(req.params.id, {
@@ -85,9 +97,8 @@ const controllerAdminSeq = {
         nombre: {[Op.like]: `%${req.query.search}%`}
       }
     })
-    
-    .then(resultado => { 
-      //console.log(resultado)
+        
+    .then(function(resultado){
       res.render('listProducts', {productos : resultado}); })
     .catch(error => res.send(error))
   }

@@ -1,3 +1,7 @@
+.tituloproduct{
+  font-weight: 900;
+}
+
 
 .allProducts{
   display: flex;
@@ -7,20 +11,7 @@
   padding: 20px;
 }
 
-.contenedorMayor{
-  display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-}
-.contenedorMayor .marcobodega .bodega{
-  height: 500px;
-	width: 98%;
-  margin: 5px 5px;
-	opacity: 0.5;
-}
 .contenedor1{
-  /*height: 200px;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
@@ -29,41 +20,40 @@
   box-shadow: 0px 0px 6px 3px rgba(68, 68, 68, 0.3);
   border-radius: 5px;
   margin-top: 15px;
+  align-items: center;
 }
 
+.product_img{
+  height: 410px;
+  
+}
 .elemento1{
   width: 110px;
 
 }
+.elemento2 {
+  max-width: 150px;
+  
+}
+
 .elemento2 p{
   max-width: 150px;
   padding-left: 5px;
+  
 }
-.contenedor2{
-	height: auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: flex-end;
+.nombreProdDetail{
+  font-weight: 700;
 }
-.informacionDelProducto{
-	text-align: left;
-	align-items: flex-start;
-}
-.marcobodega{
-    display:flex;
-    justify-content: center;
-}
-.bodega{
-    height: 500px;
-	width: 98%;
-    margin: 5px 5px;
-}
+
 
 /*---List Products---*/
 
 .visita{
   margin-top: 10px;
+}
+.tituloListP {
+  text-align: center;
+  font-weight: 800;
 }
 .col-12{
     margin-left: 5%;
@@ -72,7 +62,6 @@
 a.btn.btn-outline-primary {
   min-width: 130px;
   height: 40px;
-  
   padding: 5px 10px;
   font-weight: bold;
   cursor: pointer;
@@ -82,7 +71,6 @@ a.btn.btn-outline-primary {
   outline: none;
   border-radius: 5px;
   border: 2px solid #604621;
-  
   background: #fff;
   color: #604621
 }
@@ -91,7 +79,6 @@ a.btn.btn-outline-primary:hover {
   color: #fff;
 }
 
-
 button.btn.btn-primary{
   background-color: #604621;
   border-color: white;
@@ -99,9 +86,13 @@ button.btn.btn-primary{
 .col-6a{
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  margin: 10px;
 }
-
+.formSearcLp{
+  margin: 15px;
+  height: 60px;
+  text-align: center;
+}
 .menu-productos{
     padding: 2%;
     width: 80%;

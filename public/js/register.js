@@ -1,4 +1,4 @@
-window.onload = function(){
+/*window.onload = function(){
     let formulario = document.querySelector("form.create-user");
     formulario.addEventListener("submit",function(e) {
   

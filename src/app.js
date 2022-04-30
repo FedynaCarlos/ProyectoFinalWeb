@@ -3,6 +3,7 @@ const methodOverride =  require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const bodyParser = require('body-parser');
+
 //const userlogeado = require('./middlewares/userLogeado');
 
 

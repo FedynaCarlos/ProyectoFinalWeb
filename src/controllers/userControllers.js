@@ -4,7 +4,7 @@ const User = require('../models/User')
 const bcryptjs = require('bcryptjs');
 
 const usuariosController = {
-    register: (req,res) => {
+    register: (req,res) => { 
         res.render('register.ejs');
     },
     processRegister: (req, res) => {
@@ -28,7 +28,7 @@ const usuariosController = {
                         },
                  oldData: req.body
              })
-        }6
+        }
 
 
         let userToCreate = {
@@ -42,7 +42,7 @@ const usuariosController = {
         
     },
 
-    login: (req,res) => {
+    login: (req,res) => { 
          
          res.render('login.ejs');
          
@@ -50,6 +50,8 @@ const usuariosController = {
     },
     authenticate: (req, res) => { 
        
+       // return res.send(req.body);
+
         let userToLogin = User.findByField('email' , req.body.email);
         
         
@@ -58,9 +60,14 @@ const usuariosController = {
             let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkpassword){
                 delete userToLogin.password;    
-                //console.log(userToLogin);
+                
                 req.session.userLogeado = userToLogin;
-                //console.log(req.session.userLogeado)
+
+                /*  GUARDO LA COOKIE*/
+                if (req.body.recordar){
+                    res.cookie('userMail', req.body.email , {maxAge: (1000 * 60) * 2})
+                }
+
                 return res.redirect('/');
             }
             else {
@@ -72,8 +79,9 @@ const usuariosController = {
             }   
             });
         }
-        }
-    },/*
+        } 
+    },
+    /*
     userLogeado: (req, res) => {
         
         return res.render('/',{
@@ -83,7 +91,7 @@ const usuariosController = {
         
     },*/
     logout: (req, res) =>{
-        
+        res.clearCookie('userMail')
         req.session.destroy();
         return res.redirect('/');
     }

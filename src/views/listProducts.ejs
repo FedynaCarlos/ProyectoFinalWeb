@@ -2,22 +2,20 @@
 <html lang="en">
 <%- include('partials/head') %>
 <head>
-    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css" crossorigin="anonymous">
-    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <%- include('partials/header') %>
     <main class="body-produts">
         <section class="visita">
-            <h3>ADMINISTRADOR DE PRODUCTOS</h3> 
+            <h3 class="tituloListP">ADMINISTRADOR DE PRODUCTOS</h3> 
         </section>
         <article class="col-12">
             
             <a href="/administrar/create" class="btn btn-outline-primary">Nuevo Producto</a>
         </article>
         <article class="col-6a">
-            <form action="/administrar/search_results" method="GET">
+            <form class="formSearcLp" action="/administrar/search_results" method="GET">
                 <input type="search" name="search">
                 <button class="btn btn-primary" type="submit">
                     <ion-icon name="search-outline"></ion-icon>
@@ -121,6 +119,7 @@
         </div>
     </section>
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
     </main>
 </body>
 </html>
