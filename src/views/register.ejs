@@ -5,8 +5,16 @@
     <title>Registro</title>
 </head>
 <body>
+   
     <%- include('./partials/header') %>
     <main>  <!--Se realiza main con la finanlidad de poder realizar un flexbox y poder manejar sus propiedades-->
+    <!--Agregado por Paco-->
+    <!--Agregado por Paco-->
+    <!--Agregado por Paco-->
+    <section class="errores">
+        <ul></ul>
+    </section>
+    
         <form action="/user" method="POST" class="create-user" enctype="multipart/form-data">
             <div class="control-formulario">
                 <p>
@@ -93,7 +101,7 @@
             </div>
             <div class="control-formulario">
                 <label for="">Agregar imagen</label>
-                <input type="file" id="avatar" name="image" id="image">
+                <input type="file" id="imagen" name="image">
                  <% if (locals.errors && errors.image) { %>
                     <div>
                         <span style="color: yellow; font-size: 12px"><%= errors.image.msg %></span> 

@@ -151,5 +151,15 @@
   "telefono": "1532723456",
   "password": "$2a$10$lc8aMOOSMy56wTTl8/pX7OFhAX1vyHmcphuBEJa2b10utzv4NAZMO",
   "image": "image-1650831661330.jpg"
+ },
+ {
+  "id": 15,
+  "nombres": "Juan",
+  "apellidos": "Fedyna",
+  "email": "pacofedvs@gmail.com",
+  "fechaNacimiento": "1987-12-12",
+  "telefono": "01132712055",
+  "password": "$2a$10$7x5yge8mBdc6pIQW3UoETuaFq4mm.z2wkTMKoQdhdGQJvvZNRlvzW",
+  "image": "image-1651291105483.jpg"
  }
 ]
