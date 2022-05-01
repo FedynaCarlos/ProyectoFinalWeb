@@ -15,6 +15,9 @@ const pController ={
 			})
 			.catch(error => res.send(error))
     },
+		productCart: (req,res) => {
+			res.render("productCart");
+		}
 
 };
 

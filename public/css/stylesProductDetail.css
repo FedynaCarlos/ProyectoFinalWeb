@@ -45,6 +45,11 @@
   font-weight: 700;
 }
 
+.tdCarrito{
+  width: 0%;
+  text-align: left;
+}
+
 
 /*---List Products---*/
 
@@ -187,7 +192,7 @@ a.btn.btn-success{
   background-color: rgb(233, 204, 161);
   border-color: #604621;
 }
-a.btn.btn-danger{
+.btnEliminarList{
   background-color: rgba(253, 150, 150, 0.836);
   border-color: #604621;
 }

@@ -91,11 +91,12 @@ article div img{
   
 }
 .cant{
-border-radius: 20%;
+border-radius: 5%;
 font-weight: 700;
 color: black;
 border-color:rgb(70, 10, 10);
 border-width: 4px;
+width: 60px;
 }
 .cant:hover{
   color: green;
@@ -123,6 +124,14 @@ border-width: 4px;
 .botonm{
   justify-content: center;
 
+}
+
+.btnResta{
+  background-color: rgb(236, 96, 96);
+}
+
+.btnVaciar{
+  background-color: rgb(236, 96, 96);
 }
 
 

@@ -56,6 +56,7 @@ const controllerAdminSeq = {
     .catch(error => res.send(error))
   },
   edit: (req,res) => {
+    
     const cepas = db.Cepa.findAll()
     const productos = db.Producto.findByPk(req.params.id, {
       include: [{association : 'cepa'}]
@@ -82,6 +83,8 @@ const controllerAdminSeq = {
     .catch(error => res.send(error))
   },
   destroy:(req, res) => {
+    
+    
     db.Producto.destroy({
       where: {
         produc_id: req.params.id

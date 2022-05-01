@@ -108,7 +108,10 @@
                             <td>
                                 <a href="/administrar/detail/<%= producto.produc_id%> " class="btn btn-info">Detalle</a>
                                 <a href="/administrar/edit/<%= producto.produc_id%> " class="btn btn-success">Editar</a>
-                                <a href="/administrar/delete/<%= producto.produc_id%> "class="btn btn-danger">Eliminar</a>
+                                <form action="/administrar/delete/<%= producto.produc_id%>" class="d-inline form-delete">
+                                    <button class="btn btn-danger btnEliminarList" type="submit">Eliminar</button>
+                                </form>
+                            <!--    <a href="/administrar/delete/<%= producto.produc_id%> "class="btn btn-danger">Eliminar</a> -->
                             </td>
                             
                       </tr>
@@ -120,6 +123,8 @@
     </section>
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="js/listProduct.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </main>
 </body>
 </html>

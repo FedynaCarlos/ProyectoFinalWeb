@@ -9,7 +9,7 @@
     
   <h2 class="tituloproduct">Nuestros productos con la mejor calidad</h2>
   
-  <section class="allProducts">
+  <section class="allProducts" id="template-card">
       <!--div mostrar imagen-->
       <% for(let i=0; i < productos.length; i++){ %>
       <article  class="contenedor1">
@@ -26,17 +26,73 @@
             <!--elemento 2-->
             
             <h3 class="nombreProdDetail"><%= productos[i].nombre%> </h3>
-            <P><%= productos[i].descripcion%></p>
-            <p><%= productos[i].cepa.descripcion%></p>
-            <p><%= productos[i].categoria%></p>
-            <p><%= productos[i].precio%></p>
+            <p class="descProduct"><%= productos[i].descripcion%></p>
+            <p class="cepaProduct"><%= productos[i].cepa.descripcion%></p>
+            <p class="categoriaProduct"><%= productos[i].categoria%></p>
+            <p class="precioProduct"><%= productos[i].precio%></p>
             
-            <button type="reset" class="boton-formulario">Agregar al carrito</button>
+            <button type="reset" data-id="<%= productos[i].produc_id%>" class="boton-formulario">Agregar al carrito</button>
           </div>
         </article>
         <% } %>
 
     </section>
+
+    <div class="container">
+      <h4>Carrito de compras</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+          </tr>
+        </tfoot>
+      </table>
+      
+      <div class="row" id="cards"></div>
+    </div>
+
+    <template id="template-carrito">
+      <tr>
+        <th class='tdCarrito' scope="row">id</th>
+        <td class='tdCarrito'>Café</td>
+        <td class='tdCarrito'>1</td>
+        <td class='tdCarrito'>
+          <button class="btn btn-info btn-sm btnSuma">
+            +
+          </button>
+          <button class="btn btn-danger btn-sm btnResta">
+            -
+          </button>
+        </td>
+        <td class='tdCarrito'>$ <span>500</span></td>
+      </tr>
+    </template>
+
+    <template id="template-footer">
+      <th scope="row" colspan="2">Total productos</th>
+      <td class='tdCarrito'>10</td>
+      <td class='tdCarrito'>
+        <button class="btn btn-danger btn-sm btnVaciar" id="vaciar-carrito">
+          Limpiar
+        </button>
+      </td>
+      <td class="font-weight-bold tdCarrito">$ <span>5000</span></td>
+    </template>
+
+
+
     <%- include('partials/footer') %>
+
+    <script src="/js/productCart.js"></script>
   </body>
 
