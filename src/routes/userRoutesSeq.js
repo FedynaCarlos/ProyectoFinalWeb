@@ -3,13 +3,12 @@
 const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
-const usuariosController = require('../controllers/userControllers');
 const validationUsers = require('../middlewares/validationUsers');
 const userLogin = require('../middlewares/userLogin');
 const multer = require('multer');
 const path = require('path');
 const userControllersSeq = require('../controllers/userControllersSeq');
-const multer = require('multer');
+
 
 //multer para imagenes
 
@@ -23,25 +22,25 @@ var storage = multer.diskStorage({
 })
 var upload = multer({storage})
 
-/*
-router.get('/', userLoginAdmin, controllerAdminSeq.index);
 
-router.get('/create', controllerAdminSeq.create);
-router.post('/create', upload.single('image'), controllerAdminSeq.save);
-router.get('/detail/:id', controllerAdminSeq.show);
-router.get('/edit/:id', controllerAdminSeq.edit);
-router.put('/edit/:id', upload.single('image'), controllerAdminSeq.update);
-router.get('/delete/:id', controllerAdminSeq.destroy);
-router.get('/search_results', controllerAdminSeq.search);
- */
+router.get('/', userLogin, userControllersSeq.index);
 
-router.get('/register', userLogin, usuariosController.register);
-router.post('/',upload.single('image'), validationUsers, usuariosController.processRegister);
+router.get('/create', userControllersSeq.create);
+router.post('/create', upload.single('image'), userControllersSeq.save);
+router.get('/detail/:id', userControllersSeq.show);
+router.get('/edit/:id', userControllersSeq.edit);
+router.put('/edit/:id', upload.single('image'), userControllersSeq.update);
+router.get('/delete/:id', userControllersSeq.destroy);
+router.get('/search_results', userControllersSeq.search);
 
-router.get('/login', userLogin, usuariosController.login);
-router.post('/login', usuariosController.authenticate);
 
-router.get('/logout', usuariosController.logout);
+router.get('/register', userLogin, userControllersSeq.register);
+router.post('/',upload.single('image'), validationUsers, userControllersSeq.processRegister);
+
+router.get('/login', userLogin, userControllersSeq.login);
+router.post('/login', userControllersSeq.authenticate);
+
+router.get('/logout', userControllersSeq.logout);
 
 
 module.exports = router;

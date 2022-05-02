@@ -4,7 +4,9 @@ const db = require('../../src/database/models');
 const res = require('express/lib/response');
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
+const Usuario = require('../database/models/Usuario');
 const Op = db.Sequelize.Op;
+//const User = require('../models/User')
 
 const userControllersSeq = {
   register: (req,res) => { 
@@ -21,7 +23,7 @@ const userControllersSeq = {
    
     /*Busco si el usuario esta en la base para no repetir el email */
 
-    let userInDb = User.findByField('email',req.body.email)
+    let userInDb = db.Usuario.findByField('email',req.body.email)
 
     if (userInDb) {
         return res.render('register', {
@@ -56,7 +58,7 @@ const userControllersSeq = {
        
     // return res.send(req.body);
 
-     let userToLogin = User.findByField('email' , req.body.email);
+     let userToLogin = db.Usuario.findByField('email' , req.body.email);
           
     if (userToLogin){
 
