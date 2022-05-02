@@ -3,6 +3,7 @@ const methodOverride =  require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const bodyParser = require('body-parser');
+
 //const userlogeado = require('./middlewares/userLogeado');
 
 
@@ -15,7 +16,7 @@ app.set('view engine','ejs');
 
 //Requerir las rutas
 const mainRoutes = require('./routes/mainRoutes');
-const userRoutes = require('./routes/userRoutes');
+const userRoutes = require('./routes/userRoutesSeq');
 const productRoutes = require('./routes/productRoutes');
 const cepaRoutes = require('./routes/cepaRoutes');
 //const adminRoutes = require('./routes/adminRoutes'); --  deshabilito mientras configuro el sequelize ---- 

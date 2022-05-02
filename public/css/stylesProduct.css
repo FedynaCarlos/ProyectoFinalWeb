@@ -10,7 +10,7 @@ h2{
     display: flex;
     flex-wrap: wrap;
     padding-top: 15px;
-    align-items: center;
+    align-items: flex-start;
     align-content: flex-start;
     width: 750px;
     background-color: #604621;
@@ -21,6 +21,7 @@ h2{
     border-radius: 4px;
     padding: 10px;
     justify-content:space-around ;
+    height: auto;
 }
 .createProduct label{
     color: white;
@@ -56,6 +57,7 @@ h2{
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;
     font-size: large; 
+    margin-bottom: 10px;
 }
 
 .boton-guardarP{

@@ -7,9 +7,9 @@
   <body>
   <%- include('./partials/header') %>
     
-  <h2>Nuestros productos con la mejor calidad</h2>
+  <h2 class="tituloproduct">Nuestros productos con la mejor calidad</h2>
   
-  <section class="allProducts">
+  <section class="allProducts" id="template-card">
       <!--div mostrar imagen-->
       <% for(let i=0; i < productos.length; i++){ %>
       <article  class="contenedor1">
@@ -18,65 +18,81 @@
           <div class="elemento1">
             <!--elemento1-->
             <img src="/images/<%= productos[i].imagen%>"  class="product_img">
-            <!--<i class="fas fa-truck"></i> 
             
-            <h4 class="description"><%= productos[i].nombre%></h4> -->
           </div>
           <!--fin de elemnto1-->
           <!--descripcion del producto-->
           <div class="elemento2">
             <!--elemento 2-->
             
-            <h3><%= productos[i].nombre%> </h3>
-            <P><%= productos[i].descripcion%></p>
-            <p><%= productos[i].cepa_id%></p>
-            <p><%= productos[i].categoria%></p>
-            <p><%= productos[i].precio%></p>
+            <h3 class="nombreProdDetail"><%= productos[i].nombre%> </h3>
+            <p class="descProduct"><%= productos[i].descripcion%></p>
+            <p class="cepaProduct"><%= productos[i].cepa.descripcion%></p>
+            <p class="categoriaProduct"><%= productos[i].categoria%></p>
+            <p class="precioProduct"><%= productos[i].precio%></p>
             
-            <button type="reset" class="boton-formulario">Agregar al carrito</button>
+            <button type="reset" data-id="<%= productos[i].produc_id%>" class="boton-formulario">Agregar al carrito</button>
           </div>
         </article>
         <% } %>
-        
-
-
-        <!--contenedor de productos en miniatura
-                <div class="contenedor2">
-                  <div class="elemento3">
-                      <img src="images/clogoespumante.jpg" width="90"halt="Vino blanco" class="product_img">
-                      <i class="fas fa-truck"></i>
-                   <p class="price">$4.000</p>
-                   <h3 class="nombre">Espumante</h3>
-                  <h4 class="description">Espumoso</h4>
-                 <button type="reset" class="boton-formulario">Agregar al carrito</button>
-                  </div>
-                  <div class="elemento4">
-                      <img src="images/Junior_Blend.jpg" width="80"halt="Vino tinto" class="product_img">
-                      <i class="fas fa-truck"></i>
-                   <p class="price">$5.000</p>
-                   <h3 class="nombre">Junior Blend</h3>
-                  <h4 class="description">Vino tinto</h4>
-                  <button type="reset" class="boton-formulario">Agregar al carrito</button>
-                  </div>
-                  <div class="elemento5">
-                      <img src="images/María_Magdalena.jpg" width="90"halt="Vino Blanco" class="product_img">
-                      <i class="fas fa-truck"></i>
-                   <p class="price">$4.500</p>
-                   <h3 class="nombre">María Magdalena</h3>
-                  <h4 class="description">Vino Blanco</h4>
-                  <button type="reset" class="boton-formulario">Agregar al carrito</button>
-                  </div>
-                  <div class="elemento6">
-                      <img src="/public/images/SantaRita.jpg" width="80"halt="Vino Tinto" class="product_img">
-                      <i class="fas fa-truck"></i>
-                   <p class="price">$6.000</p>
-                   <h3 class="nombre">Santa Rita</h3>
-                  <h4 class="description">Vino Tinto</h4>
-                  <button type="reset" class="boton-formulario">Agregar al carrito</button>
-                  </div>
-              </div> -->
 
     </section>
+
+    <div class="container">
+      <h4>Carrito de compras</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Item</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody id="items"></tbody>
+        <tfoot>
+          <tr id="footer">
+            <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+          </tr>
+        </tfoot>
+      </table>
+      
+      <div class="row" id="cards"></div>
+    </div>
+
+    <template id="template-carrito">
+      <tr>
+        <th class='tdCarrito' scope="row">id</th>
+        <td class='tdCarrito'>Café</td>
+        <td class='tdCarrito'>1</td>
+        <td class='tdCarrito'>
+          <button class="btn btn-info btn-sm btnSuma">
+            +
+          </button>
+          <button class="btn btn-danger btn-sm btnResta">
+            -
+          </button>
+        </td>
+        <td class='tdCarrito'>$ <span>500</span></td>
+      </tr>
+    </template>
+
+    <template id="template-footer">
+      <th scope="row" colspan="2">Total productos</th>
+      <td class='tdCarrito'>10</td>
+      <td class='tdCarrito'>
+        <button class="btn btn-danger btn-sm btnVaciar" id="vaciar-carrito">
+          Limpiar
+        </button>
+      </td>
+      <td class="font-weight-bold tdCarrito">$ <span>5000</span></td>
+    </template>
+
+
+
     <%- include('partials/footer') %>
+
+    <script src="/js/productCart.js"></script>
   </body>
 

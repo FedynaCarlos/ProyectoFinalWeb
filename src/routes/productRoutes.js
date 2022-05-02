@@ -25,6 +25,7 @@ var upload = multer({storage: storage})
 
 
 router.get('/',pController.productos);
+router.get('/productCart',pController.productCart)
 
 //router.get('/productosPrincipal',pController.productosPrincipal)
 
