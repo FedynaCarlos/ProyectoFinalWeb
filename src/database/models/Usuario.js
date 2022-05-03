@@ -25,7 +25,7 @@ module.exports = function (sequelize, dataTypes) {
     password: {
       type:dataTypes.STRING
     },
-    categoria: {
+    perfil_id: {
       type:dataTypes.STRING
     },
     avatar: {
