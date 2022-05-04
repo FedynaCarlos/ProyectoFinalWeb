@@ -161,5 +161,25 @@
   "telefono": "01132712055",
   "password": "$2a$10$7x5yge8mBdc6pIQW3UoETuaFq4mm.z2wkTMKoQdhdGQJvvZNRlvzW",
   "image": "image-1651291105483.jpg"
+ },
+ {
+  "id": 16,
+  "nombres": "toni",
+  "apellidos": "rew",
+  "email": "edr@gmail.com",
+  "fechaNacimiento": "1965-03-12",
+  "telefono": "1123454534",
+  "password": "$2a$10$00p/.x7QdwQOd8.TId3OT.s6B9WGfXgJ4iWZ5NvnuGYIhrPcox4KC",
+  "image": "image-1651492534642.jpg"
+ },
+ {
+  "id": 17,
+  "nombres": "Juan",
+  "apellidos": "Fedyna",
+  "email": "pacodyna@gmail.com",
+  "fechaNacimiento": "2012-02-12",
+  "telefono": "01132712055",
+  "password": "$2a$10$Yx4AGeSsJeBU9WVHB6TRoehh6npppdBqz5V1Ox1jE4ai8E08eqVTW",
+  "image": "image-1651492838111.jpg"
  }
 ]
