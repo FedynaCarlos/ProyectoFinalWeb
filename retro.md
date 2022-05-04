@@ -42,3 +42,9 @@ Creacion de base de datos (create_database) (create_tabla) (ferein keys)
 tenemos el structure.sql.
 en este sprint nos costo un poco mas ya que se nos complejizo la acumulacion de tareas pendientes, pero eso no impidio reforzar el equipo y dedicarnos a seguir trabajandolo, 
 orgullosos del laburo en quipo aqui estamos. dispuestos a mostrar nuestros logros.
+Sprint 7 
+Aqui nos encontramos en una etapa maravillosa, el proyecto ya esta encaminado, el grupo se consolido fuertemente, y estamos obteniendo buenos resultados, orgullosamente les presentamos nuestro sprint nuevamente.
+ya con las validaciones del back-end y del front-end, ofrecemos mayor seguridad a nuestra pagina a la hora que los usuarios nos brinden sus datos.
+Se hizo las validaciones front-end del login, de los usuarios y por supuesto fue un desafio hacerlas funcionar, ya estando en marcha aqui les dejamos funcionando.n
+
+
