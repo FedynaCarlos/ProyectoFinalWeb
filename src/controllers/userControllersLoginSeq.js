@@ -61,24 +61,24 @@ const userControllersLoginSeq = {
 
      //let userToLogin = db.Usuario.findByField('email' , req.body.email);
 
-     /*let userToLogin =*/  db.Usuario.findOne({
+     /*let userToLogin =*/  
+     db.Usuario.findOne({
           where : {
             email: (req.body.email)
           }
       })
         .then((userToLogin) => { 
           
+          
           if (userToLogin){
-             
-              let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-
-              console.log(isOkpassword);
-
-              if (isOkpassword){
+          
+           let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+              
+              if (isOkpassword && userToLogin){
                   delete userToLogin.password;    
                   
                   req.session.userLogeado = userToLogin;
-
+                  console.log(userToLogin.nombres)
                     /*  GUARDO LA COOKIE   */
 
                   if (req.body.recordar){
@@ -91,10 +91,13 @@ const userControllersLoginSeq = {
                     errors: {
                     email:{ msg: 'Las credenciales no son válidos' }
                     }   
-                  });
+                  });res.redirect('login.ejs')
                 }
           }
-       }); 
+        })
+        .catch(error => res.redirect('login.ejs'))
+          
+
   },
 
   logout: (req, res) =>{
