@@ -34,10 +34,10 @@ router.put('/edit/:id', upload.single('image'), userControllersAdmSeq.update);
 router.get('/delete/:id', userControllersAdmSeq.destroy);
 router.get('/search_results', userControllersAdmSeq.search);
 
-
+/*
 router.get('/register', userLogin, userControllersLoginSeq.register);
 router.post('/',upload.single('image'), validationUsers, userControllersLoginSeq.processRegister);
-
+*/
 router.get('/login', userLogin, userControllersLoginSeq.login);
 router.post('/login', userControllersLoginSeq.authenticate);
 
