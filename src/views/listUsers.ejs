@@ -8,14 +8,14 @@
     <%- include('partials/header') %>
     <main class="body-produts">
         <section class="visita">
-            <h3>ADMINISTRADOR DE USUARIOS</h3> 
+            <h3 class="tituloListP"> ADMINISTRADOR DE USUARIOS</h3> 
         </section>
         <article class="col-12">
             
-            <a href="/user" class="btn btn-outline-primary">Nuevo Usuario</a>
+            <a href="/register" class="btn btn-outline-primary">Nuevo Usuario</a>
         </article>
         <article class="col-6a">
-            <form action="/administrar/search_results" method="GET">
+            <form action="/admUsuarios/search_results" method="GET">
                 <input type="search" name="search">
                 <button class="btn btn-primary" type="submit">
                     <ion-icon name="search-outline"></ion-icon>
@@ -35,15 +35,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% productos.forEach(producto=> { %>
+                    <% usuarios.forEach(usuario=> { %>
                         <tr class="table-active">
                            <!-- <th scope="row">Active</th> -->
-                            <td><%= producto.produc_id%></td>
-                            <td><%= producto.nombre%></td>
+                            <td><%= usuario.id%></td>
+                            <td><%= usuario.nombres%></td>
                             <td>
-                                <a href="/administrar/detail/<%= producto.produc_id%> " class="btn btn-info">Detalle</a>
-                                <a href="/administrar/edit/<%= producto.produc_id%> " class="btn btn-success">Editar</a>
-                                <a href="/administrar/delete/<%= producto.produc_id%> "class="btn btn-danger">Eliminar</a>
+                                <a href="/admUsuarios/detail/<%= usuario.id%> " class="btn btn-info">Detalle</a>
+                                <a href="/admUsuarios/edit/<%= usuario.id%> " class="btn btn-success">Editar</a>
+                                <a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger">Eliminar</a>
                             </td>
                             
                       </tr>

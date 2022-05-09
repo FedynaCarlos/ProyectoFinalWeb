@@ -43,6 +43,7 @@ app.use(userLogeadoMiddlewares);
 //Rutas a usar
 app.use('/',mainRoutes);
 app.use('/user',userRoutes);
+app.use('/admUsuarios',userRoutes);
 app.use('/productos',productRoutes);
 app.use('/cepa',cepaRoutes);
 app.use('/about',mainRoutes);

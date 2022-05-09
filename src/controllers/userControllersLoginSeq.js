@@ -24,10 +24,17 @@ const userControllersLoginSeq = {
    
     /*Busco si el usuario esta en la base para no repetir el email */
 
-    let userInDb = db.Usuario.findByField('email',req.body.email)
+    //let userInDb = db.Usuario.findByField('email',req.body.email)
 
-    if (userInDb) {
-        return res.render('register', {
+    db.Usuario.findOne({limit:1,
+      where : {
+        email: (req.body.email)
+      }
+    })
+    .then((userToRegister) => { 
+             
+     if (userToRegister){  console.log(userToRegister) 
+          return res.render('register', {
                     errors: { 
                         email: {
                             msg: 'El mail se encuentra registrado'
@@ -35,18 +42,38 @@ const userControllersLoginSeq = {
                     },
              oldData: req.body
          })
-    }
-
-    let userToCreate = {
+      } else { 
+       
+       db.Usuario.create({
+          nombres: req.body.nombres,
+          apellidos: req.body.apellidos,
+          email: req.body.email,
+          perfil_id: 2,
+          fechaNac: req.body.fechaNacimiento,
+          telefono: req.body.telefono,
+          password: bcryptjs.hashSync(req.body.password,10),
+          avatar: req.file.filename,
+        })
+          .then(() => {
+            res.redirect("/");
+          })
+          .catch((error) => res.send(error));
+        /*
+        let userToCreate = {
         ...req.body, 
         password: bcryptjs.hashSync(req.body.password,10),
         image: req.file.filename,
-    }
+        } */
+      }
+    })
+    .catch(error => res.redirect('login.ejs'))  
 
+    
+     /* 
      delete userToCreate.cpassword,
      User.create(userToCreate);
      return res.redirect('/user/login')
-    
+    */
   },
 
   login: (req,res) => { 
