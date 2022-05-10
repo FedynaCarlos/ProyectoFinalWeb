@@ -13,7 +13,9 @@ const Op = db.Sequelize.Op;
 const userControllersAdmSeq = {
 
   index: (req,res) =>{
-      db.Usuario.findAll()
+      db.Usuario.findAll({
+        include : 
+        [{association : 'perfil'}]})
         .then(function(usuarios){ 
           res.render('listUsers', {usuarios});
         })
@@ -21,9 +23,9 @@ const userControllersAdmSeq = {
   },
 
   create: (req,res) => {
-    db.Cepa.findAll()
-      .then(function(cepas){
-        res.render("createProduct", {cepas});
+    db.Perfil.findAll()
+      .then(function(perfil){
+        res.render("createProduct", {perfil});
       })
   },
 
@@ -34,66 +36,66 @@ const userControllersAdmSeq = {
       perfil_id: req.body.perfil,
       imagen: req.file.filename
     })
-    .then(vinos => {
-      res.redirect("/administrar");
+    .then(usuarios => {
+      res.redirect("/admUsuarios");
     })
     .catch(error => res.send(error))
   },
   show: (req,res)=>{
-    db.Producto.findByPk(req.params.id, {
-      include : [{association : 'cepa'}]
+    db.Usuario.findByPk(req.params.id, {
+      include : [{association : 'perfil'}]
     })
-    .then(miVino=> {
+    .then(miUsuario=> {
       
-      res.render('detail', {miVino})
+      res.render('profilUser', {miUsuario})
     })
     .catch(error => res.send(error))
   },
   edit: (req,res) => {
-    const cepas = db.Cepa.findAll()
-    const productos = db.Producto.findByPk(req.params.id, {
-      include: [{association : 'cepa'}]
+    const perfil = db.Perfil.findAll()
+    const usuarios = db.Usuario.findByPk(req.params.id, {
+      include: [{association : 'perfil'}]
     })
-    Promise.all([productos,cepas])
-    .then( ([vinoEditar, cepas]) => {
-      res.render("editProduct", {vinoEditar, cepas})
+    Promise.all([usuarios,perfil])
+    .then( ([usuarioEditar, perfil]) => {
+      res.render("editUser", {usuarioEditar, perfil})
     })
   },
   update: (req, res) => {
-    db.Producto.update ({
-      nombre: req.body.nombre,
-      precio: req.body.precio,
-      cepa_id: req.body.cepa,
-      descripcion: req.body.descripcion,
+    db.Usuario.update ({
+      nombre: req.body.nombres,
+      apellido: req.body.apellidos,
+      email: req.body.email,
+      perfil_id: req.body.perfil,
       imagen: req.file ? req.file.filename : req.body.oldImagen
     }, {
       where: {
-        produc_id: req.params.id
+        id: req.params.id
       }
     })
-    .then(() => res.redirect('/administrar'))
+    .then(() => res.redirect('/admUsuarios'))
     .catch(error => res.send(error))
   },
   destroy:(req, res) => {
-    db.Producto.destroy({
+    db.Usuario.destroy({
       where: {
-        produc_id: req.params.id
+        id: req.params.id
       }
     })
-    .then(() => res.redirect('/administrar'))
+    .then(() => res.redirect('/admUsuarios'))
     .catch(error => res.send(error))
   },
   search: (req,res) => {
-    db.Producto.findAll({
-      include: [{association : 'cepa'}],
+    db.Usuario.findAll({
+      include: [{association : 'perfil'}],
       where : {
-        nombre: {[Op.like]: `%${req.query.search}%`}
+        nombres: {[Op.like]: `%${req.query.search}%`}
       }
     })
     
     .then(resultado => { 
       //console.log(resultado)
-      res.render('listProducts', {productos : resultado}); })
+      res.render('listUsers', {usuarios : resultado}); })
     .catch(error => res.send(error))
   }
  

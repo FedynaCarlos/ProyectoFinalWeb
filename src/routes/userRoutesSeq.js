@@ -39,7 +39,7 @@ router.get('/search_results', userControllersAdmSeq.search);
 router.post('/',upload.single('image'), validationUsers, userControllersLoginSeq.processRegister);
 */
 
-router.get('/register', userLogin, userControllersLoginSeq.register);
+router.get('/register',  userControllersLoginSeq.register);
 router.post('/',upload.single('avatar'), validationUsers, userControllersLoginSeq.processRegister);
 
 router.get('/login', userLogin, userControllersLoginSeq.login);

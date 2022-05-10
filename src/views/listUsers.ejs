@@ -12,7 +12,7 @@
         </section>
         <article class="col-12">
             
-            <a href="/register" class="btn btn-outline-primary">Nuevo Usuario</a>
+            <a href="/User/register" class="btn btn-outline-primary">Nuevo Usuario</a>
         </article>
         <article class="col-6a">
             <form action="/admUsuarios/search_results" method="GET">
@@ -30,6 +30,7 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Nombre</th>
+                        <th scope="col">Perfil</th>
                         <th scope="col">Ver/Editar/Eliminar</th>
                         
                     </tr>
@@ -40,10 +41,13 @@
                            <!-- <th scope="row">Active</th> -->
                             <td><%= usuario.id%></td>
                             <td><%= usuario.nombres%></td>
+                            <td><%= usuario.perfil.descripcion%></td>
                             <td>
                                 <a href="/admUsuarios/detail/<%= usuario.id%> " class="btn btn-info">Detalle</a>
                                 <a href="/admUsuarios/edit/<%= usuario.id%> " class="btn btn-success">Editar</a>
+                                <% if (usuario.perfil.perfil_id==2) {%>
                                 <a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger">Eliminar</a>
+                                <% } %> 
                             </td>
                             
                       </tr>
