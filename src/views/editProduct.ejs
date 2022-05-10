@@ -13,16 +13,16 @@
         <!--<form action="" method="post" class="createProduct"> -->
            <div class="controlIngresoProductos">
                <label for="">Nombre del Producto</label>
-               <input class="input1" type="text" name="nombre" id="nombre" placeholder="Ej: Vino casillero del Diablo" value="<%= vinoEditar.nombre%>">
-               <% if (typeof errors != 'undefined' && typeof errors.nombre != 'undefined') { %>
-                <span style="color: red"><%= errors.nombre.msg %></span> 
-            <% } %>
+               <input class="input1 <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" type="text" name="nombre" id="nombre" placeholder="Ej: Vino casillero del Diablo" value="<%= vinoEditar.nombre%>">
+                <% if (locals.errors && errors.nombre ) { %>
+                    <span style="color: yellow"><%= errors.nombre.msg %></span> 
+                <% } %>
            </div>
             <div class="controlIngresoProductos">
                 <label for="">Precio del produto:</label>
-                <input class="input1" type="number" name="precio" id="precio" placeholder="Ej: 5.400" value="<%= vinoEditar.precio%>">
+                <input class="input1 <%= locals.errors && errors.precio ? 'is-invalid' : null %>" type="number" name="precio" id="precio" placeholder="Ej: 5.400" value="<%= vinoEditar.precio%>">
                 <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
-                    <span style="color: red"><%= errors.precio.msg %></span> 
+                    <span style="color: yellow"><%= errors.precio.msg %></span> 
                 <% } %>
             </div>
             <div class="controlIngresoProductos">
@@ -30,16 +30,15 @@
                 <select class="input1" name="cepa" id="cepa">
                     <% for (let i=0; i < cepas.length; i++) { %>
                         <option value="<%= cepas[i].cepa_id %>" <%= vinoEditar.cepa_id == cepas[i].cepa_id ? "selected" : null %>><%= cepas[i].descripcion%></option>
-                        
                     <% } %>
                     <% if (typeof errors !='undefined' && typeof errors.cepa !='undefined' ) { %>
-                        <span style="color: red"><%= errors.cepa.msg %></span>
+                        <span style="color: yellow"><%= errors.cepa.msg %></span>
                     <% } %>
                 </select>
             </div>
             <div class="controlIngresoProductos">
                 <label for="">Categoría:</label>
-                <select name="categoria" class= "input1"  id="categoria" required>
+                <select name="categoria" class= "input1"  id="categoria" value="<%=locals.oldData ? oldData.categoria : null %>>
                     <option disabled value="#">Seleccione una categoria</option>
                     <option value="Espumoso" <%= vinoEditar.categoria == "Espumoso" ? "selected" : null %>>Espumoso</option>
                     <option value="Blanco" <%= vinoEditar.categoria == "Blanco" ? "selected" : null %>>Blanco</option>
@@ -47,7 +46,7 @@
                     <option value="Rosado"<%= vinoEditar.categoria == "Rosado" ? "selected" : null %>>Rosado</option>
                 </select>
                <% if (typeof errors != 'undefined' && typeof errors.categoria != 'undefined') { %>
-                    <span style="color: red"><%= errors.categoria.msg %></span> 
+                    <span style="color: yellow"><%= errors.categoria.msg %></span> 
                 <% } %>
             </div>
             <div class="controlIngresoProductos">
@@ -69,13 +68,17 @@
                 <textarea class="textaread" cols="90" name="descripcion" id="descripcion" rows="6" placeholder="Breve descripción" ><%= vinoEditar.descripcion%></textarea>
             </div>
             <% if (typeof errors != 'undefined' && typeof errors.descripcion != 'undefined') { %>
-                <span style="color: red"><%= errors.descripcion.msg %></span> 
+                <span style="color: yellow"><%= errors.descripcion.msg %></span> 
             <% } %>
             <div class="controlIngresoProductos">
-                <button type="submit" class="boton-formulario">Actualizar</button>
+                <form action="" class = "form-btnActualizar">
+                    <button type="submit" class="boton-formulario btnActualizar">Actualizar</button>
+                </form>
                 <button href="/administrar"  class="boton-formulario">Volver</button>
                 
             </div>
         </form>
+        <script src="/js/editProduct.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body> 
 </html>

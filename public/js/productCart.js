@@ -15,8 +15,6 @@ window.onload = function () {
 
 
   const addCarrito = e => {
-
-    
     if (e.target.classList.contains("boton-formulario")) {
       setCarrito(e.target.parentElement);
     }
@@ -33,6 +31,7 @@ window.onload = function () {
       precio: objeto.querySelector(".precioProduct").textContent,
       cantidad: 1
     };
+    //Comprueba si existe o no la propiedad
     if(carrito.hasOwnProperty(producto.id)){
       producto.cantidad = carrito[producto.id].cantidad + 1
     }
@@ -51,7 +50,7 @@ window.onload = function () {
       templateCarrito.querySelector(".btn-info").dataset.id = producto.id
       templateCarrito.querySelector(".btn-danger").dataset.id = producto.id
       templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
-      const clone = templateCarrito.cloneNode(true)
+      const clone = templateCarrito.cloneNode(true)  //Se clonan los atributos
       fragment.appendChild(clone)
     })
     items.appendChild(fragment)

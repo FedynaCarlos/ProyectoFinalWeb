@@ -25,7 +25,7 @@ router.get('/create', controllerAdminSeq.create);
 router.post("/create", upload.single("image"), validationCreate, controllerAdminSeq.save);
 router.get('/detail/:id', controllerAdminSeq.show);
 router.get('/edit/:id', controllerAdminSeq.edit);
-router.put('/edit/:id', upload.single('image'), controllerAdminSeq.update);
+router.put("/edit/:id", upload.single("image"), validationCreate, controllerAdminSeq.update);
 router.get('/delete/:id', controllerAdminSeq.destroy);
 router.get('/search_results', controllerAdminSeq.search);
 
