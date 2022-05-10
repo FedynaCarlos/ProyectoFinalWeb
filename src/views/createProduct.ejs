@@ -30,7 +30,7 @@
               
             </div>
             <div class="controlIngresoProductos" id="grupo__precio">
-                <label for="">Precio del produto:</label>
+                <label for="" class="formulario__label">Precio del produto</label>
                 <div>
                     <input 
                         class="input1 <%= locals.errors && errors.precio ? 'is-invalid' : null %>" 
@@ -40,11 +40,11 @@
                         placeholder="Ej: 5.400"
                         value="<%=locals.oldData ? oldData.precio : null %>">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
                     <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
                         <span style="color: yellow"><%= errors.precio.msg %></span> 
                     <% } %>
-                    <p class="formulario__input-error">Se deben ingresar numeros</p>
-                </div>
+                    <p class="formulario__input-error">Se deben ingresar números</p>
             </div>
             <div class="controlIngresoProductos">
                 
@@ -84,12 +84,16 @@
                 <% } %>
             </div>
         
-            <div class="controlIngresoProductos2">
-                <label for="">Descripción</label>
-                <textarea class="textaread" cols="90" name="descripcion" id="descripcion" rows="4" placeholder="Breve descripción"></textarea>
-                <% if (typeof errors != 'undefined' && typeof errors.descripcion != 'undefined') { %>
-                    <span style="color: yellow"><%= errors.descripcion.msg %></span> 
-                <% } %>
+            <div class="controlIngresoProductos" id="grupo__descripcion">
+                <label for="" class="formulario__label">Descripción</label>
+                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                <div>
+                    <textarea class="textaread" cols="80" name="descripcion" id="descripcion" rows="4" placeholder="Breve descripción" ></textarea>
+                    <% if (typeof errors != 'undefined' && typeof errors.descripcion != 'undefined') { %>
+                        <span style="color: yellow"><%= errors.descripcion.msg %></span> 
+                    <% } %>
+                    <p class="formulario__input-error">Mínimo 20 caracteres</p>
+                </div>
             </div>
 <!--
             <% if (typeof validaciones != 'undefined') {%>

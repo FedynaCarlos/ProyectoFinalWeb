@@ -1,5 +1,5 @@
 window.onload = function(){
-    let formulario = document.querySelector("form.create-user");
+ /*   let formulario = document.querySelector("form.create-user");
     formulario.addEventListener("submit",function(e) {
   
 
@@ -24,7 +24,6 @@ window.onload = function(){
     if(campoEmail.value == ""){
     errores.push("El campo email no puede estar vacio");
         }
-
     
     let campoImagen = document.querySelector("#imagen");   
     if(campoImagen.value == ""){
@@ -39,18 +38,20 @@ window.onload = function(){
          }
     if(errores.length > 0) {
         e.preventDefault();
-let ulErrores = document.querySelector(".errores ul");
-
+        let ulErrores = document.querySelector(".errores ul");
         errores.forEach(error => {
             ulErrores.innerHTML += `<li>${error}</li>`
-        
+        });
+    }
     
-       });
+})*/
 }
+
+/*
     
     
 
-/*window.addEventListener("load", function() {
+window.addEventListener("load", function() {
     let formulario = document.querySelector("form.create-user");
     formulario.addEventListener("submit",function(e) {
         e.preventDefault();
@@ -113,7 +114,7 @@ window.onload = function(){
     
     
 
-/*window.addEventListener("load", function() {
+window.addEventListener("load", function() {
     let formulario = document.querySelector("form.create-user");
     formulario.addEventListener("submit",function(e) {
         e.preventDefault();
@@ -127,5 +128,4 @@ console.log(prueba)
         }
     })
 });
-
 */
