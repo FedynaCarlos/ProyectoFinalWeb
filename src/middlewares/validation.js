@@ -23,9 +23,6 @@ const validationCreate = [
   check("categoria")
     .notEmpty()
     .withMessage("La Categoria no puede estar vacia")
-    .bail()
-    .isLength({ min: 20 })
-    .withMessage("Debe tener como mínimo 20 caracteres")
     .bail(),
   check("image").custom((value, { req }) => {
     let file = req.file;

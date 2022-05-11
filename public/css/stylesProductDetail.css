@@ -58,7 +58,11 @@
   
 }
 .nombreProdDetail{
-  font-weight: 700;
+  font-weight: bold;
+}
+.volverVistaP{
+  text-decoration: none;
+  text-align: center;
 }
 
 .tdCarrito{
