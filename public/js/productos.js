@@ -1,8 +1,9 @@
 window.onload = function(){
-  /*
+  
   const formulario = document.getElementById('formulario');
   const inputs = document.querySelectorAll('#formulario input');
   const textArea = document.querySelector("#descripcion");
+  const image = document.querySelector('#image')
   //let nombre = document.querySelector("#nombre");
 
   const campos = {
@@ -15,10 +16,34 @@ window.onload = function(){
     //console.log(e.target.name);
     switch (e.target.name) {
       case "nombre":
-        validarCampo(expresiones.nombre, e.target, 'nombre');
+        validarCampo(expresiones.nombre, e.target, "nombre");
         break;
       case "precio":
         validarCampo(expresiones.precio, e.target, "precio");
+        break;
+      case "image":
+     image.addEventListener("input", function(){
+
+       if (image.files.length == 0) {
+          Swal.fire("Sin Imagen?", "Por favor selecciona una imagen", "question");
+          //alert("Debe cargar una imagen");
+         } else if (image.value) {
+           fileName = image.value;
+           (idxDot = fileName.lastIndexOf(".") + 1),
+             (extFile = fileName.substr(idxDot, fileName.length).toLowerCase());
+           if (
+             !(extFile == "jpg" || extFile == "jpeg" || extFile == "png" || extFile == ".gif")) {
+             Swal.fire({
+               icon: "error",
+               title: "Oops...",
+               text: "Debe cargar una imagen en formato jpg/jpeg/png/gif",
+             });
+              //alert("Debe cargar una imagen en formato jpg/jpeg/png/gif");
+           }
+         }
+
+     });
+
         break;
     }
   }
@@ -62,10 +87,7 @@ window.onload = function(){
               .classList.add("formulario__input-error-activo");
             campos[campo] = false;
         }
-
   }
-
-
 
   inputs.forEach((input)=> {
     input.addEventListener('keyup', validarFormulario);
@@ -75,10 +97,22 @@ window.onload = function(){
   textArea.addEventListener('keyup', validarTextArea);
   textArea.addEventListener("blur", validarTextArea);
 
-  //formulario.addEventListener('submit', (e) => {
-    /*e.preventDefault();
+  formulario.addEventListener('submit', (e) => {
+    //e.preventDefault();
     
-    if(campos.nombre && campos.precio && campos.descripcion){
+    console.log(campos.nombre)
+     
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Creado con exito",
+        showConfirmButton: false,
+        timer: 3500,
+      });
+    
+
+
+    /*if(campos.nombre && campos.precio && campos.descripcion){
       formulario.reset();
       document
         .getElementById("formulario__mensaje-exito")
@@ -86,16 +120,16 @@ window.onload = function(){
     }*/
 
 
-  //})
+  })
 
-  /*
+  
   const expresiones = {
    
     precio: /^\d+$/, //Solo numeros, obligatorio
-    nombre: /^[a-zA-ZÀ-ÿ\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
-    descripcion: /^[a-zA-ZÀ-ÿ\s]{20,400}$/, // Letras y espacios, pueden llevar acentos.
+    nombre: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
+    descripcion: /^[a-zA-ZÀ-ÿ0-9\s]{20,400}$/, // Letras y espacios, pueden llevar acentos.
    
   };
-*/
+
 
 }

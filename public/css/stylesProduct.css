@@ -68,6 +68,10 @@ h2{
     flex-direction: column;
     width: 100%;
 }
+.inputImagenC{
+    color: white;
+}
+
 .textaread{
     border-radius: 5px;
     font-family: 'Raleway', sans-serif;

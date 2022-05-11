@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
         icon: "success",
         title: "Actualizado con exito",
         showConfirmButton: false,
-        timer: 2500,
+        timer: 1000,
       })
     });
   });

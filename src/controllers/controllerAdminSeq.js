@@ -40,7 +40,9 @@ const controllerAdminSeq = {
         imagen: req.file.filename,
       })
         .then((vinos) => {
-          res.redirect("/administrar");
+           setTimeout(function () {
+             res.redirect("/administrar");
+           }, 1000);
         })
         .catch((error) => res.send(error));
     }
@@ -79,7 +81,10 @@ const controllerAdminSeq = {
         }, {
           where: { produc_id: req.params.id }
         });
-      res.redirect('/administrar');
+      setTimeout(function(){
+        res.redirect('/administrar');
+
+      },1000)
     }
       catch(error){res.send(error)}
       
