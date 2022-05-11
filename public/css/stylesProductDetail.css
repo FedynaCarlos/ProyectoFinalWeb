@@ -64,8 +64,11 @@
 .tdCarrito{
   width: 0%;
   text-align: left;
+  min-width: 80px;
 }
-
+.totalCarrito{
+  font-weight: bold;
+}
 
 /*---List Products---*/
 
