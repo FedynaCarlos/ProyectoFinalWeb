@@ -1,41 +1,71 @@
-/**{
-    margin: 0px;
-    padding: 0px;    
-    box-sizing: border-box;
-}
-*/
-
 
 .bodyIndex{
-   
     color: black;
 }
-.marcobodega{
-    display:flex;
+
+.contenedorN{
+    width: 100%;
+    overflow: hidden; 
+}
+
+.slider-contenedor{
+    width: 100%;
+    display: flex;
+}
+
+.contenido-slider{
+    width: 100%;
+    height: 500px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.contenido-slider > img{
     width: 400px;
 }
 
-.bodega{
-    height: 400px;
-	width: 100%;
-    margin: 5px 5px;
+.contenido-slider>div {
+    width: 50%;
 }
 
-.pie{
-    font-weight: 100;
-    margin-top: 15x;
-    font-size: 40px;
+.contenido-slider>h2 {
+    font-weight: 300;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.contA {
+    color: white;
+    background: #332863;
+    width: 100px;
+    display: block;
+    padding: 15px 0;
     text-align: center;
-   }
-   .texto {
+    border-radius: 3px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.contA:nth-child(2) {
+    background: white;
+    color: #332863;
+}
+
+
+.principalIndex{
+    padding-top: 10px;
+}
+
+.texto {
        margin-top: 10px;
        display: inline-block;
        text-align:justify ;
        font-size: 21px;
        height: auto;
        width: 40%;
-   }
+}
 
 .copyright {
     margin-top: 10px;
@@ -45,6 +75,7 @@
     height: 30px;
     width: 100%;
 }
+
 .imageIndex{
     margin-left: 1px;
     width: 200px;
@@ -52,8 +83,47 @@
 }
 
 
-@media (min-width: 361px){
-    .marcobodega{
-        width: 100%;
+.carouselPos{
+    position:relative;
+}
+
+@media screen and (max-width: 768px) {
+    .contenido-slider > img{
+        width: 250px;
     }
+    .contenido-slider > div{
+        width: 40%;
+    }
+    .contenido-slider h2{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contenido-slider>img {
+        width: 250px;
+    }
+
+    .contenido-slider>div {
+        width: 40%;
+    }
+
+    .contenido-slider h2 {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contenido-slider {
+        flex-direction: column-reverse;
+    }
+
+    .contenido-slider>div {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 361px){
+    
 }

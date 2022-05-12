@@ -10,9 +10,6 @@
         </p>
     </div>
 
-    <box-icon name='chevron-down'></box-icon>
-
-
     <nav class="menuNav">
         <section class="menuNav_container">
             <div class="marcoLogo">
@@ -52,7 +49,6 @@
 
                 <li class="menuNav_item menuNav_item--show">
                     <a href="#" class="menuNav_link">Administración <img src="/images/arrow.svg" class="menuNav_arrow"></a>
-                
                     <ul class="menuNav_nesting">
                         <li class="menuNav_inside">
                             <a href="/administrar" class="menuNav_link menuNav_link--inside">Productos</a>
@@ -60,11 +56,6 @@
                         <li class="menuNav_inside">
                             <a href="/admUsuarios" class="menuNav_link menuNav_link--inside">Usuarios</a>
                         </li>
-                        
-        <!--              <li class="menuNav_inside">
-                            <a href="#" class="menuNav_link menuNav_link--inside">Project3</a>
-                        </li>
-        -->
                     </ul>
                 </li>
                 
@@ -76,13 +67,10 @@
                     </a>
                 </li>
 
-
                 <% } else { %>
                     <li><a href="/user/register" class="menuNav_link"><i class="far fa-address-card"></i></a></li>
                     <li><a href="/user/login" class="menuNav_link"><i class="fas fa-user"></i></a></li>
-
                 <% } %>
-
             </ul>
 
             <div class="menuNav_hamburguer">
@@ -139,4 +127,5 @@
 
     -->
     <script src="/js/navBar.js"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script> 
 </header>

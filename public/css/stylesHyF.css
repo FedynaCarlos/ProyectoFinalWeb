@@ -11,6 +11,15 @@ header {
     background-color: transparent;
 }
  
+/*------ NavBar ------*/
+
+.navBarBoot{
+    background-color: #604621;
+    color: white;
+}
+.navBarBootCol{
+    color: white;
+}
 .menuNav{
     font-family: 'Poppins',sans-serif;
     background-color: #604621;
@@ -49,7 +58,7 @@ header {
 .menuNav_link{
     color: white;
     text-decoration: none;
-    padding: 0 30px;
+    padding: 0 15px;
     display: flex;
     height: 100%;
     align-items: center;
@@ -78,7 +87,7 @@ header {
     background-color: #604621;
 }
 .menuNav_link--inside{
-    padding: 20px 50px 20px 20px;
+    padding: 10px 50px 10px 20px;
 }
 
 .menuNav_link--inside:hover {
@@ -101,7 +110,7 @@ header {
     color: white;
 }
 
-/**/
+/*----fin NavBar------*/
 
 .idiomas {
 	font-size:11px;
@@ -160,9 +169,7 @@ header ul li{
 	transition: color .5s;
 }
 
-
 .searchNavBar a{
-    
     align-items: center;
     padding: 0;
     margin: 0 11px;
@@ -171,7 +178,6 @@ header ul li{
     border: 0;
     cursor: pointer;
     color: white;
-
 }
 
 footer{
@@ -183,37 +189,43 @@ footer{
     flex-wrap: wrap;
     width: 400px;
 }
+
 .pAbout {
     padding: 1px;
     margin-bottom: 3px;
 }
+
 .fLogo{
     border-radius: 50%;
     width: 80px;
     padding: 5px;
 }
+
 .logoyredes{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
 }
+
 .redes{
     display: flex;
     color: #5b5d63;
     justify-content: space-around;
     padding: 5% 0;
- 
 }
+
 .redes i{
     width:40px;
     height: 40px;
     text-align: center;
     padding: 10% 0;
 }
+
 .fSubtituloppal{
     display: flex;
 }
+
 .fSubtitulo{
     font-weight: bold;
     display: flex;
@@ -227,17 +239,19 @@ footer{
     display: flex;
     padding: 1px;
 }
+
 .fLogoyTextoBajo{
     display: flex;
     padding-top: 10px;
     color: #5b5d63;
 }
+
 .logoPagos{
     margin-top: 10px;
     width: 100%;
 }
 
-
+/*----------@Medias----------------*/
 
 @media (min-width: 361px){
     header{
@@ -256,19 +270,18 @@ footer{
         display: block;
         display: flex;
     }
-    
 }
+
 @media (min-width: 1024px){
     .mainmenu li a{
         font-size: 18px;
     }
-
 }
+
 @media (max-width:768px){
     .menuNav_hamburguer {
         display: flex;
     }
-
     .menuNav_item{
         --clip:0;
         overflow: hidden;
@@ -280,7 +293,6 @@ footer{
     .menuNav_item--show{
         background-color: var(--background);
     }
-
     .menuNav_links{
         position: fixed;
         max-width: 400px;
@@ -321,7 +333,6 @@ footer{
         width: 90%;
         margin-left: auto;
         border-left: 1px solid #bbac96;
-
     }
 }
 
