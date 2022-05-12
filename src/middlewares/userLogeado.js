@@ -3,6 +3,7 @@ function userLogeado(req, res, next) {
     
     if (req.session && req.session.userLogeado) {
         res.locals.isLogged = true;
+        
     }
 
     next();
