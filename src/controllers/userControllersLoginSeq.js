@@ -33,7 +33,7 @@ const userControllersLoginSeq = {
     })
     .then((userToRegister) => { 
              
-     if (userToRegister){  console.log(userToRegister) 
+     if (userToRegister){  //console.log(userToRegister) 
           return res.render('register', {
                     errors: { 
                         email: {
@@ -90,7 +90,7 @@ const userControllersLoginSeq = {
           }
         })
         .then((userToLogin) => { 
-           console.log(userToLogin)        
+           //console.log(userToLogin)        
           if (userToLogin){
           
            let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -99,7 +99,8 @@ const userControllersLoginSeq = {
                   delete userToLogin.password;    
                   
                   req.session.userLogeado = userToLogin;
-                  console.log(userToLogin.avatar)
+                    /* console.log(userToLogin.perfil_id)
+               console.log('por aqui voy'+ locals.perfil_id)*/
                     /*  GUARDO LA COOKIE   */
 
                   if (req.body.recordar){
