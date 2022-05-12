@@ -15,14 +15,14 @@
 }
 
 .container{
-      display: flex;
+  display: flex;
   flex-direction: column;
   width: 100vw;
   text-align: center;
-  margin: 1px;
+  margin: auto;
 }
 .container:hover{
-      color: green;
+    color: green;
     transition: color .2s;
     }
   

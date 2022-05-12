@@ -90,7 +90,6 @@ const userControllersLoginSeq = {
           }
         })
         .then((userToLogin) => { 
-           //console.log(userToLogin)        
           if (userToLogin){
           
            let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -110,12 +109,12 @@ const userControllersLoginSeq = {
                   return res.redirect('/');
               } else {
                   return res.render('login.ejs',{
-                    errors: { email:{ msg: 'Las credenciales no son válidos' }}   
+                    errors: { email:{ msg: 'Las credenciales no son válidas' }}   
                   });
                 }
           } else {
             return res.render('login.ejs',{
-              errors: { email:{ msg: 'Las credenciales no son válidos' }}   
+              errors: { email:{ msg: 'Las credenciales no son válidas' }}   
             });
           }
 

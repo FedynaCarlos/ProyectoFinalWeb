@@ -11,6 +11,75 @@ header {
     background-color: transparent;
 }
  
+.menuNav{
+    font-family: 'Poppins',sans-serif;
+    background-color: #604621;
+    color: white;
+    height: 70px;
+}
+
+.menunav_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.menuNav_links{
+    height: 100%;
+    transition: transform .5s;
+    display: flex;
+}
+.menuNav_item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    --clip:  polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+}
+.menuNav_item:hover{
+    --clip:  polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+}
+
+.menuNav_link{
+    color: white;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.menuNav_link:hover{
+    background-color: #bbac96;
+}
+
+
+.menuNav_arrow{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+    margin-left: 3px;
+
+}
+.menuNav_nesting{
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    transform: translateY(100%);
+    background-color: #604621;
+}
+
+
+/**/
+
 .idiomas {
 	font-size:11px;
 	text-align:right;

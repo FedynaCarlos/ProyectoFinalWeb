@@ -9,6 +9,61 @@
             </a>
         </p>
     </div>
+
+    <box-icon name='chevron-down'></box-icon>
+
+
+    <nav class="menuNav">
+        <section class="menuNav_container">
+            <h1 class ="menuNav_logo">Bodega</h1>
+            
+            <ul class="menuNav_links">
+                <li class="menuNav_item">
+                    <a href="#" class="menuNav_link">Home</a>
+                </li>
+
+                <li class="menuNav_item menuNav_item--show" >
+                    <a href="#" class="menuNav_link">About <img src="/images/arrow.svg" class="menuNav_arrow" ></a>
+                    
+                    <ul class="menuNav_nesting">
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">About1</a>
+                        </li>
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">About2</a>
+                        </li>
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">About3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menuNav_item menuNav_item--show">
+                    <a href="#" class="menuNav_link">Projects <img src="/images/arrow.svg" class="menuNav_arrow"></a>
+                
+                    <ul class="menuNav_nesting">
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">Project1</a>
+                        </li>
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">Project2</a>
+                        </li>
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">Project3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menuNav_item">
+                    <a href="#" class="menuNav_link">Contact</a>
+                </li>
+
+            </ul>
+        </section>
+
+    </nav>
+
+
     <section class="cabecera">
         
         <nav class="mainmenu">
@@ -21,11 +76,11 @@
                         <a href="/"><img class="logo" src="/images/logo g5.png" alt="Logo de Bodega G5"></a>
                     </div>
                 </li>
-                <li><a href="/productos/productCart">Compras &nbsp<i class="fas fa-shopping-cart"></i></a> </li>
-                <div class="searchNavBar">
-                    <a href="/about"><i class="fa-solid fa-magnifying-glass"></i></a>
+               <!-- <li><a href="/productos/productCart">Compras &nbsp<i class="fas fa-shopping-cart"></i></a> </li> -->
+            <!-- <div class="searchNavBar">
+                    <a href="/about"><i class="fa-solid fa-magnifying-glass"></i></a> -->
                     <!--<i class="fa-solid fa-magnifying-glass"></i>-->
-                </div>
+            <!-- </div> -->
             </ul>
             <ul>
                 <% if (locals.isLogged ) {%>
@@ -54,5 +109,5 @@
         </button>
 
     </section>
-    
+    <script src="/js/navBar.js"></script>
 </header>
