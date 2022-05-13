@@ -45,7 +45,7 @@
                 </li>
         -->
 
-                <% if (locals.isLogged) {%>
+                <% if (locals.isLogged && locals.userLogeado.perfil_id == 1) {%>
 
                 <li class="menuNav_item menuNav_item--show">
                     <a href="#" class="menuNav_link">Administración <img src="/images/arrow.svg" class="menuNav_arrow"></a>
@@ -67,6 +67,14 @@
                     </a>
                 </li>
 
+                <% } else if (locals.isLogged && locals.userLogeado.perfil_id == 2) { %>
+                    <li>
+                        <a href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="menuNav_link">
+                            <img src="/images/users/<%= locals.userLogeado.avatar %>" width="40" style="border-radius:80%">
+                            Hola <%= locals.userLogeado.nombres %>
+                        <li><a href="/user/logout" class="menuNav_link"><i class="fas fa-sign-out-alt "> </i> Logout</a></li>
+                        </a>
+                    </li>    
                 <% } else { %>
                     <li><a href="/user/register" class="menuNav_link"><i class="far fa-address-card"></i></a></li>
                     <li><a href="/user/login" class="menuNav_link"><i class="fas fa-user"></i></a></li>

@@ -29,6 +29,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Perfil</th>
                         <th scope="col">Ver/Editar/Eliminar</th>
@@ -40,6 +41,7 @@
                         <tr class="table-active">
                            <!-- <th scope="row">Active</th> -->
                             <td><%= usuario.id%></td>
+                            <td><%= usuario.email%></td>
                             <td><%= usuario.nombres%></td>
                             <td><%= usuario.perfil.descripcion%></td>
                             <td>

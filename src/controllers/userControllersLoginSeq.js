@@ -98,8 +98,8 @@ const userControllersLoginSeq = {
                   delete userToLogin.password;    
                   
                   req.session.userLogeado = userToLogin;
-                    /* console.log(userToLogin.perfil_id)
-               console.log('por aqui voy'+ locals.perfil_id)*/
+                     //console.log(userToLogin.perfil_id)
+               //console.log('por aqui voy'+ locals.perfil_id)
                     /*  GUARDO LA COOKIE   */
 
                   if (req.body.recordar){
@@ -119,6 +119,7 @@ const userControllersLoginSeq = {
           }
 
         })
+        //.catch(error => res.redirect('error'))
         .catch(error => res.redirect('login.ejs'))
           
 

@@ -30,8 +30,12 @@
             <p class="cepaProduct"><%= productos[i].cepa.descripcion%></p>
             <p class="categoriaProduct"><%= productos[i].categoria%></p>
             <p class="precioProduct"><%= productos[i].precio%></p>
-            
+            <% if (locals.isLogged) {%>
             <button type="reset" data-id="<%= productos[i].produc_id%>" class="boton-formulario">Agregar al carrito</button>
+            <% } else { %>
+            <button type="reset" data-id="<%= productos[i].produc_id%>">Debes estar logeado</button>
+            <% } %>  
+
           </div>
         </article>
         <% } %>

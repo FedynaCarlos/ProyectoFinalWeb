@@ -9,6 +9,10 @@ window.onload = function () {
   let card = document.querySelector(".boton-formulario");
   let carrito = {};
 
+  //console.log(locals.isLogged);
+  //if (!locals.isLogged) 
+  //{card.addEventListener('click', alert("Debes estar LOGEADO"))}   
+
 
   templateCard.addEventListener('click', e => {addCarrito(e)});
   items.addEventListener('click', e => {btnAumentarDisminuir(e)});

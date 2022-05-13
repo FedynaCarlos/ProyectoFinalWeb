@@ -8,9 +8,9 @@ async function userLogeadoMiddlewares(req, res, next) {
     res.locals.isLogged = false;
     
     let cookieEmail = req.cookies.userMail;
-    console.log('en el middleware '+cookieEmail)
     
-    if (cookieEmail){ console.log('entro al if')
+    
+    if (cookieEmail){ 
      var cookieUser = await db.Usuario.findOne({limit:1,
             where : {
             email: (cookieEmail)
