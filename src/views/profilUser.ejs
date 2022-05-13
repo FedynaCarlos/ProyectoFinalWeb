@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+  <head>
+    <title>Detalle Productos</title>
+  </head>
+  <body>
+  <%- include('./partials/header') %>
+    <section>
+      <!--div mostrar imagen-->
+      <div class="contenedor1">
+        <!--contenedor1-->
+        <div class="elemento1">
+          <!--elemento1-->
+          <img src="/images/users/<%= miUsuario.avatar%>" width="200" height="200" style="border-radius:90%"> 
+    
+          <h4 class="description"><%= miUsuario.nombres +' '+ miUsuario.apellidos%></h4>
+        </div>
+        <!--fin de elemnto1-->
+        <!--descripcion del producto-->
+        <div class="elemento2">
+          <!--elemento 2-->
+          <h3>Usuario</h3>
+          <br>
+          <br>
+          <p>Perfil:<br> <%= miUsuario.perfil.descripcion%></p>
+          <p>Email:<br> <%= miUsuario.email%></p>
+          <p>Telefono:<br> <%= miUsuario.telefono%></p>
+          <p>Fecha Nac.:<br> <%= miUsuario.fechaNac%></p>
+          <br>
+          <br>
+           
+        </div>
+        <form  action="/admUsuarios" method= "GET" >
+           <div class="controlIngresoProductos">          
+              <button href="/admUsuarios"  class="boton-formulario">Volver</button>
+            </div>
+        </form>   
+      </div>
+
+
+    </section>
+    <%- include('partials/footer') %>
+  </body>
+

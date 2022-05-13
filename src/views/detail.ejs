@@ -6,20 +6,28 @@
   </head>
   <body>
   <%- include('./partials/header') %>
-    <section>
+    
+  
+  <section class="allProducts">
       <!--div mostrar imagen-->
-      <div class="contenedor1">
+      <div class="contenedor2">
         <!--contenedor1-->
-        <div class="elemento1">
+        <div class="elemento2-1">
           <!--elemento1-->
           <img src="/images/<%= miVino.imagen%>" width="110" class="product_img">
-          <i class="fas fa-truck"></i> 
-    
+         
           <h4 class="description"><%= miVino.nombre%></h4>
+          <div class="card-body">
+            
+              <div class="controlIngresoProductos">
+                <a href="/administrar" class="boton-formulario volverVistaP">Volver</a>
+              </div>
+            
+          </div>
         </div>
         <!--fin de elemnto1-->
         <!--descripcion del producto-->
-        <div class="elemento2">
+        <div class="elemento2-2">
           <!--elemento 2-->
           <h3>Producto</h3>
           <br>

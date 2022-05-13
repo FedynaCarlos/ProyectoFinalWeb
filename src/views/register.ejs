@@ -9,8 +9,7 @@
     <%- include('./partials/header') %>
     <main>  <!--Se realiza main con la finanlidad de poder realizar un flexbox y poder manejar sus propiedades-->
     <!--Agregado por Paco-->
-    <!--Agregado por Paco-->
-    <!--Agregado por Paco-->
+    
     <section class="errores">
         <ul></ul>
     </section>
@@ -88,6 +87,7 @@
             <div class="control-formulario">
                 <input 
                   type="text" 
+                  id="telefono"
                   name="telefono" 
                   placeholder="Telefono" 
                   class="control <%= locals.errors && errors.telefono? 'is-invalid' : null %>"
@@ -101,7 +101,7 @@
             </div>
             <div class="control-formulario">
                 <label style="color: white" for="">Agregar imagen</label>
-                <input type="file" id="imagen" name="image">
+                <input type="file" id="avatar" name="avatar">
                  <% if (locals.errors && errors.image) { %>
                     <div>
                         <span style="color: yellow; font-size: 12px"><%= errors.image.msg %></span> 

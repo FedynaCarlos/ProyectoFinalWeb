@@ -28,17 +28,18 @@
                     class="control">
                     <% if (locals.errors && errors.email) {%>
                         <div>
-                            <span style="color: yellow; font-size: 12px"><%= errors.email.msg %></span> 
+                          <span style="color: yellow; font-size: 12px"><%= errors.email.msg %></span> 
                         </div>
                     <% } %> 
             </div>
             <div class="titulo-usuario">
                 <input type="checkbox" id="recordar" name="recordar">
-                <label for="recordar">Recordar Usuario</label>                     
+                <label for="recordar">Recordar Usuario</label>
             </div>
-            <div>
+     <!--       <div>
                 <p class="ocontrasena"><a href="#">Olvidaste tu contraseña?</a></p>
             </div>
+    -->
             <div class="control-formulario">
                 <button type="submit" class="boton-formulario">Ingresar</button>
             </div>

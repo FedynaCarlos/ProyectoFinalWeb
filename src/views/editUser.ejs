@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<<%- include('./partials/head') %>
+<head>
+    <title>Crear Usuarios</title>
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <main>
+        <h2>Formulario de edición de Usuarios</h2>
+        <!--Se realiza main con la finalidad de poder realizar un flexbox y poder manejar sus propiedades-->
+        <form  class= "createProduct" action="/admUsuarios/edit/<%= usuarioEditar.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <!--<form action="" method="post" class="createProduct"> -->
+           <div class="controlIngresoProductos">
+               <label for="">Nombre</label>
+               <input class="input1" type="text" name="nombres" id="nombres" placeholder="Ej: Jorge" value="<%= usuarioEditar.nombres%>">
+               <% if (typeof errors != 'undefined' && typeof errors.nombre != 'undefined') { %>
+                <span style="color: red"><%= errors.nombres.msg %></span> 
+            <% } %>
+           </div>
+            <div class="controlIngresoProductos">
+                <label for="">Apellido</label>
+                <input class="input1" type="text" name="apellidos" id="apellidos" placeholder="Ej: Lopez" value="<%= usuarioEditar.apellidos%>">
+                <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
+                    <span style="color: red"><%= errors.apellidos.msg %></span> 
+                <% } %>
+            </div>
+
+            <div class="controlIngresoProductos">
+                <label for="">perfil:</label>
+                <select class="input1" name="perfil" id="perfil">
+                    <% for (let i=0; i < perfil.length; i++) { %>
+                        <option value="<%= perfil[i].perfil_id %>" <%= usuarioEditar.perfil_id == perfil[i].perfil_id ? "selected" : null %>><%= perfil[i].descripcion%></option>
+                        
+                    <% } %>
+                    <% if (typeof errors !='undefined' && typeof errors.perfil !='undefined' ) { %>
+                        <span style="color: red"><%= errors.perfil.msg %></span>
+                    <% } %>
+                </select>
+            </div>
+
+            <div class="controlIngresoProductos">
+                <label for="">E-mail</label>
+                <input class="input1" type="email" name="email" id="email" placeholder="Ej: aaa@bbb.ccc" value="<%= usuarioEditar.email%>">
+                <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
+                    <span style="color: red"><%= errors.email.msg %></span> 
+                <% } %>
+            </div>
+
+            <div class="controlIngresoProductos">
+                <label for="">Teléfono</label>
+                <input class="input1" type="text" name="telefono" id="telefono" placeholder="123456789" value="<%= usuarioEditar.telefono%>">
+                <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
+                    <span style="color: red"><%= errors.telefono.msg %></span> 
+                <% } %>
+            </div>
+
+            <div class="controlIngresoProductos">
+                <label for="">Fecha Nacimiento</label>
+                <input class="input1" type="text" name="fechaNac" id="fechaNac" placeholder="Ej: 01/01/2000" value="<%= usuarioEditar.fechaNac%>">
+                <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
+                    <span style="color: red"><%= errors.fechaNac.msg %></span> 
+                <% } %>
+            </div>
+            
+            <div class="controlIngresoProductos">
+                <figure class="form-group">
+                    <img class="w-100e" src="/images/users/<%= usuarioEditar.avatar%>" style="border-radius:90%" alt="usuario <%= usuarioEditar.nombres%>">
+                </figure>
+                <input type="hidden" name="oldAvatar" value="<%= usuarioEditar.avatar%>">
+                <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+                <input type="file" name="avatar%">
+
+               <!-- <label for="">Agregar imagen</label>
+                <input type="file" name="image" id="image"> -->
+            </div>
+            <div class="controlIngresoProductos">
+
+            </div>
+            
+            <div class="controlIngresoProductos">
+                <button type="submit" class="boton-formulario">Actualizar</button>
+                <button href="/admUsuarios"  class="boton-formulario">Volver</button>
+                
+            </div>
+        </form>
+</body> 
+</html>

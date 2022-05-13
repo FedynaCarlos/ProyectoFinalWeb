@@ -9,6 +9,79 @@
             </a>
         </p>
     </div>
+
+    <nav class="menuNav">
+        <section class="menuNav_container">
+            <div class="marcoLogo">
+                <a href="/"><img class="logo" src="/images/logo g5.png" alt="Logo de Bodega G5"></a>
+            </div>
+          <!--  <h1 class ="menuNav_logo">Bodega</h1> -->
+            
+            <ul class="menuNav_links">
+                <li class="menuNav_item">
+                    <a href="/" class="menuNav_link">Inicio</a>
+                </li>
+                <li class="menuNav_item">
+                    <a href="/about" class="menuNav_link">Nuestra Historia</a>
+                </li>
+                <li class="menuNav_item">
+                    <a href="/productos" class="menuNav_link">Productos</a>
+                </li>
+
+       <!--         <li class="menuNav_item menuNav_item--show" >
+                    <a href="#" class="menuNav_link">About <img src="/images/arrow.svg" class="menuNav_arrow" ></a>
+                    
+                    <ul class="menuNav_nesting">
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">About1</a>
+                        </li>
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">About2</a>
+                        </li>
+                        <li class="menuNav_inside">
+                            <a href="#" class="menuNav_link menuNav_link--inside">About3</a>
+                        </li>
+                    </ul>
+                </li>
+        -->
+
+                <% if (locals.isLogged) {%>
+
+                <li class="menuNav_item menuNav_item--show">
+                    <a href="#" class="menuNav_link">Administración <img src="/images/arrow.svg" class="menuNav_arrow"></a>
+                    <ul class="menuNav_nesting">
+                        <li class="menuNav_inside">
+                            <a href="/administrar" class="menuNav_link menuNav_link--inside">Productos</a>
+                        </li>
+                        <li class="menuNav_inside">
+                            <a href="/admUsuarios" class="menuNav_link menuNav_link--inside">Usuarios</a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="menuNav_link">
+                        <img src="/images/users/<%= locals.userLogeado.avatar %>" width="40" style="border-radius:80%">
+                        Hola <%= locals.userLogeado.nombres %>
+                    <li><a href="/user/logout" class="menuNav_link"><i class="fas fa-sign-out-alt "> </i> Logout</a></li>
+                    </a>
+                </li>
+
+                <% } else { %>
+                    <li><a href="/user/register" class="menuNav_link"><i class="far fa-address-card"></i></a></li>
+                    <li><a href="/user/login" class="menuNav_link"><i class="fas fa-user"></i></a></li>
+                <% } %>
+            </ul>
+
+            <div class="menuNav_hamburguer">
+                <img src="/images/menu.svg" class="menuNav_img">
+            </div>
+
+        </section>
+
+    </nav>
+
+<!--
     <section class="cabecera">
         
         <nav class="mainmenu">
@@ -21,18 +94,22 @@
                         <a href="/"><img class="logo" src="/images/logo g5.png" alt="Logo de Bodega G5"></a>
                     </div>
                 </li>
-                <li><a href="/productos/productCart">Compras &nbsp<i class="fas fa-shopping-cart"></i></a> </li>
-                <div class="searchNavBar">
-                    <a href="/about"><i class="fa-solid fa-magnifying-glass"></i></a>
-                    <!--<i class="fa-solid fa-magnifying-glass"></i>-->
-                </div>
+                <li><a href="/productos/productCart">Compras &nbsp<i class="fas fa-shopping-cart"></i></a> </li> 
+             <div class="searchNavBar">
+                    <a href="/about"><i class="fa-solid fa-magnifying-glass"></i></a> 
+                    <i class="fa-solid fa-magnifying-glass"></i>
+             </div> 
             </ul>
             <ul>
-                <% if (locals.isLogged) {%>
-                <li><a href="/administrar">Administrar</a></li>
+                <% if (locals.isLogged ) {%>
+                
+                <li>
+                    <a href="/administrar">Adm. Productos</a>
+                    <a href="/admUsuarios">Adm. Usuarios</a>
+                </li>
                 <li>
                     <a href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/images/users/imagen1.jpg" width="40" style="border-radius:80%">
+                    <img src="/images/users/<%= locals.userLogeado.avatar %>" width="40" style="border-radius:80%">
                     Hola <%= locals.userLogeado.nombres %>
                     <li><a href="/user/logout"><i class="fas fa-sign-out-alt"> </i> Logout</a></li>
                     </a>
@@ -40,14 +117,15 @@
                 <% } else { %>    
                 <li><a href="/user/register"><i class="far fa-address-card"></i></a></li>
                 <li><a href="/user/login"><i class="fas fa-user"></i></a></li>
-                <!--<li><a href="/user/login">Login</a></li> -->
+                <li><a href="/user/login">Login</a></li> 
                 <% } %>
-                <!--<li><a href="/productos/productosPrincipal">Listado Productos</a></li>-->
+                <li><a href="/productos/productosPrincipal">Listado Productos</a></li>
             </ul>
         </nav>
-        <button class="burguermenu" type="button">
-            <i class="fas fa-bars"></i>
-        </button>
-
+      
     </section>
+
+    -->
+    <script src="/js/navBar.js"></script>
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script> 
 </header>

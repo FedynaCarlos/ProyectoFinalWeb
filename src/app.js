@@ -3,6 +3,7 @@ const methodOverride =  require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 const bodyParser = require('body-parser');
+//const bootstrap = require("bootstrap");
 
 
 
@@ -52,6 +53,7 @@ app.use(userLogeadoMiddlewares);
 //Rutas a usar
 app.use('/',mainRoutes);
 app.use('/user',userRoutes);
+app.use('/admUsuarios',userRoutes);
 app.use('/productos',productRoutes);
 app.use('/cepa',cepaRoutes);
 app.use('/about',mainRoutes);

@@ -24,10 +24,17 @@ const userControllersLoginSeq = {
    
     /*Busco si el usuario esta en la base para no repetir el email */
 
-    let userInDb = db.Usuario.findByField('email',req.body.email)
+    //let userInDb = db.Usuario.findByField('email',req.body.email)
 
-    if (userInDb) {
-        return res.render('register', {
+    db.Usuario.findOne({limit:1,
+      where : {
+        email: (req.body.email)
+      }
+    })
+    .then((userToRegister) => { 
+             
+     if (userToRegister){  //console.log(userToRegister) 
+          return res.render('register', {
                     errors: { 
                         email: {
                             msg: 'El mail se encuentra registrado'
@@ -35,18 +42,38 @@ const userControllersLoginSeq = {
                     },
              oldData: req.body
          })
-    }
-
-    let userToCreate = {
+      } else { 
+       
+       db.Usuario.create({
+          nombres: req.body.nombres,
+          apellidos: req.body.apellidos,
+          email: req.body.email,
+          perfil_id: 2,
+          fechaNac: req.body.fechaNacimiento,
+          telefono: req.body.telefono,
+          password: bcryptjs.hashSync(req.body.password,10),
+          avatar: req.file.filename,
+        })
+          .then(() => {
+            res.redirect("/");
+          })
+          .catch((error) => res.send(error));
+        /*
+        let userToCreate = {
         ...req.body, 
         password: bcryptjs.hashSync(req.body.password,10),
         image: req.file.filename,
-    }
+        } */
+      }
+    })
+    .catch(error => res.redirect('login.ejs'))  
 
+    
+     /* 
      delete userToCreate.cpassword,
      User.create(userToCreate);
      return res.redirect('/user/login')
-    
+    */
   },
 
   login: (req,res) => { 
@@ -57,28 +84,22 @@ const userControllersLoginSeq = {
 
   authenticate: (req, res) => { 
        
-    //return res.send(req.body);
-
-     //let userToLogin = db.Usuario.findByField('email' , req.body.email);
-
-     /*let userToLogin =*/  db.Usuario.findOne({
+      db.Usuario.findOne({limit:1,
           where : {
             email: (req.body.email)
           }
-      })
+        })
         .then((userToLogin) => { 
-          
           if (userToLogin){
-             
-              let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-
-              console.log(isOkpassword);
-
+          
+           let isOkpassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+              
               if (isOkpassword){
                   delete userToLogin.password;    
                   
                   req.session.userLogeado = userToLogin;
-
+                    /* console.log(userToLogin.perfil_id)
+               console.log('por aqui voy'+ locals.perfil_id)*/
                     /*  GUARDO LA COOKIE   */
 
                   if (req.body.recordar){
@@ -88,13 +109,19 @@ const userControllersLoginSeq = {
                   return res.redirect('/');
               } else {
                   return res.render('login.ejs',{
-                    errors: {
-                    email:{ msg: 'Las credenciales no son válidos' }
-                    }   
+                    errors: { email:{ msg: 'Las credenciales no son válidas' }}   
                   });
                 }
+          } else {
+            return res.render('login.ejs',{
+              errors: { email:{ msg: 'Las credenciales no son válidas' }}   
+            });
           }
-       }); 
+
+        })
+        .catch(error => res.redirect('login.ejs'))
+          
+
   },
 
   logout: (req, res) =>{

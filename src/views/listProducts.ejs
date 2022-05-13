@@ -24,68 +24,6 @@
         </article>
     <section>
       
-        <!-- <div class="formulario-creacion"> 
-        <form class="createProduct" action="/administrar/create" s method="POST" enctype="multipart/form-data">
-            <div class="controlIngresoProductos">
-                <label for="">Nombre del Producto</label>
-                <input class="input1" type="text" name="nombre" id="nombre" placeholder="Ej: Vino casillero del Diablo">
-                <% if (typeof errors !='undefined' && typeof errors.nombre !='undefined' ) { %>
-                    <span style="color: red">
-                        <%= errors.nombre.msg %>
-                    </span>
-                    <% } %>
-            </div>
-            <div class="controlIngresoProductos">
-                <label for="">Precio del produto:</label>
-                <input class="input1" type="number" name="precio" id="precio" placeholder="Ej: 5.400">
-                <% if (typeof errors !='undefined' && typeof errors.precio !='undefined' ) { %>
-                    <span style="color: red">
-                        <%= errors.precio.msg %>
-                    </span>
-                    <% } %>
-            </div>
-            <div class="controlIngresoProductos">
-                <label for="">Cepa:</label>
-                <input class="input1" type="text" name="cepa" id="cepa" placeholder="Ej: Malbec">
-                <% if (typeof errors !='undefined' && typeof errors.cepa !='undefined' ) { %>
-                    <span style="color: red">
-                        <%= errors.cepa.msg %>
-                    </span>
-                    <% } %>
-            </div>
-            <div class="controlIngresoProductos">
-                <label for="">Categoría:</label>
-                <select class="input1" name="categoria" id="categoria">
-                    <option selected="selected" value=""> </option>
-                    <option value="Espumante">Espumoso</option>
-                    <option value="Blanco">Blanco</option>
-                    <option value="Tinto">Tinto</option>
-                    <option value="Rosado">Rosado</option>
-                </select>
-                <% if (typeof errors != 'undefined' && typeof errors.categoria != 'undefined') { %>
-                            <span style="color: red"><%= errors.categoria.msg %></span> 
-                        <% } %> 
-            </div>
-            <div class="controlIngresoProductos">
-                <label for="">Agregar imagen</label>
-                <input type="file" name="image" id="image">
-            </div>
-        
-            <div class="controlIngresoProductos2">
-                <label for="">Descripción</label>
-                <textarea class="textaread" cols="90" name="descripcion" id="descripcion" rows="2"
-                    placeholder="Breve descripción"></textarea>
-            </div>
-            <% if (typeof errors !='undefined' && typeof errors.descripcion !='undefined' ) { %>
-                <span style="color: red">
-                    <%= errors.descripcion.msg %>
-                </span>
-                <% } %>
-                    <div class="controlIngresoProductos">
-                        <button type="submit" class="boton-formulario">Guardar Producto</button>
-                    </div>
-        </form> -->
-
     </section>
     
     <section class= "CRUD">
@@ -121,7 +59,8 @@
 
         </div>
     </section>
-        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+       <!-- <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> -->
+        <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
         <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
         <script src="js/listProduct.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
