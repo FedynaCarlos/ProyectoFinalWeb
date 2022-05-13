@@ -1,7 +1,9 @@
+const { devNull } = require("os");
+
 module.exports = {
   development: {
     username: "root",
-    password: '8090',
+    password: null,
     database: "grupo_5",
     host: "127.0.0.1",
     dialect: "mysql",
