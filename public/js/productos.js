@@ -4,7 +4,6 @@ window.onload = function(){
   const inputs = document.querySelectorAll('#formulario input');
   const textArea = document.querySelector("#descripcion");
   const image = document.querySelector('#image')
-  //let nombre = document.querySelector("#nombre");
 
   const campos = {
     nombre: false,
@@ -38,12 +37,10 @@ window.onload = function(){
                title: "Oops...",
                text: "Debe cargar una imagen en formato jpg/jpeg/png/gif",
              });
-              //alert("Debe cargar una imagen en formato jpg/jpeg/png/gif");
+              
            }
          }
-
      });
-
         break;
     }
   }
@@ -98,10 +95,13 @@ window.onload = function(){
   textArea.addEventListener("blur", validarTextArea);
 
   formulario.addEventListener('submit', (e) => {
-    //e.preventDefault();
+    //console.log(e.preventDefault());
     
-    console.log(campos.nombre)
-     
+    console.log(campos.nombre);
+    console.log(campos.precio);
+    console.log(campos.descripcion);
+
+    if(campos.nombre && campos.precio && campos.descripcion){
       Swal.fire({
         position: "top-end",
         icon: "success",
@@ -109,6 +109,12 @@ window.onload = function(){
         showConfirmButton: false,
         timer: 3500,
       });
+    } else {
+      Swal.fire("Debes completar la información");
+    }
+
+    //console.log(campos.nombre)
+     
     
 
 

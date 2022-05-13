@@ -3,7 +3,6 @@ const { devNull } = require('os');
 const db = require('../../src/database/models');
 const res = require('express/lib/response');
 const { validationResult } = require("express-validator");
-
 const Op = db.Sequelize.Op;
 
 const controllerAdminSeq = {
@@ -22,13 +21,14 @@ const controllerAdminSeq = {
       })
    },
   save: (req,res) => {
-    
     const errors= validationResult(req);
     if (!errors.isEmpty()){
       return (
       db.Cepa.findAll()
         .then (function(cepas){
-          res.render('createProduct', {errors:errors.mapped(), oldData:req.body, cepas})
+          setTimeout(function () {
+            res.render('createProduct', {errors:errors.mapped(), oldData:req.body, cepas})
+          }, 1200);
         }))
     } else {
       db.Producto.create({
@@ -52,13 +52,11 @@ const controllerAdminSeq = {
       include : [{association : 'cepa'}]
     })
     .then(miVino=> {
-      
       res.render('detail', {miVino})
     })
     .catch(error => res.send(error))
   },
   edit: (req,res) => {
-    
     const cepas = db.Cepa.findAll()
     const productos = db.Producto.findByPk(req.params.id, {
       include: [{association : 'cepa'}]
@@ -70,7 +68,6 @@ const controllerAdminSeq = {
   },
   update: async (req, res) => {
     try {
-      
       await db.Producto.update ({
           nombre: req.body.nombre,
           precio: req.body.precio,
@@ -83,15 +80,11 @@ const controllerAdminSeq = {
         });
       setTimeout(function(){
         res.redirect('/administrar');
-
       },1000)
     }
       catch(error){res.send(error)}
-      
   },
   destroy:(req, res) => {
-    
-    
     db.Producto.destroy({
       where: {
         produc_id: req.params.id
@@ -107,14 +100,10 @@ const controllerAdminSeq = {
         nombre: {[Op.like]: `%${req.query.search}%`}
       }
     })
-        
     .then(function(resultado){
       res.render('listProducts', {productos : resultado}); })
     .catch(error => res.send(error))
   }
- 
 }
-
-
 
 module.exports = controllerAdminSeq;

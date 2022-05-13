@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<<%- include('./partials/head') %>
+<%- include('./partials/head') %>
 <head>
     <title>Crear Productos</title>
 </head>
@@ -27,8 +27,8 @@
                 <span style="color: yellow"><%= errors.nombre.msg %></span> 
               <% } %>
               <p class ="formulario__input-error">Minimo 5 caracteres</p>
-              
             </div>
+
             <div class="controlIngresoProductos" id="grupo__precio">
                 <label for="" class="formulario__label">Precio del produto</label>
                 <div>
@@ -89,15 +89,14 @@
                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 <div>
                     <textarea class="textaread" cols="80" name="descripcion" id="descripcion" 
-                    rows="4" placeholder="Breve descripción" 
-                    value="<%=locals.oldData ? oldData.descripcion : null %>"></textarea>
+                    rows="4" placeholder="Breve descripción"><%=locals.oldData ? oldData.descripcion : null %></textarea>
                     <% if (typeof errors != 'undefined' && typeof errors.descripcion != 'undefined') { %>
                         <span style="color: yellow"><%= errors.descripcion.msg %></span> 
                     <% } %>
                     <p class="formulario__input-error">Mínimo 20 caracteres</p>
                 </div>
             </div>
-<!--
+<!-- 
             <% if (typeof validaciones != 'undefined') {%>
                 <% validaciones.forEach( (validacion) => { %> 
                     <div>
