@@ -23,8 +23,8 @@ const validationUsers = [
         };
             return true;
     }),
-    check('password').notEmpty().withMessage('No puede estar vacio').bail().isLength({ min: 5, max: 10 }).withMessage('Debe tener como minimo 5 y maximo 10 caracteres').bail(),
-    check('cpassword').notEmpty().withMessage('No puede estar vacio').bail().isLength({ min: 5, max: 10 }).withMessage('Debe tener como minimo 5 y maximo 10 caracteres').bail(),
+    check('password').notEmpty().withMessage('No puede estar vacio').bail().isLength({ min: 8, max: 10 }).withMessage('Debe tener como minimo 8 y maximo 10 caracteres').bail(),
+    check('cpassword').notEmpty().withMessage('No puede estar vacio').bail().isLength({ min: 8, max: 10 }).withMessage('Debe tener como minimo 8 y maximo 10 caracteres').bail(),
     check('cpassword', 'Los Passwords no son iguales').custom((value, {req}) => (value === req.body.password)),
 ]
 
