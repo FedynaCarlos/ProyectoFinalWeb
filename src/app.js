@@ -4,6 +4,13 @@ const session = require('express-session');
 const cookies = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+
+
+const apiProducto= require('./routes/apiRoutesProducto');
+const apiUsuario= require('./routes/apiRoutesUsuario');
+
+
+
 //const userlogeado = require('./middlewares/userLogeado');
 
 
@@ -13,6 +20,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('./public'));
 app.set('views', __dirname + '/views');
 app.set('view engine','ejs');
+app.use('/api1',apiProducto);
+app.use('/api2',apiUsuario);
 
 //Requerir las rutas
 const mainRoutes = require('./routes/mainRoutes');
