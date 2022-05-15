@@ -61,13 +61,15 @@ const userControllersAdmSeq = {
       res.render("editUser", {usuarioEditar, perfil})
     })
   },
-  update: (req, res) => {
+  update: (req, res) => { 
     db.Usuario.update ({
-      nombre: req.body.nombres,
-      apellido: req.body.apellidos,
+      nombres: req.body.nombres,
+      apellidos: req.body.apellidos,
       email: req.body.email,
+      fechaNac: req.body.fechaNac,
+      telefono: req.body.telefono,
       perfil_id: req.body.perfil,
-      imagen: req.file ? req.file.filename : req.body.oldImagen
+      avatar: req.file ? req.file.filename : req.body.oldAvatar 
     }, {
       where: {
         id: req.params.id

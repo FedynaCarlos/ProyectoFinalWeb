@@ -57,27 +57,27 @@
 
             <div class="controlIngresoProductos">
                 <label for="">Fecha Nacimiento</label>
-                <input class="input1" type="text" name="fechaNac" id="fechaNac" placeholder="Ej: 01/01/2000" value="<%= usuarioEditar.fechaNac%>">
+                <input class="input1" type="date" name="fechaNac" id="fechaNac" placeholder="Ej: 01/01/2000" value="<%= usuarioEditar.fechaNac%>">
                 <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
                     <span style="color: red"><%= errors.fechaNac.msg %></span> 
                 <% } %>
             </div>
             
             <div class="controlIngresoProductos">
+                
                 <figure class="form-group">
-                    <img class="w-100e" src="/images/users/<%= usuarioEditar.avatar%>" style="border-radius:90%" alt="usuario <%= usuarioEditar.nombres%>">
+                    <img class="w-100e" src="/images/users/<%= usuarioEditar.avatar%>"  style="border-radius:90%">
                 </figure>
-                <input type="hidden" name="oldAvatar" value="<%= usuarioEditar.avatar%>">
-                <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
-                <input type="file" name="avatar%">
-
+                   <label style="color: white" for="">Cambiar Avatar</label>
+                   <input type="file" id="avatar" name="avatar" >
+                  <!--  <input type="hidden" name="oldAvatar" id="oldAvatar" value="<%= usuarioEditar.avatar %>">
+               De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
+                  
+                <!--  <input type="file" id="avatar" name="avatar">-->
                <!-- <label for="">Agregar imagen</label>
-                <input type="file" name="image" id="image"> -->
+                 <input type="file" name="avatar" id="avatar" value="<%= usuarioEditar.avatar %>"> -->
             </div>
-            <div class="controlIngresoProductos">
-
-            </div>
-            
+          
             <div class="controlIngresoProductos">
                 <button type="submit" class="boton-formulario">Actualizar</button>
                 <button href="/admUsuarios"  class="boton-formulario">Volver</button>

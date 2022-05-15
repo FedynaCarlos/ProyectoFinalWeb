@@ -61,11 +61,13 @@
             </div>
             <div class="controlIngresoProductos">
                 <figure class="form-group">
-                    <img class="w-100e" src="/images/<%= vinoEditar.imagen%>" alt="producto <%= vinoEditar.nombre%>">
+                    <img class="w-100e" src="/images/<%= vinoEditar.imagen%>" >
                 </figure>
-                <input type="hidden" name="oldImagen" value="<%= vinoEditar.imagen%>">
-                <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
-                <input type="file" name="imagen">
+                <label style="color: white" for="">Cambiar imagen</label>
+                   <input type="file" id="image" name="image" >
+               <!--  <input type="hidden" name="oldImagen" value="<%= vinoEditar.imagen%>">
+               De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) 
+                <input type="file" name="imagen" id="imagen">-->
 
                <!-- <label for="">Agregar imagen</label>
                 <input type="file" name="image" id="image"> -->
