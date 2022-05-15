@@ -3,23 +3,25 @@ import SmallCard from './SmallCard';
 
 let productInDataBase = {
     color:   "primary",
-    titulo: "Movies in Data Base",
-    valor: 21,
-    icono: "fas fa-film",
+    titulo: "Total de productos",
+    valor: 450,
+    icono: "fa-solid fa-wine-bottle",
 }
 
-let amount ={
-    color:   "success",
-    titulo: "Total awards",
-    valor: 79,
-    icono: "fas fa-award",
-}
+let amount = {
+  color: "success",
+  titulo: "Total de Usuarios",
+  valor: 5,
+  icono: "fa-solid fa-user-check",
+  //<FontAwesomeIcon icon="fa-light fa-wine-glass-empty" />
+};
 
 let user = {
     color:   "warning",
-    titulo: "Actors quantity",
-    valor: 49,
-    icono: "fas fa-user",
+    titulo: "Total de Cepas",
+    valor: 8,
+    icono: "fa-solid fa-wine-glass",
+    
 }
 
 let cardProps = [productInDataBase,amount,user];
