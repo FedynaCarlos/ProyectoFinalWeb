@@ -32,6 +32,7 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Imagen</th>
                         <th scope="col">Nombre</th>
                         <th scope="col">Ver/Editar/Eliminar</th>
                         
@@ -41,9 +42,10 @@
                     <% productos.forEach(producto=> { %>
                         <tr class="table-active">
                            <!-- <th scope="row">Active</th> -->
-                            <td><%= producto.produc_id%></td>
-                            <td><%= producto.nombre%></td>
-                            <td>
+                           <td class="tableId"><%= producto.produc_id%></td>
+                           <td class="tableImagen"><img class="w-100t" src="/images/<%= producto.imagen%>" alt=""></td>
+                            <td class="tableNombre"><%= producto.nombre%></td>
+                            <td class="tableBotones">
                                 <a href="/administrar/detail/<%= producto.produc_id%> " class="btn btn-info">Detalle</a>
                                 <a href="/administrar/edit/<%= producto.produc_id%> " class="btn btn-success">Editar</a>
                                 <form action="/administrar/delete/<%= producto.produc_id%>" class="d-inline form-delete">
