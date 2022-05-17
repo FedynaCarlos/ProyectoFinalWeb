@@ -48,7 +48,10 @@
                                 <a href="/admUsuarios/detail/<%= usuario.id%> " class="btn btn-info">Detalle</a>
                                 <a href="/admUsuarios/edit/<%= usuario.id%> " class="btn btn-success">Editar</a>
                                 <% if (usuario.perfil.perfil_id==2) {%>
-                                <a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger">Eliminar</a>
+                                    <form action="/admUsuarios/delete/<%= usuario.id%>" class="d-inline form-delete">
+                                        <button class="btn btn-danger btnEliminarList" type="submit">Eliminar</button>
+                                    </form>
+                                <!--<a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger">Eliminar</a>-->
                                 <% } %> 
                             </td>
                             

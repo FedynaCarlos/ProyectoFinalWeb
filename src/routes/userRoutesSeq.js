@@ -31,13 +31,9 @@ router.get('/create', userControllersAdmSeq.create);
 router.post('/create', upload.single('avatar'), userControllersAdmSeq.save);
 router.get('/detail/:id', userControllersAdmSeq.show);
 router.get('/edit/:id', userControllersAdmSeq.edit);
-router.put('/edit/:id', upload.single('avatar'), userControllersAdmSeq.update);
+router.put('/edit/:id',  upload.single('avatar'),validationUsers, userControllersAdmSeq.update);
 router.get('/delete/:id', userControllersAdmSeq.destroy);
 router.get('/search_results', userControllersAdmSeq.search);
-
-/*
-router.post('/',upload.single('image'), validationUsers, userControllersLoginSeq.processRegister);
-*/
 
 router.get('/register',  userControllersLoginSeq.register);
 router.post('/',upload.single('avatar'), validationUsers, userControllersLoginSeq.processRegister);

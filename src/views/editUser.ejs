@@ -14,14 +14,14 @@
            <div class="controlIngresoProductos">
                <label for="">Nombre</label>
                <input class="input1" type="text" name="nombres" id="nombres" placeholder="Ej: Jorge" value="<%= usuarioEditar.nombres%>">
-               <% if (typeof errors != 'undefined' && typeof errors.nombre != 'undefined') { %>
+               <% if (typeof errors != 'undefined' && typeof errors.nombres != 'undefined') { %>
                 <span style="color: red"><%= errors.nombres.msg %></span> 
             <% } %>
            </div>
             <div class="controlIngresoProductos">
                 <label for="">Apellido</label>
                 <input class="input1" type="text" name="apellidos" id="apellidos" placeholder="Ej: Lopez" value="<%= usuarioEditar.apellidos%>">
-                <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
+                <% if (typeof errors != 'undefined' && typeof errors.apellidos != 'undefined') { %>
                     <span style="color: red"><%= errors.apellidos.msg %></span> 
                 <% } %>
             </div>
@@ -42,7 +42,7 @@
             <div class="controlIngresoProductos">
                 <label for="">E-mail</label>
                 <input class="input1" type="email" name="email" id="email" placeholder="Ej: aaa@bbb.ccc" value="<%= usuarioEditar.email%>">
-                <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
+                <% if (typeof errors != 'undefined' && typeof errors.email != 'undefined') { %>
                     <span style="color: red"><%= errors.email.msg %></span> 
                 <% } %>
             </div>
@@ -50,7 +50,7 @@
             <div class="controlIngresoProductos">
                 <label for="">Teléfono</label>
                 <input class="input1" type="text" name="telefono" id="telefono" placeholder="123456789" value="<%= usuarioEditar.telefono%>">
-                <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
+                <% if (typeof errors != 'undefined' && typeof errors.telefono != 'undefined') { %>
                     <span style="color: red"><%= errors.telefono.msg %></span> 
                 <% } %>
             </div>
@@ -58,7 +58,7 @@
             <div class="controlIngresoProductos">
                 <label for="">Fecha Nacimiento</label>
                 <input class="input1" type="date" name="fechaNac" id="fechaNac" placeholder="Ej: 01/01/2000" value="<%= usuarioEditar.fechaNac%>">
-                <% if (typeof errors != 'undefined' && typeof errors.precio != 'undefined') { %>
+                <% if (typeof errors != 'undefined' && typeof errors.fechaNac != 'undefined') { %>
                     <span style="color: red"><%= errors.fechaNac.msg %></span> 
                 <% } %>
             </div>
@@ -79,10 +79,15 @@
             </div>
           
             <div class="controlIngresoProductos">
-                <button type="submit" class="boton-formulario">Actualizar</button>
+                <form action="" class = "form-btnActualizar">
+                    <button type="submit" class="boton-formulario btnActualizar">Actualizar</button>
+                </form>
                 <button href="/admUsuarios"  class="boton-formulario">Volver</button>
                 
             </div>
         </form>
+        <script src="/js/editUsers.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body> 
 </html>
