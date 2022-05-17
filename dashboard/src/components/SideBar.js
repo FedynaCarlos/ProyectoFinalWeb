@@ -3,10 +3,11 @@ import image from '../assets/images/logo.png';
 import { Route, Link, Routes } from 'react-router-dom';
 import ContentWrapper from './ContentWrapper';
 import CepasInDb from './CepasInDb';
-import LastMovieInDb from './LastMovieInDb';
+import ProductoInDb from "./ProductoInDb";
 import ContentRowMovies from './ContentRowMovies';
 import Error404 from './Error404';
 import Producto from './Producto';
+import SearchMovies from "./SearchMovies";
 
 function SideBar(){
     return (
@@ -15,12 +16,12 @@ function SideBar(){
         <ul
           className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion"
           id="accordionSidebar"
-          style={{background:'#604621'}}
+          style={{ background: "#604621" }}
         >
           {/*<!-- Sidebar - Brand -->*/}
           <Link
             className="sidebar-brand d-flex align-items-center justify-content-center"
-            style={{height:150}}
+            style={{ height: 150 }}
             to="/"
           >
             <div className="sidebar-brand-icon">
@@ -53,17 +54,17 @@ function SideBar(){
 
           {/*<!-- Nav Item - Pages -->*/}
           <li className="nav-item">
-            <Link className="nav-link collapsed" to="/GenresInDb">
+            <Link className="nav-link collapsed" to="/CepasInDb">
               <i className="fas fa-fw fa-folder"></i>
-              <span>Genres</span>
+              <span>Cepas</span>
             </Link>
           </li>
 
           {/*<!-- Nav Item - Charts -->*/}
           <li className="nav-item">
-            <Link className="nav-link" to="/LastMovieInDb">
+            <Link className="nav-link" to="/ProductoInDb">
               <i className="fas fa-fw fa-chart-area"></i>
-              <span>LastMovieInDb</span>
+              <span>Producto estrella</span>
             </Link>
           </li>
 
@@ -71,7 +72,7 @@ function SideBar(){
           <li className="nav-item">
             <Link className="nav-link" to="/ContentRowMovies">
               <i className="fas fa-fw fa-table"></i>
-              <span>ContentRowMovies</span>
+              <span>Resumen</span>
             </Link>
           </li>
 
@@ -83,6 +84,14 @@ function SideBar(){
             </Link>
           </li>
 
+          {/*<!-- Buscador -->*/}
+          <li className="nav-item nav-link">
+            <Link className="nav-link" to="/SearchMovies">
+              <i className="fas fa-search"></i>
+              <span>Buscar un cóctel</span>
+            </Link>
+          </li>
+
           {/*<!-- Divider -->*/}
           <hr className="sidebar-divider d-none d-md-block" />
         </ul>
@@ -91,10 +100,11 @@ function SideBar(){
         <Routes>
           <Route exat path="/" element={<ContentWrapper />} />
           <Route path="/CepasInDb" element={<CepasInDb />} />
-          <Route path="/LastMovieInDb" element={<LastMovieInDb />} />
+          <Route path="/ProductoInDb" element={<ProductoInDb />} />
           <Route path="/ContentRowMovies" element={<ContentRowMovies />} />
           <Route path="/table" element={<Producto />} />
           <Route path="*" element={<Error404 />} />
+          <Route path="/SearchMovies" element={<SearchMovies />}/>
         </Routes>
       </React.Fragment>
     );

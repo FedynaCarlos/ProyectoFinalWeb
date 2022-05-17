@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import SmallCard from './SmallCard';
+
 
 let productInDataBase = {
     color:   "primary",
@@ -25,20 +26,70 @@ let user = {
 }
 
 let cardProps = [productInDataBase,amount,user];
+let totC, totU, totP;
 
 
-function ContentRowMovies(){
+class ContentRowMovies extends Component {
+  constructor() {
+    super();
+    this.state = {
+      cepaTotal: [],
+      totalesUsuarios: [],
+      totalesProductos: [],
+    };
+  }
+  componentDidMount() {
+    fetch("api/cepas")
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then((totales) => {
+        this.setState({ cepaTotal: totales.data });
+      })
+      .catch((error) => console.log(error));
+
+    fetch("api/usuarios")
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then((totalesU) => {
+        this.setState({ totalesUsuarios: totalesU.prueba });
+        //console.log(totalesU.prueba);
+      })
+      .catch((error) => console.log(error));
+    fetch("api/productos")
+      .then((respuesta) => {
+        console.log(respuesta);
+        return respuesta.json();
+      })
+      .then((totalesP) => {
+        this.setState({ totalesProductos: totalesP.prueba });
+        //console.log(totalesU.prueba);
+      })
+      .catch((error) => console.log(error));
+    
+  }
+  
+  render() {
     return (
-        <React.Fragment>
+      <React.Fragment>
         {/*<!-- Content Row -->*/}
         <div className="row">
-            {
-                cardProps.map((producto,index)=>{
-                    return <SmallCard  {...producto}  key= {index}/>
-                })
-            }      
+          
+          {
+            cardProps.map((producto, index) => {
+              totC = this.state.cepaTotal.length
+              totU = this.state.totalesUsuarios.length;
+              totP = this.state.totalesProductos.length;
+              cardProps[2].valor = totC
+              cardProps[1].valor = totU
+              cardProps[0].valor = totP;
+            return <SmallCard {...producto} key={index} />;
+          })
+          }
         </div>
-        </React.Fragment>
-    )
+      </React.Fragment>
+    );
+  }
 }
 export default ContentRowMovies;

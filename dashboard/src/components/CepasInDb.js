@@ -1,36 +1,23 @@
-import React ,{ Component } from 'react';
+import React ,{useEffect, useState} from 'react';
 import Cepa  from './Cepa';
 
 
-class CepasInDb extends Component {
+function CepasInDb () {
 
-    constructor(){
-        super()
-        this.state = {
-            cepaList: []
-        }
-    }
+  const [cepa,setCepas] = useState([])
 
-    componentDidMount () {
+    useEffect( ()=>{
 
-        fetch('api/cepas')
-            .then( respuesta => {
-                return respuesta.json()
-            })
-            .then(cepa => {
-                console.log(cepa)
-                this.setState({ cepaList: cepa.data });
-            })
-    }
+      fetch('api/cepas')
+          .then( respuesta => {
+              return respuesta.json()
+          })
+          .then(cepa => {
+            setCepas(cepa.data)
+          })
 
-    fondo( ){
-
-        let fondoCaja = document.querySelector('.fondoCaja');
-        fondoCaja.classList.toggle('bg-secondary');
-
-    }
-
-    render () {
+    }, [])
+    
         return (
           <React.Fragment>
             {/*<!-- Categories in DB -->*/}
@@ -38,15 +25,14 @@ class CepasInDb extends Component {
               <div className="card shadow mb-4">
                 <div className="card-header py-3">
                   <h6
-                    onMouseOver={this.fondo}
                     className="m-0 font-weight-bold text-gray-800"
                   >
-                    Categorias de nuestros vinos
+                    Cepas de nuestros vinos
                   </h6>
                 </div>
                 <div className="card-body fondoCaja">
                   <div className="row">
-                    {this.state.cepaList.map((cepa, index) => {
+                    {cepa.map((cepa, index) => {
                       return <Cepa {...cepa} key={index} />;
                     })}
                   </div>
@@ -57,5 +43,5 @@ class CepasInDb extends Component {
         );
     }
 
-}
+
 export default CepasInDb;
