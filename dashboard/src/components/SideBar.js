@@ -8,6 +8,7 @@ import ContentRowMovies from './ContentRowMovies';
 import Error404 from './Error404';
 import Producto from './Producto';
 import SearchMovies from "./SearchMovies";
+import Thanks from "./Thanks";
 
 function SideBar(){
     return (
@@ -92,6 +93,8 @@ function SideBar(){
             </Link>
           </li>
 
+          
+
           {/*<!-- Divider -->*/}
           <hr className="sidebar-divider d-none d-md-block" />
         </ul>
@@ -104,7 +107,8 @@ function SideBar(){
           <Route path="/ContentRowMovies" element={<ContentRowMovies />} />
           <Route path="/table" element={<Producto />} />
           <Route path="*" element={<Error404 />} />
-          <Route path="/SearchMovies" element={<SearchMovies />}/>
+          <Route path="/SearchMovies" element={<SearchMovies />} />
+          <Route path="/Thanks" element={<Thanks />} />
         </Routes>
       </React.Fragment>
     );

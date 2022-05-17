@@ -4,8 +4,6 @@ import React,{useEffect,useState,useRef} from 'react';
 
 function SearchMovies(){
 
-
-
 	const apiKey = 'c39fef59'; // Intenta poner cualquier cosa antes para probar
 	const inputTag = useRef();
 
@@ -17,38 +15,29 @@ function SearchMovies(){
       "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
       "X-RapidAPI-Key": "0189b27828msh83571956534a58ep1136ecjsn80c22c9251e7",
     },
-  };
+	};
 
 	useEffect(()=>{
-		
 
-		if(apiKey !== ''){
-			
 
 			fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php?i=${keyword}`, options)
         .then((response) => response.json())
         .then((data) => {
-          //console.log(data);
-          if (!data.Error) {
-            setMovies(data.drinks);
-          } else {
+        
+					if (data.drinks === 'None Found') {
             setMovies([]);
+          } else {
+						setMovies(data.drinks);
           }
         })
         .catch((error) => console.log(error));
-
-		}
 	},[keyword])
 
 	const searchMovie = (e) => {
 		e.preventDefault();
-
 	    const value = inputTag.current.value;
 		setKeyword(value)
-	   
 	};
-	
-
 
 	return(
 		<div className="container-fluid">
@@ -106,7 +95,7 @@ function SearchMovies(){
 							})
 						}
 					</div>
-					{ movies.length === 0 && <div className="alert alert-warning text-center">No se encontraron cocteles</div>}
+					{ movies.length === 0 && <div className="alert alert-warning text-center">No se encontraron cócteles</div>}
 				</>
 				:
 				<div className="alert alert-danger text-center my-4 fs-2">Eyyyy... ¿PUSISTE TU APIKEY?</div>

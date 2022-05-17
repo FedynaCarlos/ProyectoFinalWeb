@@ -54,17 +54,14 @@ class ContentRowMovies extends Component {
       })
       .then((totalesU) => {
         this.setState({ totalesUsuarios: totalesU.prueba });
-        //console.log(totalesU.prueba);
       })
       .catch((error) => console.log(error));
     fetch("api/productos")
       .then((respuesta) => {
-        console.log(respuesta);
         return respuesta.json();
       })
       .then((totalesP) => {
         this.setState({ totalesProductos: totalesP.prueba });
-        //console.log(totalesU.prueba);
       })
       .catch((error) => console.log(error));
     
@@ -75,7 +72,6 @@ class ContentRowMovies extends Component {
       <React.Fragment>
         {/*<!-- Content Row -->*/}
         <div className="row">
-          
           {
             cardProps.map((producto, index) => {
               totC = this.state.cepaTotal.length

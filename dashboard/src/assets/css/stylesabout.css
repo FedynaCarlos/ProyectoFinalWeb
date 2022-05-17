@@ -1,0 +1,103 @@
+
+
+.containerDash{
+    display: flex;
+}
+
+.about-usbd{
+    margin-top: 6px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+
+}
+.about{
+    text-align: justify;
+    padding: 20px;
+    width: 90%;
+    margin:1% 4%;
+    border:solid 1px #604621;
+}
+.descripciones{
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.marco{
+    padding: 10px;
+    text-align: center;
+}
+.photoPersonal{
+    text-align: center;
+    width: 250px;
+    height: 340px;
+}
+.nombreAbout{
+     font-weight: 700;
+}
+.historia{
+    max-width: 400px;
+    text-align: justify;
+}
+
+/* ----Not Found-------*/
+
+.not-found{
+    display: flex;
+    justify-content: center;
+    margin: 0.2% 5%;
+}
+.text404{
+    padding-top: 10px;
+    font-size: 100px;
+    text-align: center;
+    color: #604621;
+    background: #FFFFFF;
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+    color: #604621;
+    background: #FFFFFF;
+    margin-bottom: 50px;
+}
+.nfs1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nfs1 h4{
+    padding: 2px;
+}
+.listRedirection{
+    list-style: none;
+}
+
+.listRedirection a{
+    text-decoration: none;   
+}
+.lNosot{
+    text-align: center;
+}
+.imgBienvenidaPpal{
+    padding-top: 20px;
+    text-align: center;
+}
+.imgBienvenida{
+    width: 350px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 0.85rem rgb(128, 93, 61))
+}
+.nfImag{
+    text-align: right;
+}
+.img404{
+    transform: rotate(+20deg);
+    width: 75%;
+    text-align: right;
+}
+.card-body1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

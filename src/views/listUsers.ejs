@@ -22,7 +22,7 @@
                 </button>
             </form>
         </article>
-        
+    
     <section class= "CRUD">
         <div class="menu-productos">
             <table class="table table-hover">
@@ -40,18 +40,17 @@
                     <% usuarios.forEach(usuario=> { %>
                         <tr class="table-active">
                            <!-- <th scope="row">Active</th> -->
-                            <td><%= usuario.id%></td>
-                            <td><%= usuario.email%></td>
-                            <td><%= usuario.nombres%></td>
-                            <td><%= usuario.perfil.descripcion%></td>
-                            <td>
+                            <td class="tableId"><%= usuario.id%></td>
+                            <td class="tableEmail"><%= usuario.email%></td>
+                            <td class="tableNombreU"><%= usuario.nombres%></td>
+                            <td class="tablePerfil"><%= usuario.perfil.descripcion%></td>
+                            <td class="tableBotones">
                                 <a href="/admUsuarios/detail/<%= usuario.id%> " class="btn btn-info">Detalle</a>
                                 <a href="/admUsuarios/edit/<%= usuario.id%> " class="btn btn-success">Editar</a>
                                 <% if (usuario.perfil.perfil_id==2) {%>
-                                <a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger">Eliminar</a>
+                                <a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger btnEliminarList">Eliminar</a>
                                 <% } %> 
                             </td>
-                            
                       </tr>
                     <% }); %>
                 </tbody>

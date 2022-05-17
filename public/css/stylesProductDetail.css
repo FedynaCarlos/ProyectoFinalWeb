@@ -2,7 +2,6 @@
   font-weight: 900;
 }
 
-
 .allProducts{
   display: flex;
   flex-direction: row;
@@ -171,10 +170,6 @@ button.btn.btn-primary{
 }
 .botones.no-mobile button {
   width: 100%;
-/*
-.formulario-creacion button {
-  background-color: var(--grisOscuro);
-  margin-top: 9px;*/
 }
 
 .CRUD{
@@ -182,7 +177,6 @@ button.btn.btn-primary{
 }
 
 .table{
-  /*width: 80%;*/
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
@@ -195,10 +189,8 @@ thead {
 }
 
 th, td{
-  /*width: 25%;*/
   text-align: left;
   vertical-align: top;
-  /*border-bottom: 1px solid black;*/
   border-collapse: collapse;
   padding: 2px;
 }
@@ -206,6 +198,19 @@ th {
   font-weight: bolder;
   font-size: 18px;
 }
+
+.tablePerfil{
+  width: 15%;
+}
+
+.tableNombreU{
+  width: 20%;
+}
+
+.tableEmail{
+  width: 30%;
+}
+
 
 .tableId{
   width: 5%;
@@ -218,7 +223,7 @@ th {
   width: 40%;
 }
 .tableBotones{
-  width: 40%;
+  width: 30%;
   min-width: 274px;
 }
 .w-100t {
