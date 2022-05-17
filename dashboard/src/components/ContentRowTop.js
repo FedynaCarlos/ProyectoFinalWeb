@@ -1,37 +1,35 @@
 import React from 'react';
 import CepasInDb from './CepasInDb';
 import ContentRowMovies from './ContentRowMovies';
-import LastMovieInDb from './LastMovieInDb';
+import ProductoInDb from "./ProductoInDb";
 function ContentRowTop(){
-    return(
-        <React.Fragment>
-				{/*<!-- Content Row Top -->*/}
-				<div className="container-fluid">
-					<div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-						<h1 className="h3 mb-0 text-gray-800">Dashboard Bodega Grupo 5</h1>
-					</div>
-				
-					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
-					{/*<!-- End movies in Data Base -->*/}
-					
-	
-					{/*<!-- Content Row Last Movie in Data Base -->*/}
-					<div className="row">
-						{/*<!-- Last Movie in DB -->*/}
-						<LastMovieInDb />
-						{/*<!-- End content row last movie in Data Base -->*/}
+    return (
+      <React.Fragment>
+        {/*<!-- Content Row Top -->*/}
+        <div className="container-fluid">
+          <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
+            <h1 className="h3 mb-0 text-gray-800">Dashboard Bodega Grupo 5</h1>
+          </div>
 
-						{/*<!-- Genres in DB -->*/}
-						<CepasInDb />
+          {/*<!-- Content Row Movies-->*/}
+          <ContentRowMovies />
+          {/*<!-- End movies in Data Base -->*/}
 
-						{/*<!--End Genres In Db-->*/}		
-					</div>
-				</div>
-				{/*<!--End Content Row Top-->*/}
+          {/*<!-- Content Row Last Movie in Data Base -->*/}
+          <div className="row">
+            {/*<!-- Last Movie in DB -->*/}
+            <ProductoInDb />
+            {/*<!-- End content row last movie in Data Base -->*/}
 
-        </React.Fragment>
-    )
+            {/*<!-- Genres in DB -->*/}
+            <CepasInDb />
+
+            {/*<!--End Genres In Db-->*/}
+          </div>
+        </div>
+        {/*<!--End Content Row Top -->*/}
+      </React.Fragment>
+    );
 
 }
 export default ContentRowTop;
