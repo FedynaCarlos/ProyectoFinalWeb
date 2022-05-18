@@ -2,7 +2,6 @@
   font-weight: 900;
 }
 
-
 .allProducts{
   display: flex;
   flex-direction: row;
@@ -171,10 +170,6 @@ button.btn.btn-primary{
 }
 .botones.no-mobile button {
   width: 100%;
-/*
-.formulario-creacion button {
-  background-color: var(--grisOscuro);
-  margin-top: 9px;*/
 }
 
 .CRUD{
@@ -182,7 +177,6 @@ button.btn.btn-primary{
 }
 
 .table{
-  /*width: 80%;*/
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
@@ -195,10 +189,8 @@ thead {
 }
 
 th, td{
-  /*width: 25%;*/
   text-align: left;
   vertical-align: top;
-  /*border-bottom: 1px solid black;*/
   border-collapse: collapse;
   padding: 2px;
 }
@@ -207,19 +199,45 @@ th {
   font-size: 18px;
 }
 
+.tablePerfil{
+  width: 15%;
+}
+
+.tableNombreU{
+  width: 20%;
+}
+
+.tableEmail{
+  width: 30%;
+}
+
 .tableId{
   width: 5%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
   
 }
 .tableImagen {
-  width: 15%;
+  width: 10%;
+  text-align: center;
 }
 .tableNombre{
-  width: 40%;
+  width: 20%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.tableDescripcion{
+  width: 30;
+  display: table-cell;
+  vertical-align: middle;
 }
 .tableBotones{
-  width: 40%;
+  width: 30%;
   min-width: 274px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 .w-100t {
   width: 30px;
@@ -243,9 +261,16 @@ a.btn.btn-success{
 
 .w-100e{
     width: 110px;
-    margin-left: 310px;
+    padding: 5px;
+    /*margin-left: 310px;*/
 }
 
+.btnsEdit{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+}
 
 @media (max-width: 820px) {
     .formulario-creacion {

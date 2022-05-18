@@ -20,13 +20,10 @@ class Producto extends Component{
             return respuesta.json()
         })
         .then(productos =>{
-            //console.log(productos)
             this.setState({productos: productos.prueba})
-            //console.log(productos)
         })
         .catch(error => console.log(error))
     }
-
 
     render(){
         return (
@@ -81,4 +78,5 @@ class Producto extends Component{
         );
     }
 }
+
 export default Producto;

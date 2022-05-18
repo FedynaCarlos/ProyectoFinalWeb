@@ -5,8 +5,6 @@ const validationCreate = require('../middlewares/validation');
 const multer = require('multer');
 const path = require('path');
 
-//const controllerAdminSeqPrueba = require('../controllers/productControllers');
-
 //multer para imagenes
 
 var storage = multer.diskStorage({
@@ -19,11 +17,7 @@ var storage = multer.diskStorage({
 })
 var upload = multer({storage: storage})
 
-
 router.get('/',pController.productos);
 router.get('/productCart',pController.productCart)
 
-
 module.exports = router;
-
-

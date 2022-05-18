@@ -18,9 +18,6 @@ const pController ={
 		productCart: (req,res) => {
 			res.render("productCart");
 		}
-
 };
 
-
 module.exports = pController;
-

@@ -21,7 +21,7 @@ window.onload = function(){
         validarCampo(expresiones.precio, e.target, "precio");
         break;
       case "image":
-     image.addEventListener("input", function(){
+      image.addEventListener("input", function(){
 
        if (image.files.length == 0) {
           Swal.fire("Sin Imagen?", "Por favor selecciona una imagen", "question");
@@ -31,13 +31,12 @@ window.onload = function(){
            (idxDot = fileName.lastIndexOf(".") + 1),
              (extFile = fileName.substr(idxDot, fileName.length).toLowerCase());
            if (
-             !(extFile == "jpg" || extFile == "jpeg" || extFile == "png" || extFile == ".gif")) {
+             !(extFile == "jpg" || extFile == "jpeg" || extFile == "png" || extFile == "gif")) {
              Swal.fire({
                icon: "error",
                title: "Oops...",
                text: "Debe cargar una imagen en formato jpg/jpeg/png/gif",
              });
-              
            }
          }
      });
@@ -95,11 +94,7 @@ window.onload = function(){
   textArea.addEventListener("blur", validarTextArea);
 
   formulario.addEventListener('submit', (e) => {
-    //console.log(e.preventDefault());
-    
-    console.log(campos.nombre);
-    console.log(campos.precio);
-    console.log(campos.descripcion);
+    //e.preventDefault();
 
     if(campos.nombre && campos.precio && campos.descripcion){
       Swal.fire({
@@ -109,33 +104,15 @@ window.onload = function(){
         showConfirmButton: false,
         timer: 3500,
       });
+      //formulario.submit();
     } else {
       Swal.fire("Debes completar la información");
     }
-
-    //console.log(campos.nombre)
-     
-    
-
-
-    /*if(campos.nombre && campos.precio && campos.descripcion){
-      formulario.reset();
-      document
-        .getElementById("formulario__mensaje-exito")
-        .classList.add("formulario__mensaje-exito-activo");
-    }*/
-
-
   })
 
-  
   const expresiones = {
-   
     precio: /^\d+$/, //Solo numeros, obligatorio
     nombre: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
     descripcion: /^[a-zA-ZÀ-ÿ0-9\s]{20,400}$/, // Letras y espacios, pueden llevar acentos.
-   
   };
-
-
 }

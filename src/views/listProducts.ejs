@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('partials/head') %>
 <head>
-    
+    <title>Listado Productos</title>
 </head>
 <body>
     <%- include('partials/header') %>
@@ -10,10 +10,11 @@
         <section class="visita">
             <h3 class="tituloListP">ADMINISTRADOR DE PRODUCTOS</h3> 
         </section>
+
         <article class="col-12">
-            
             <a href="/administrar/create" class="btn btn-outline-primary">Nuevo Producto</a>
         </article>
+
         <article class="col-6a">
             <form class="formSearcLp" action="/administrar/search_results" method="GET">
                 <input type="search" name="search">
@@ -22,48 +23,41 @@
                 </button>
             </form>
         </article>
-    <section>
-      
-    </section>
-    
-    <section class= "CRUD">
-        <div class="menu-productos">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Imagen</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Ver/Editar/Eliminar</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <% productos.forEach(producto=> { %>
+
+        <section class= "CRUD">
+            <div class="menu-productos">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="tableId">Id</th>
+                            <th scope="col" class="tableImagen">Imagen</th>
+                            <th scope="col" class="tableNombre">Nombre</th>
+                            <th scope="col" class="tableDescripcion">Descripción</th>
+                            <th scope="col" class="tableBotones">Ver/Editar/Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% productos.forEach(producto=> { %>
                         <tr class="table-active">
-                           <!-- <th scope="row">Active</th> -->
-                           <td class="tableId"><%= producto.produc_id%></td>
-                           <td class="tableImagen"><img class="w-100t" src="/images/<%= producto.imagen%>" alt=""></td>
+                            <td class="tableId"><%= producto.produc_id%></td>
+                            <td class="tableImagen"><img class="w-100t" src="/images/<%= producto.imagen%>" alt=""></td>
                             <td class="tableNombre"><%= producto.nombre%></td>
+                            <td class="tableDescripcion"><%= producto.descripcion%></td>
                             <td class="tableBotones">
                                 <a href="/administrar/detail/<%= producto.produc_id%> " class="btn btn-info">Detalle</a>
                                 <a href="/administrar/edit/<%= producto.produc_id%> " class="btn btn-success">Editar</a>
                                 <form action="/administrar/delete/<%= producto.produc_id%>" class="d-inline form-delete">
                                     <button class="btn btn-danger btnEliminarList" type="submit">Eliminar</button>
                                 </form>
-                            <!--    <a href="/administrar/delete/<%= producto.produc_id%> "class="btn btn-danger">Eliminar</a> -->
                             </td>
-                            
-                      </tr>
-                    <% }); %>
-                </tbody>
-            </table>
-
-        </div>
-    </section>
-       <!-- <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> -->
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
         <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
-        <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+     <!--   <script src="js/bootstrap.min.js" crossorigin="anonymous"></script> -->
         <script src="js/listProduct.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </main>

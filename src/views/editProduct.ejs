@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('./partials/head') %>
 <head>
-    <title>Crear Productos</title>
+    <title>Editar Producto</title>
 </head>
 <body>
     <%- include('./partials/header') %>
@@ -60,17 +60,17 @@
                 <% } %>
             </div>
             <div class="controlIngresoProductos">
-                <figure class="form-group">
+                <figure class="form-group botella">
                     <img class="w-100e" src="/images/<%= vinoEditar.imagen%>" >
                 </figure>
                 <label style="color: white" for="">Cambiar imagen</label>
-                   <input type="file" id="image" name="image" >
-               <!--  <input type="hidden" name="oldImagen" value="<%= vinoEditar.imagen%>">
-               De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) 
-                <input type="file" name="imagen" id="imagen">-->
+                <label for=""><%= vinoEditar.imagen%></label>   
+                <input type="file" name="image" id="image" class="inputImagenC" value="<%= vinoEditar.imagen%>" >
+                 <input type="hidden" name="oldImagen" id="image2" value="<%= vinoEditar.imagen%>">
+              <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) 
+                -->
 
-               <!-- <label for="">Agregar imagen</label>
-                <input type="file" name="image" id="image"> -->
+               <!-- <label for="">Agregar imagen</label>-->
             </div>
 
             <div class="controlIngresoProductos" id = "grupo__descripcion">
@@ -86,15 +86,25 @@
             </div>
 
             <div class="controlIngresoProductos">
+                <button type="submit" class="boton-formulario">Guardar Producto</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado con exito</p>
+            </div>
+            <div class="controlIngresoProductos">
+                <a href="/administrar" class="boton-formulario volverVistaP btn">Volver</a>
+            </div>
+
+
+    <!--        <div class="controlIngresoProducto btnsEdit">
                 <form action="" class = "form-btnActualizar">
                     <button type="submit" class="boton-formulario btnActualizar">Actualizar</button>
                 </form>
                 <button href="/administrar"  class="boton-formulario">Volver</button>
                 
-            </div>
+            </div> -->
         </form>
         <script src="/js/editProduct.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!--    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>-->
 </body> 
 </html>

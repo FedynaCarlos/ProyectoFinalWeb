@@ -22,15 +22,11 @@ module.exports = function (sequelize, dataTypes) {
   }
 
   let Cepa = sequelize.define(alias, cols, config);
-
-  
   Cepa.associate = function(models) {
     Cepa.hasMany(models.Producto, {
       as: "productos",
       foreignKey: "cepa_id"
     })
   }
-
-
   return Cepa;
 }

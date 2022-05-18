@@ -2,16 +2,12 @@
 /*-----------------Register------------------------*/
 
 
-/*----Fin Header-----*/
-/*body{
-    background-image: url('/images/fotopaginainicio.jpg');    
-}*/
 .titulo-register{
     color: white;
     font-family: 'Raleway', sans-serif;
     font-size: 24px;
     padding: 10px;
-    margin:0%;
+    margin:10px;
     text-align: center;   
 }
 .titulo-usuario{
@@ -24,13 +20,14 @@
 }
 .create-user{  
     margin: auto;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     display: flex;
     flex-wrap: nowrap;
     padding-top: 15px;
     align-items: center;
     align-content: center;
-    width: 400px;
+    width: 410px;
     background-color: #604621;
     height: auto;
     overflow: auto;
@@ -44,8 +41,6 @@
     width: 300px;
     height: 50px;
     margin: 10px;
-    
-    /*background-color: transparent;*/
 }
 .control{
     width: 90%;

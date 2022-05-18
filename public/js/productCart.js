@@ -13,10 +13,8 @@ window.onload = function () {
   //if (!locals.isLogged) 
   //{card.addEventListener('click', alert("Debes estar LOGEADO"))}   
 
-
   templateCard.addEventListener('click', e => {addCarrito(e)});
   items.addEventListener('click', e => {btnAumentarDisminuir(e)});
-
 
   const addCarrito = e => {
     if (e.target.classList.contains("boton-formulario")) {
@@ -75,9 +73,8 @@ window.onload = function () {
       (acc, { cantidad }) => acc + cantidad, 0);
     const nPrecio = Object.values(carrito).reduce(
       (acc, { cantidad, precio }) => acc + cantidad * precio, 0);
-    // console.log(nPrecio)
 
-    templateFooter.querySelectorAll("td")[0].textContent = nCantidad;
+      templateFooter.querySelectorAll("td")[0].textContent = nCantidad;
     templateFooter.querySelector("span").textContent = nPrecio;
 
     const clone = templateFooter.cloneNode(true);
@@ -93,7 +90,6 @@ window.onload = function () {
   }
 
   const btnAumentarDisminuir = (e) => {
-    // console.log(e.target.classList.contains('btn-info'))
     if (e.target.classList.contains("btn-info")) {
       const producto = carrito[e.target.dataset.id];
       producto.cantidad++;
@@ -113,5 +109,4 @@ window.onload = function () {
     }
     e.stopPropagation();
   };
-
 };

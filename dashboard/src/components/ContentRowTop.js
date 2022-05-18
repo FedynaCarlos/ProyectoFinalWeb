@@ -1,7 +1,8 @@
 import React from 'react';
 import CepasInDb from './CepasInDb';
-import ContentRowMovies from './ContentRowMovies';
+import ContentRowResumen from './ContentRowResumen';
 import ProductoInDb from "./ProductoInDb";
+
 function ContentRowTop(){
     return (
       <React.Fragment>
@@ -12,7 +13,7 @@ function ContentRowTop(){
           </div>
 
           {/*<!-- Content Row Movies-->*/}
-          <ContentRowMovies />
+          <ContentRowResumen />
           {/*<!-- End movies in Data Base -->*/}
 
           {/*<!-- Content Row Last Movie in Data Base -->*/}
@@ -30,6 +31,6 @@ function ContentRowTop(){
         {/*<!--End Content Row Top -->*/}
       </React.Fragment>
     );
-
 }
+
 export default ContentRowTop;
