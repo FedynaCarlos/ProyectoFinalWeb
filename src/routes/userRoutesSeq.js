@@ -4,6 +4,7 @@ const { Router } = require('express');
 const express = require('express');
 const router = express.Router();
 const validationUsers = require('../middlewares/validationUsers');
+const validationEditUsers = require('../middlewares/validationEditUsers');
 const userLogin = require('../middlewares/userLogin');
 const multer = require('multer');
 const path = require('path');
@@ -31,7 +32,7 @@ router.get('/create', userControllersAdmSeq.create);
 router.post('/create', upload.single('avatar'), userControllersAdmSeq.save);
 router.get('/detail/:id', userControllersAdmSeq.show);
 router.get('/edit/:id', userControllersAdmSeq.edit);
-router.put('/edit/:id',  upload.single('avatar'),validationUsers, userControllersAdmSeq.update);
+router.put('/edit/:id',  upload.single('avatar'),validationEditUsers, userControllersAdmSeq.update);
 router.get('/delete/:id', userControllersAdmSeq.destroy);
 router.get('/search_results', userControllersAdmSeq.search);
 

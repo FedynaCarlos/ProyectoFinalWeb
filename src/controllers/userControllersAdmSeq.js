@@ -61,7 +61,34 @@ const userControllersAdmSeq = {
       res.render("editUser", {usuarioEditar, perfil})
     })
   },
+
+  update: async (req, res) => {
+    try {      
+      await db.Usuario.update ({
+        nombres: req.body.nombres,
+        apellidos: req.body.apellidos,
+        email: req.body.email,
+        fechaNac: req.body.fechaNac,
+        telefono: req.body.telefono,
+        perfil_id: req.body.perfil,
+        avatar: req.file ? req.file.filename : req.body.oldAvatar
+        }, {
+          where: { id: req.params.id }
+        });
+      setTimeout(function(){
+        res.redirect('/admUsuarios');
+      },500)
+    }
+      catch(error){res.send(error)}
+  },
+  /*
   update: (req, res) => { 
+
+    const errors = validationResult(req);
+   
+    if (!errors.isEmpty()) {console.log(errors)
+        return res.render('editUser.ejs') //('editUser.ejs', { errors: errors.mapped(), oldData: req.body })
+    }
     db.Usuario.update ({
       nombres: req.body.nombres,
       apellidos: req.body.apellidos,
@@ -77,7 +104,7 @@ const userControllersAdmSeq = {
     })
     .then(() => res.redirect('/admUsuarios'))
     .catch(error => res.send(error))
-  },
+  },*/
   destroy:(req, res) => {
     db.Usuario.destroy({
       where: {

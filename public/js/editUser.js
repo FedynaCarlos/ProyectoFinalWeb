@@ -1,24 +1,46 @@
-window.onload = function(){
-  let editForm = document.querySelectorAll(".btnActualizar");
+const res = require("express/lib/response");
+
+window.onload = function(){ 
   const formulario = document.getElementById("formulario");
   const inputs = document.querySelectorAll("#formulario input");
-  const textArea = document.querySelector("#descripcion");
-  
-   const validarTextArea = (e) => {
-     validarCampo(expresiones.descripcion, e.target, "descripcion");
-   };
+  //let editForm = document.querySelectorAll(".btnActualizar");
+
+  const campos = {
+    nombres: false,
+    apellidos: false,
+    telefono: false,
+    email: false,
+    fechaNac: false
+  }
+
+  const expresiones = {
+    email: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i, // Letras y numeros sin espacios, y @.
+    telefono: /^\d+$/, //Solo numeros, obligatorio
+    nombres: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
+    apellidos: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
+    
+  };
 
    const validarFormulario = (e) => {
     //console.log(e.target.name);
     switch (e.target.name) {
-      case "nombre":
-        validarCampo(expresiones.nombre, e.target, "nombre");
+      case "nombres":
+        validarCampo(expresiones.nombres, e.target, "nombres");
         break;
-      case "precio":
-        validarCampo(expresiones.precio, e.target, "precio");
+      case "apellidos":
+        validarCampo(expresiones.apellidos, e.target, "apellidos");
+        break;
+      case "telefono":
+        validarCampo(expresiones.telefono, e.target, "telefono");
+        break;
+      case "email":
+        validarCampo(expresiones.email, e.target, "email");
+        break;
+      case "fechaNac":
+        validarCampo(expresiones.fechaNac, e.target, "fechaNac");
         break;
     }
-  }
+   }
 
    const validarCampo = (expresion, input, campo) => {
      
@@ -38,7 +60,7 @@ window.onload = function(){
        document
          .querySelector(`#grupo__${campo} .formulario__input-error`)
          .classList.remove("formulario__input-error-activo");
-       //campos[campo] = true;
+       campos[campo] = true;
      } else {
        document
          .getElementById(`grupo__${campo}`)
@@ -55,7 +77,7 @@ window.onload = function(){
        document
          .querySelector(`#grupo__${campo} .formulario__input-error`)
          .classList.add("formulario__input-error-activo");
-      // campos[campo] = false;
+       campos[campo] = false;
      }
    };
 
@@ -64,25 +86,34 @@ window.onload = function(){
      input.addEventListener("blur", validarFormulario);
    });
 
-   textArea.addEventListener("keyup", validarTextArea);
-   textArea.addEventListener("blur", validarTextArea);
+  
 
-   const expresiones = {
-     precio: /^\d+$/, //Solo numeros, obligatorio
-     nombre: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
-     descripcion: /^[a-zA-ZÀ-ÿ0-9\s]{20,400}$/, // Letras y espacios, pueden llevar acentos.
-   };
+    
+     /* editForm.forEach((formulario) => {
+        formulario.addEventListener("click", (e) => {*/
+  formulario.addEventListener('submit', (e) => {
 
-  editForm.forEach((form) => {
-    form.addEventListener("click", (e) => {
-     
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Actualizado con exito",
-        showConfirmButton: false,
-        timer: 1000,
-      })
-    });
-  });
+    console.log(campos.nombres);
+    console.log(campos.apellidos);
+    console.log(campos.telefono);
+
+        if(campos.nombres && campos.apellidos && campos.telefono && campos.fechaNac && campos.email){ 
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Usuario Actualizado con exito",
+                showConfirmButton: false,
+                timer: 3500,
+              });
+                    
+          } else {
+              Swal.fire("Debes completar la información");
+                //return("editUser.ejs")
+          }
+       });
+
+     // })  
+      
+
+
 };
