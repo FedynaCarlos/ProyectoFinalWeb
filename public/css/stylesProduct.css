@@ -7,6 +7,7 @@ h2{
 .createProduct{
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
     padding-top: 15px;
@@ -47,6 +48,12 @@ h2{
     flex-direction: column;
     padding-bottom: 10px;
 }
+
+.botella{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .formulario__validacion-estado {
 /*	position: relative; */
     top: 3px; left: -30px;

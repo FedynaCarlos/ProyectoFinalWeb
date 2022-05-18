@@ -211,20 +211,33 @@ th {
   width: 30%;
 }
 
-
 .tableId{
   width: 5%;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
   
 }
 .tableImagen {
-  width: 15%;
+  width: 10%;
+  text-align: center;
 }
 .tableNombre{
-  width: 40%;
+  width: 20%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.tableDescripcion{
+  width: 30;
+  display: table-cell;
+  vertical-align: middle;
 }
 .tableBotones{
   width: 30%;
   min-width: 274px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 .w-100t {
   width: 30px;
@@ -248,9 +261,16 @@ a.btn.btn-success{
 
 .w-100e{
     width: 110px;
-    margin-left: 310px;
+    padding: 5px;
+    /*margin-left: 310px;*/
 }
 
+.btnsEdit{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+}
 
 @media (max-width: 820px) {
     .formulario-creacion {

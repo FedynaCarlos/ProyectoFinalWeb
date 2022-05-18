@@ -16,16 +16,16 @@ let amount = {
 };
 
 let user = {
-    color:   "warning",
-    titulo: "Total de Cepas",
-    valor: 8,
-    icono: "fa-solid fa-wine-glass",
-}
+  color: "warning",
+  titulo: "Total de Cepas",
+  valor: 8,
+  icono: "fa-solid fa-wine-glass",
+};
 
 let cardProps = [productInDataBase,amount,user];
 let totC, totU, totP;
 
-class ContentRowMovies extends Component {
+class ContentRowResumen extends Component {
   constructor() {
     super();
     this.state = {
@@ -84,4 +84,4 @@ class ContentRowMovies extends Component {
   }
 }
 
-export default ContentRowMovies;
+export default ContentRowResumen;

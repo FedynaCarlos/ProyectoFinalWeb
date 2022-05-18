@@ -21,7 +21,7 @@ window.onload = function(){
         validarCampo(expresiones.precio, e.target, "precio");
         break;
       case "image":
-     image.addEventListener("input", function(){
+      image.addEventListener("input", function(){
 
        if (image.files.length == 0) {
           Swal.fire("Sin Imagen?", "Por favor selecciona una imagen", "question");
@@ -94,11 +94,7 @@ window.onload = function(){
   textArea.addEventListener("blur", validarTextArea);
 
   formulario.addEventListener('submit', (e) => {
-    //console.log(e.preventDefault());
-    
-    console.log(campos.nombre);
-    console.log(campos.precio);
-    console.log(campos.descripcion);
+    //e.preventDefault();
 
     if(campos.nombre && campos.precio && campos.descripcion){
       Swal.fire({
@@ -108,6 +104,7 @@ window.onload = function(){
         showConfirmButton: false,
         timer: 3500,
       });
+      //formulario.submit();
     } else {
       Swal.fire("Debes completar la información");
     }

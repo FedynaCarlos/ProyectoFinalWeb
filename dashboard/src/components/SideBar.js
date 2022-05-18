@@ -4,7 +4,7 @@ import { Route, Link, Routes } from 'react-router-dom';
 import ContentWrapper from './ContentWrapper';
 import CepasInDb from './CepasInDb';
 import ProductoInDb from "./ProductoInDb";
-import ContentRowMovies from './ContentRowMovies';
+import ContentRowResumen from './ContentRowResumen';
 import Error404 from './Error404';
 import Producto from './Producto';
 import SearchMovies from "./SearchMovies";
@@ -43,7 +43,7 @@ function SideBar(){
           <li className="nav-item active">
             <Link className="nav-link" to="/">
               <i className="fas fa-fw fa-tachometer-alt"></i>
-              <span>Dashboard - Bodega Grupo 5</span>
+              <span>Resumen - Bodega Grupo 5</span>
             </Link>
           </li>
 
@@ -51,12 +51,12 @@ function SideBar(){
           <hr className="sidebar-divider" />
 
           {/*<!-- Heading -->*/}
-          <div className="sidebar-heading">Actions</div>
+          <div className="sidebar-heading">Opciones</div>
 
           {/*<!-- Nav Item - Pages -->*/}
           <li className="nav-item">
             <Link className="nav-link collapsed" to="/CepasInDb">
-              <i className="fas fa-fw fa-folder"></i>
+              <i className="fas fa-fw fa-wine-glass"></i>
               <span>Cepas</span>
             </Link>
           </li>
@@ -64,14 +64,14 @@ function SideBar(){
           {/*<!-- Nav Item - Charts -->*/}
           <li className="nav-item">
             <Link className="nav-link" to="/ProductoInDb">
-              <i className="fas fa-fw fa-chart-area"></i>
-              <span>Producto estrella</span>
+              <i className="fas fa-fw fa-bell"></i>
+              <span>Ultimo producto ingresado</span>
             </Link>
           </li>
 
           {/*<!-- Nav Item - Tables -->*/}
           <li className="nav-item">
-            <Link className="nav-link" to="/ContentRowMovies">
+            <Link className="nav-link" to="/ContentRowResumen">
               <i className="fas fa-fw fa-table"></i>
               <span>Resumen</span>
             </Link>
@@ -80,7 +80,7 @@ function SideBar(){
           {/* tabla */}
           <li className="nav-item">
             <Link className="nav-link" to="/table">
-              <i className="fas fa-fw fa-film"></i>
+              <i className="fas fa-wine-bottle fa-fw "></i>
               <span>Tabla de productos</span>
             </Link>
           </li>
@@ -102,7 +102,7 @@ function SideBar(){
           <Route exat path="/" element={<ContentWrapper />} />
           <Route path="/CepasInDb" element={<CepasInDb />} />
           <Route path="/ProductoInDb" element={<ProductoInDb />} />
-          <Route path="/ContentRowMovies" element={<ContentRowMovies />} />
+          <Route path="/ContentRowResumen" element={<ContentRowResumen />} />
           <Route path="/table" element={<Producto />} />
           <Route path="*" element={<Error404 />} />
           <Route path="/SearchMovies" element={<SearchMovies />} />

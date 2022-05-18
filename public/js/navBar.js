@@ -2,6 +2,17 @@
   const listElements = document.querySelectorAll(".menuNav_item--show");
   const list = document.querySelector('.menuNav_links');
   const menu = document.querySelector('.menuNav_hamburguer');
+  const idiomaEs = document.querySelector('#espanol');
+  const idiomaEn = document.querySelector("#english");
+  const inicio = document.querySelector('#inicio')
+
+  idiomaEs.addEventListener('click',()=>{
+    inicio.innerHTML = "Inicio";
+  })
+
+  idiomaEn.addEventListener("click", () => {
+    inicio.innerHTML = "Home"
+  });
 
   const addClick = () => {
     listElements.forEach(element =>{
