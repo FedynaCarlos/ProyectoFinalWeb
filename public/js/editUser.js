@@ -1,25 +1,17 @@
-const res = require("express/lib/response");
-
 window.onload = function(){ 
+  let editForm = document.querySelectorAll(".btnActualizar");
   const formulario = document.getElementById("formulario");
   const inputs = document.querySelectorAll("#formulario input");
-  //let editForm = document.querySelectorAll(".btnActualizar");
+  
 
   const campos = {
-    nombres: false,
-    apellidos: false,
-    telefono: false,
-    email: false,
-    fechaNac: false
-  }
-
-  const expresiones = {
-    email: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i, // Letras y numeros sin espacios, y @.
-    telefono: /^\d+$/, //Solo numeros, obligatorio
-    nombres: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
-    apellidos: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
-    
+    nombres: true,
+    apellidos: true,
+    telefono: true,
+    fechaNac: true
   };
+
+  
 
    const validarFormulario = (e) => {
     //console.log(e.target.name);
@@ -33,12 +25,31 @@ window.onload = function(){
       case "telefono":
         validarCampo(expresiones.telefono, e.target, "telefono");
         break;
-      case "email":
-        validarCampo(expresiones.email, e.target, "email");
-        break;
       case "fechaNac":
         validarCampo(expresiones.fechaNac, e.target, "fechaNac");
         break;
+        case "avatar":
+          console.log(avatar.value);
+        image.addEventListener("input", function () {
+            if (avatar.files.length == 0) {
+              Swal.fire("Sin Imagen?", "Por favor selecciona una imagen", "question");
+              //alert("Debe cargar una imagen");
+            } else if (avatar.value) {
+              fileName = avatar.value;
+              (idxDot = fileName.lastIndexOf(".") + 1),
+                (extFile = fileName.substr(idxDot, fileName.length).toLowerCase());
+              if (
+                !(extFile == "jpg" || extFile == "jpeg" || extFile == "png" || extFile == "gif")
+              ) {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Debe cargar una imagen en formato jpg/jpeg/png/gif",
+                });
+              }
+            }
+          });
+          break;
     }
    }
 
@@ -86,33 +97,36 @@ window.onload = function(){
      input.addEventListener("blur", validarFormulario);
    });
 
-  
-
+   const expresiones = {
+    email: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i, // Letras y numeros sin espacios, y @.
+    telefono: /^\d+$/, //Solo numeros, obligatorio
+    nombres: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
+    apellidos: /^[a-zA-ZÀ-ÿ0-9\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
     
-     /* editForm.forEach((formulario) => {
-        formulario.addEventListener("click", (e) => {*/
-  formulario.addEventListener('submit', (e) => {
+  };
 
-    console.log(campos.nombres);
-    console.log(campos.apellidos);
-    console.log(campos.telefono);
+  console.log(campos.nombres);
+  console.log(campos.apellidos);
+  console.log(campos.telefono);
+  console.log(campos.fechaNac);
 
-        if(campos.nombres && campos.apellidos && campos.telefono && campos.fechaNac && campos.email){ 
-              Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Usuario Actualizado con exito",
-                showConfirmButton: false,
-                timer: 3500,
-              });
-                    
-          } else {
-              Swal.fire("Debes completar la información");
-                //return("editUser.ejs")
-          }
-       });
 
-     // })  
+
+  formulario.addEventListener("submit", (e) => {
+    e.preventDefault()
+    if (campos.nombres && campos.apellidos && campos.telefono && campos.fechaNac) {
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Actualizado con exito",
+        showConfirmButton: false,
+        timer: 3500,
+      });
+      formulario.submit();
+    } else {
+      Swal.fire("Debes completar la información");
+    }
+  });  
       
 
 
