@@ -16,7 +16,6 @@ function slides(){
   slider.style.transform = "translate("+(-width*contador)+"px)";
   slider.style.transition = "transform 1.2s";
   contador++;
-
   if(contador == sliderIndividual.length){
     setTimeout(function(){
       slider.style.transform = "translate(0px)";

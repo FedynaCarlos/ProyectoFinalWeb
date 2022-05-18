@@ -13,4 +13,5 @@ function Cepa(props){
         </React.Fragment>
     )
 }
+
 export default Cepa;

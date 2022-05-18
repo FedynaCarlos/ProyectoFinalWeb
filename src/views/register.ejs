@@ -5,15 +5,12 @@
     <title>Registro</title>
 </head>
 <body>
-   
     <%- include('./partials/header') %>
     <main>  <!--Se realiza main con la finanlidad de poder realizar un flexbox y poder manejar sus propiedades-->
     <!--Agregado por Paco-->
-    
     <section class="errores">
         <ul></ul>
     </section>
-    
         <form action="/user" method="POST" class="create-user" enctype="multipart/form-data">
             <div class="control-formulario">
                 <p>
@@ -37,10 +34,9 @@
                         <span style="color: yellow; font-size: 12px"><%= errors.nombres.msg %></span> 
                     </div>
                     <% } %>
-                    
             </div>
             <div class="control-formulario">
-                <input 
+                <input
                     type="text" 
                     id="apellidos"
                     name="apellidos" 
@@ -71,9 +67,9 @@
             </div>
             <div class="control-formulario">
                 <input 
-                 type="date" 
+                 type="date"
                  id="fechaNac"
-                 name="fechaNacimiento" 
+                 name="fechaNacimiento"
                  placeholder="Fecha Nacimiento" 
                  class="control <%= locals.errors && errors.fechaNacimiento ? 'is-invalid' : null %>"
                  value="<%=locals.oldData ? oldData.fechaNacimiento: null %>"
@@ -123,11 +119,9 @@
             <div class="control-formulario">
                 <button type="submit" class="boton-formulario">Guardar</button>
             </div>
-            
         </form>
     </main>
-    
-       <%- include('./partials/footer') %>
-       <script src="/js/register.js"></script>  
+    <%- include('./partials/footer') %>
+    <script src="/js/register.js"></script>  
 </body>
 </html>

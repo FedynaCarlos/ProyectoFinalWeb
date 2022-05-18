@@ -7,7 +7,6 @@ function CepasInDb () {
   const [cepa,setCepas] = useState([])
 
     useEffect( ()=>{
-
       fetch('api/cepas')
           .then( respuesta => {
               return respuesta.json()
@@ -15,9 +14,8 @@ function CepasInDb () {
           .then(cepa => {
             setCepas(cepa.data)
           })
-
     }, [])
-    
+
         return (
           <React.Fragment>
             {/*<!-- Categories in DB -->*/}
@@ -40,6 +38,5 @@ function CepasInDb () {
           </React.Fragment>
         );
     }
-
 
 export default CepasInDb;

@@ -25,7 +25,6 @@ class Producto extends Component{
         .catch(error => console.log(error))
     }
 
-
     render(){
         return (
           <React.Fragment>
@@ -79,4 +78,5 @@ class Producto extends Component{
         );
     }
 }
+
 export default Producto;

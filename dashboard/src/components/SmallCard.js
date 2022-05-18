@@ -21,4 +21,5 @@ function SmallCard(props){
         </React.Fragment>
     )
 }
+
 export default SmallCard;

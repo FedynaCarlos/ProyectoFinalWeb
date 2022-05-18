@@ -22,9 +22,7 @@ module.exports = {
                    data: usuarios,
                    status:200
                })
-
            })
-
     },
     store: (req,res)=> {
         DB.Usuario

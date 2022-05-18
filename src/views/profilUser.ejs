@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('./partials/head') %>
   <head>
-    <title>Detalle Productos</title>
+    <title>Descripción de usuario</title>
   </head>
   <body>
   <%- include('./partials/header') %>
@@ -13,7 +13,6 @@
         <div class="elemento1">
           <!--elemento1-->
           <img src="/images/users/<%= miUsuario.avatar%>" width="200" height="200" style="border-radius:90%"> 
-    
           <h4 class="description"><%= miUsuario.nombres +' '+ miUsuario.apellidos%></h4>
         </div>
         <!--fin de elemnto1-->
@@ -29,16 +28,13 @@
           <p>Fecha Nac.:<br> <%= miUsuario.fechaNac%></p>
           <br>
           <br>
-           
         </div>
         <form  action="/admUsuarios" method= "GET" >
-           <div class="controlIngresoProductos">          
+           <div class="controlIngresoProductos">
               <button href="/admUsuarios"  class="boton-formulario">Volver</button>
             </div>
-        </form>   
+        </form>
       </div>
-
-
     </section>
     <%- include('partials/footer') %>
   </body>

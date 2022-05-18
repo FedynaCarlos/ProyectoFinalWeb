@@ -21,14 +21,12 @@ const userControllersAdmSeq = {
         })
         .catch(error => res.send(error))
   },
-
   create: (req,res) => {
     db.Perfil.findAll()
       .then(function(perfil){
         res.render("createProduct", {perfil});
       })
   },
-
   save: (req,res) => {
     db.Producto.create({
       nombre: req.body.nombre,
@@ -46,7 +44,6 @@ const userControllersAdmSeq = {
       include : [{association : 'perfil'}]
     })
     .then(miUsuario=> {
-      
       res.render('profilUser', {miUsuario})
     })
     .catch(error => res.send(error))
@@ -94,15 +91,11 @@ const userControllersAdmSeq = {
         nombres: {[Op.like]: `%${req.query.search}%`}
       }
     })
-    
     .then(resultado => { 
       //console.log(resultado)
       res.render('listUsers', {usuarios : resultado}); })
     .catch(error => res.send(error))
   }
- 
 }
-
-
 
 module.exports = userControllersAdmSeq;

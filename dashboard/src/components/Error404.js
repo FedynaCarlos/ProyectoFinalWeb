@@ -28,10 +28,8 @@ function Error404(){
             </section>
           </section>
         </div>
-        {/*} <div className=" container w-100 ">
-          <img className="w-100" src={imagen} alt="Error 404" />
-    </div> */}
       </React.Fragment>
     );
 }
+
 export default Error404;

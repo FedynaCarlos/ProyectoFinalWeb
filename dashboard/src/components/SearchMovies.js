@@ -1,12 +1,8 @@
 import React,{useEffect,useState,useRef} from 'react';
 
-//import noPoster from "../assets/images/no-poster.jpg";
-
 function SearchMovies(){
-
 	const apiKey = 'c39fef59'; // Intenta poner cualquier cosa antes para probar
 	const inputTag = useRef();
-
 	const [movies, setMovies] = useState([])
 	const [keyword, setKeyword] = useState('wine')
 	const options = {
@@ -18,12 +14,9 @@ function SearchMovies(){
 	};
 
 	useEffect(()=>{
-
-
 			fetch(`https://the-cocktail-db.p.rapidapi.com/filter.php?i=${keyword}`, options)
         .then((response) => response.json())
         .then((data) => {
-        
 					if (data.drinks === 'None Found') {
             setMovies([]);
           } else {

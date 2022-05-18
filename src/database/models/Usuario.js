@@ -32,19 +32,18 @@ module.exports = function (sequelize, dataTypes) {
       type:dataTypes.STRING
     }
   }
-  
+
   let config = {
     tableName: "usuario",
     timestamps: false
   }
 
   let Usuario = sequelize.define(alias, cols, config);
-
   Usuario.associate = function(models) {
     Usuario.belongsTo(models.Perfil, {
       as: "perfil",
       foreignKey: "perfil_id"
     })
-  }  
+  }
   return Usuario;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('partials/head') %>
 <head>
-    
+    <title>Listado Usuarios</title>
 </head>
 <body>
     <%- include('partials/header') %>
@@ -11,7 +11,6 @@
             <h3 class="tituloListP"> ADMINISTRADOR DE USUARIOS</h3> 
         </section>
         <article class="col-12">
-            
             <a href="/User/register" class="btn btn-outline-primary">Nuevo Usuario</a>
         </article>
         <article class="col-6a">
@@ -23,41 +22,38 @@
             </form>
         </article>
     
-    <section class= "CRUD">
-        <div class="menu-productos">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Perfil</th>
-                        <th scope="col">Ver/Editar/Eliminar</th>
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <% usuarios.forEach(usuario=> { %>
-                        <tr class="table-active">
-                           <!-- <th scope="row">Active</th> -->
-                            <td class="tableId"><%= usuario.id%></td>
-                            <td class="tableEmail"><%= usuario.email%></td>
-                            <td class="tableNombreU"><%= usuario.nombres%></td>
-                            <td class="tablePerfil"><%= usuario.perfil.descripcion%></td>
-                            <td class="tableBotones">
-                                <a href="/admUsuarios/detail/<%= usuario.id%> " class="btn btn-info">Detalle</a>
-                                <a href="/admUsuarios/edit/<%= usuario.id%> " class="btn btn-success">Editar</a>
-                                <% if (usuario.perfil.perfil_id==2) {%>
-                                <a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger btnEliminarList">Eliminar</a>
-                                <% } %> 
-                            </td>
-                      </tr>
-                    <% }); %>
-                </tbody>
-            </table>
-
-        </div>
-    </section>
+        <section class= "CRUD">
+            <div class="menu-productos">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Perfil</th>
+                            <th scope="col">Ver/Editar/Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% usuarios.forEach(usuario=> { %>
+                            <tr class="table-active">
+                                <td class="tableId"><%= usuario.id%></td>
+                                <td class="tableEmail"><%= usuario.email%></td>
+                                <td class="tableNombreU"><%= usuario.nombres%></td>
+                                <td class="tablePerfil"><%= usuario.perfil.descripcion%></td>
+                                <td class="tableBotones">
+                                    <a href="/admUsuarios/detail/<%= usuario.id%> " class="btn btn-info">Detalle</a>
+                                    <a href="/admUsuarios/edit/<%= usuario.id%> " class="btn btn-success">Editar</a>
+                                    <% if (usuario.perfil.perfil_id==2) {%>
+                                    <a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger btnEliminarList">Eliminar</a>
+                                    <% } %> 
+                                </td>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </section>
         <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
         <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>

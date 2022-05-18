@@ -93,8 +93,6 @@ function SideBar(){
             </Link>
           </li>
 
-          
-
           {/*<!-- Divider -->*/}
           <hr className="sidebar-divider d-none d-md-block" />
         </ul>
@@ -113,4 +111,5 @@ function SideBar(){
       </React.Fragment>
     );
 }
+
 export default SideBar;

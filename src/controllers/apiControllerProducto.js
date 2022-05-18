@@ -22,15 +22,13 @@ module.exports = {
                    data: producto,
                    status:200
                })
-
            })
-
     },
     store: (req,res)=> {
         DB.Producto
            .create(req.body)
            .then(producto => {
-               return res.status(200).json({ 
+               return res.status(200).json({
                    data: producto,
                    status: 200
                })

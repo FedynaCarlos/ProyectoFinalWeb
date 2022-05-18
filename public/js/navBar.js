@@ -6,30 +6,23 @@
   const addClick = () => {
     listElements.forEach(element =>{
       element.addEventListener('click', ()=>{
-        
         let subMenu = element.children[1];
         let height = 0;
         element.classList.toggle('menuNav_item--active')
-
         if(subMenu.clientHeight == 0){
           height = subMenu.scrollHeight;
         }
-
         subMenu.style.height = `${height}px`;
-
       })
-      
     })
   }
 
   const deleteStyleHeight = () => {
     listElements.forEach(element=>{
-
       if(element.children[1].getAttribute('style')){
         element.children[1].removeAttribute('style');
         element.classList.remove('menuNav_item--active');
       }
-
     })
   }
 
@@ -48,6 +41,5 @@ if(window.innerWidth <= 768){
 }
 
 menu.addEventListener('click', ()=> list.classList.toggle('menuNav_links--show'))
-
 
 })();

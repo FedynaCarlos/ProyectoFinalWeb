@@ -2,9 +2,7 @@ import React, {useRef} from 'react';
 import imagenFondo from '../assets/images/LaConsulta.jpg';
 import { Link } from "react-router-dom";
 
-
 function ProductoInDb(){
-    
     const parrafo = useRef()
     const cambiarColor = () => {
         parrafo.current.classList.toggle('bg-secondary')
@@ -46,7 +44,6 @@ function ProductoInDb(){
             </div>
           </div>
         </div>
-        
       </React.Fragment>
     );
 }

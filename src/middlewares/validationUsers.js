@@ -2,7 +2,6 @@ const path = require('path');
 const {check} = require('express-validator');
 
 const validationUsers = [
-
     check('nombres').notEmpty().withMessage('debes escribir un nombre válido').bail().isString().withMessage('Debe ser un campo alfanumerico').bail(),
     check('apellidos').notEmpty().withMessage('No puede estar vacio').bail().isString().withMessage('Debe ser un campo alfanumerico').bail(),
     check('email').notEmpty().withMessage('No puede estar vacio').bail().isEmail().withMessage('Debe ser un campo Email').bail(),

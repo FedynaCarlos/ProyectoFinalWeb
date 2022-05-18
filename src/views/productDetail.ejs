@@ -2,29 +2,24 @@
 <html lang="en">
 <%- include('./partials/head') %>
   <head>
-    <title>Detalle Productos2</title>
+    <title>Productos</title>
   </head>
   <body>
   <%- include('./partials/header') %>
-    
   <h2 class="tituloproduct">Nuestros productos con la mejor calidad</h2>
-  
   <section class="allProducts" id="template-card">
       <!--div mostrar imagen-->
       <% for(let i=0; i < productos.length; i++){ %>
       <article  class="contenedor1">
-        
           <!--contenedor1-->
           <div class="elemento1">
             <!--elemento1-->
             <img src="/images/<%= productos[i].imagen%>"  class="product_img">
-            
           </div>
           <!--fin de elemnto1-->
           <!--descripcion del producto-->
           <div class="elemento2">
             <!--elemento 2-->
-            
             <h3 class="nombreProdDetail"><%= productos[i].nombre%> </h3>
             <p class="descProduct"><%= productos[i].descripcion%></p>
             <p class="cepaProduct"><%= productos[i].cepa.descripcion%></p>
@@ -35,11 +30,9 @@
             <% } else { %>
             <button type="reset" data-id="<%= productos[i].produc_id%>">Debes estar logeado</button>
             <% } %>  
-
           </div>
         </article>
         <% } %>
-
     </section>
 
     <div class="container">
@@ -61,7 +54,6 @@
           </tr>
         </tfoot>
       </table>
-      
       <div class="row" id="cards"></div>
     </div>
 
@@ -92,11 +84,6 @@
       </td>
       <td class="font-weight-bold tdCarrito">$ <span class='totalCarrito'>5000</span></td>
     </template>
-
-
-
     <%- include('partials/footer') %>
-
     <script src="/js/productCart.js"></script>
   </body>
-

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SmallCard from './SmallCard';
 
-
 let productInDataBase = {
     color:   "primary",
     titulo: "Total de productos",
@@ -14,7 +13,6 @@ let amount = {
   titulo: "Total de Usuarios",
   valor: 5,
   icono: "fa-solid fa-user-check",
-  //<FontAwesomeIcon icon="fa-light fa-wine-glass-empty" />
 };
 
 let user = {
@@ -22,12 +20,10 @@ let user = {
     titulo: "Total de Cepas",
     valor: 8,
     icono: "fa-solid fa-wine-glass",
-    
 }
 
 let cardProps = [productInDataBase,amount,user];
 let totC, totU, totP;
-
 
 class ContentRowMovies extends Component {
   constructor() {
@@ -64,9 +60,8 @@ class ContentRowMovies extends Component {
         this.setState({ totalesProductos: totalesP.prueba });
       })
       .catch((error) => console.log(error));
-    
   }
-  
+
   render() {
     return (
       <React.Fragment>
@@ -88,4 +83,5 @@ class ContentRowMovies extends Component {
     );
   }
 }
+
 export default ContentRowMovies;
