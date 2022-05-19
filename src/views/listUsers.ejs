@@ -21,8 +21,6 @@
                 </button>
             </form>
         </article>
-<<<<<<< HEAD
-        
     <section class= "CRUD">
         <div class="menu-productos">
             <table class="table table-hover">
@@ -66,44 +64,6 @@
     <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="js/listUser.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-=======
-    
-        <section class= "CRUD">
-            <div class="menu-productos">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Perfil</th>
-                            <th scope="col">Ver/Editar/Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% usuarios.forEach(usuario=> { %>
-                            <tr class="table-active">
-                                <td class="tableId"><%= usuario.id%></td>
-                                <td class="tableEmail"><%= usuario.email%></td>
-                                <td class="tableNombreU"><%= usuario.nombres%></td>
-                                <td class="tablePerfil"><%= usuario.perfil.descripcion%></td>
-                                <td class="tableBotones">
-                                    <a href="/admUsuarios/detail/<%= usuario.id%> " class="btn btn-info">Detalle</a>
-                                    <a href="/admUsuarios/edit/<%= usuario.id%> " class="btn btn-success">Editar</a>
-                                    <% if (usuario.perfil.perfil_id==2) {%>
-                                    <a href="/admUsuarios/delete/<%= usuario.id%> "class="btn btn-danger btnEliminarList">Eliminar</a>
-                                    <% } %> 
-                                </td>
-                        </tr>
-                        <% }); %>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
-    <!--    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script> -->
->>>>>>> 8e0e72e04fe6808c8060f5c001c1deab182a1be9
     </main>
 </body>
 </html>
