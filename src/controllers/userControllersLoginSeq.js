@@ -49,7 +49,12 @@ const userControllersLoginSeq = {
           avatar: req.file.filename,
         })
           .then(() => {
+            if (!req.body.email){
             res.redirect("/");
+            } else {
+              res.redirect("/admUsuarios");
+            }
+            ;
           })
           .catch((error) => res.send(error));
         /*
