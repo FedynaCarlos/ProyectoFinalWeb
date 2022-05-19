@@ -28,7 +28,7 @@ class Producto extends Component{
     render(){
         return (
           <React.Fragment>
-            {/*<!-- MOVIES LIST -->*/}
+            {/*<!-- PRODUCTOS LIST -->*/}
             <div>
               <h1 className="h3 mb-2 text-gray-800 "
               style={{textAlign:'center'}}>
@@ -63,7 +63,6 @@ class Producto extends Component{
                       </tfoot>
                       <tbody>
                         {
-                          //console.log(this.state.movies)
                           this.state.productos.map((producto, index) => {
                             return <ProductList {...producto} key={index} />;
                           })
