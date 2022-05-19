@@ -7,7 +7,7 @@ import ProductoInDb from "./ProductoInDb";
 import ContentRowResumen from './ContentRowResumen';
 import Error404 from './Error404';
 import Producto from './Producto';
-import SearchMovies from "./SearchMovies";
+import SearchCoctail from "./SearchCoctail";
 import Thanks from "./Thanks";
 
 function SideBar(){
@@ -87,7 +87,7 @@ function SideBar(){
 
           {/*<!-- Buscador -->*/}
           <li className="nav-item nav-link">
-            <Link className="nav-link" to="/SearchMovies">
+            <Link className="nav-link" to="/SearchCoctail">
               <i className="fas fa-search"></i>
               <span>Buscar un cóctel</span>
             </Link>
@@ -105,7 +105,7 @@ function SideBar(){
           <Route path="/ContentRowResumen" element={<ContentRowResumen />} />
           <Route path="/table" element={<Producto />} />
           <Route path="*" element={<Error404 />} />
-          <Route path="/SearchMovies" element={<SearchMovies />} />
+          <Route path="/SearchCoctail" element={<SearchCoctail />} />
           <Route path="/Thanks" element={<Thanks />} />
         </Routes>
       </React.Fragment>

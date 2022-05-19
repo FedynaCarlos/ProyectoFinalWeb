@@ -12,20 +12,20 @@ function ContentRowTop(){
             <h1 className="h3 mb-0 text-gray-800">Dashboard Bodega Grupo 5</h1>
           </div>
 
-          {/*<!-- Content Row Movies-->*/}
+          {/*<!-- Content Row Productos-->*/}
           <ContentRowResumen />
-          {/*<!-- End movies in Data Base -->*/}
+          {/*<!-- End Productos in Data Base -->*/}
 
-          {/*<!-- Content Row Last Movie in Data Base -->*/}
+          {/*<!-- Content Row Last Usuario in Data Base -->*/}
           <div className="row">
-            {/*<!-- Last Movie in DB -->*/}
+            {/*<!-- Last Producto in DB -->*/}
             <ProductoInDb />
-            {/*<!-- End content row last movie in Data Base -->*/}
+            {/*<!-- End content row last Producto in Data Base -->*/}
 
-            {/*<!-- Genres in DB -->*/}
+            {/*<!-- Cepa in DB -->*/}
             <CepasInDb />
 
-            {/*<!--End Genres In Db-->*/}
+            {/*<!--End Cepa In Db-->*/}
           </div>
         </div>
         {/*<!--End Content Row Top -->*/}

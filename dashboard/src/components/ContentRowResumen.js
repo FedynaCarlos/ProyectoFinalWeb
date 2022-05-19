@@ -23,7 +23,6 @@ let user = {
 };
 
 let cardProps = [productInDataBase,amount,user];
-let totC, totU, totP;
 
 class ContentRowResumen extends Component {
   constructor() {
@@ -69,12 +68,9 @@ class ContentRowResumen extends Component {
         <div className="row">
           {
             cardProps.map((producto, index) => {
-              totC = this.state.cepaTotal.length
-              totU = this.state.totalesUsuarios.length;
-              totP = this.state.totalesProductos.length;
-              cardProps[2].valor = totC
-              cardProps[1].valor = totU
-              cardProps[0].valor = totP;
+              cardProps[2].valor = this.state.cepaTotal.length;
+              cardProps[1].valor = this.state.totalesUsuarios.length;
+              cardProps[0].valor = this.state.totalesProductos.length;
             return <SmallCard {...producto} key={index} />;
           })
           }
