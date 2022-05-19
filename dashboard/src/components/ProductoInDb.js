@@ -9,15 +9,15 @@ function ProductoInDb(){
         parrafo.current.classList.toggle("text-white");
     }
     
-    const [producto, setProductos] = useState([]);
+    const [usuario, setUsuarios] = useState([]);
 
     useEffect(() => {
-      fetch("api/productos")
+      fetch("api/usuarios")
         .then((respuesta) => {
           return respuesta.json();
         })
         .then((data) => {
-          setProductos(data.prueba[data.prueba.length-1]);
+          setUsuarios(data.prueba[data.prueba.length-1]);
         });
     }, []);
 
@@ -30,16 +30,16 @@ function ProductoInDb(){
                 onMouseOver={cambiarColor}
                 className="m-0 font-weight-bold text-gray-800"
               >
-                Ultimo producto ingresado
+                Ultimo usuario ingresado
               </h5>
             </div>
             <div className="card-body">
               <div className="text-center">
-                <h3 className="tituloUPI">{producto.nombre}</h3>
+                <h3 className="tituloUPI">{usuario.nombres}</h3>
                 <img
                   className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                   style={{ width: 10 + "rem" }}
-                  src={`http://localhost:3030/images/${producto.imagen}`}
+                  src={`http://localhost:3030/images/users/${usuario.avatar}`}
                   
                   alt=" Vino estrella "
                 />

@@ -65,7 +65,7 @@ function SideBar(){
           <li className="nav-item">
             <Link className="nav-link" to="/ProductoInDb">
               <i className="fas fa-fw fa-bell"></i>
-              <span>Ultimo producto ingresado</span>
+              <span>Ultimo usuario ingresado</span>
             </Link>
           </li>
 
