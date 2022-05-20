@@ -8,8 +8,7 @@ function SearchCoctail(){
 	const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Host": "the-cocktail-db.p.rapidapi.com",
-      "X-RapidAPI-Key": "0189b27828msh83571956534a58ep1136ecjsn80c22c9251e7",
+      
     },
 	};
 
